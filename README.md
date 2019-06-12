@@ -41,3 +41,10 @@ admin questions
 - what does canvas have that is unneeded
 - what would make it easier / better?
 - what data aggs would be helpful
+
+dashboard components: 
+- announcements
+- recently added
+- week @ glance
+- sidebar
+- to do (stretch)
