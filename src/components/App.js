@@ -5,8 +5,8 @@ import {
   Route
 } from 'react-router-dom';
 import Home from './Home';
-import Callback from '../container/auth/Callback';
-import { withSession } from '../container/auth/withSession';
+import Callback from '../containers/auth/Callback';
+import { withSession } from '../containers/auth/withSession';
 import { logOut } from '../services/auth';
 
 export default function App() {
