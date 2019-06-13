@@ -23,7 +23,9 @@ export const handleAuth = () => {
             id: profile.sub,
             username: profile.name,
             token: results.idToken,
-            image: profile.picture
+            image: profile.picture,
+            // this was added to prof with rule, then added to state
+            role: profile['https://pushpin.com/role']
           });
         });
       } else {
