@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RecentItem from './RecentItem';
 
-function RecentlyList({ recentlyArr, unread }) {
+function RecentList({ recentlyArr, unread }) {
   const recentItems = recentlyArr.map(item => {
     return (
       <li key={item._id}>
@@ -24,9 +24,9 @@ function RecentlyList({ recentlyArr, unread }) {
   );
 }
 
-RecentlyList.propTypes = {
+RecentList.propTypes = {
   recentlyArr: PropTypes.array.isRequired,
   unread: PropTypes.number.isRequired
 };
 
-export default RecentlyList;
+export default RecentList;
