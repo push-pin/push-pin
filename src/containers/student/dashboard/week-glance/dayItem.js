@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function dayItem({ type, title, dueDate, submitted }) {
+function DayItem({ type, title, dueDate, submitted }) {
   return (
     <>
       <h3>{type}</h3>
@@ -12,7 +12,7 @@ function dayItem({ type, title, dueDate, submitted }) {
   );
 }
 
-dayItem.propTypes = {
+DayItem.propTypes = {
   type: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   dueDate: PropTypes.string,
@@ -21,4 +21,4 @@ dayItem.propTypes = {
 
 //completed is a boolean, will eventually be represented as checkmark, color, something along those lines
 
-export default dayItem;
+export default DayItem;
