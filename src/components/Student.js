@@ -1,9 +1,20 @@
 import React from 'react';
+import Sidebar from '../components/nav/Sidebar';
 
 
 function Student() {
 
-  return <h1>Hey Student</h1>;
+
+  const image = '../../assets/thumbtack.png';
+  return (
+    <>
+      <h1>Hey Student</h1>
+      <Sidebar image={image}>
+        <a onClick={() => updateSelected('teacher')} href="#">Home</a>
+      </Sidebar>
+      <p></p>
+    </>
+  )
 }
 
 
