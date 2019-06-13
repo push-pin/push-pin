@@ -1,13 +1,16 @@
-import { SET_SESSION } from '../actions/sessionActions';
+import { SET_USER } from '../actions/userActions';
 
 const initialState = {
-  auth0Id: '',
-  token: '',
+  userType: '',
+  id: '',
+  username: '',
+  image: ''
 };
 
 export default function reducer(state = initialState, action) {
+  console.log(action, 'action!');
   switch(action.type) {
-    case SET_SESSION:
+    case SET_USER:
       return action.payload;
     default:
       return state;

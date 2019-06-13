@@ -1,40 +1,45 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { getId } from '../selectors/sessionSelectors';
+import { getId, getUser, getSession } from '../selectors/sessionSelectors';
 import { connect } from 'react-redux';
-import { fetchUser } from '../services/user/fetchUser';
+import { setUser } from '../actions/userActions';
 import Student from './Student';
 import Teacher from './Teacher';
 
 
 class Home extends PureComponent {
   static propTypes = {
-    auth0Id: PropTypes.string.isRequired,
-    // auth: PropTypes.object.isRequired
+    // auth0Id: PropTypes.string.isRequired,
+    // auth: PropTypes.object.isRequired,
+    fetch: PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired,
+    session: PropTypes.object.isRequired
   };
 
-  state = {
-    component: ''
-  }
-
   componentDidMount() {
-    const user = fetchUser(this.props.auth0Id);
-    console.log('user', user);
-    this.setState({ component: user.userType });
+    this.props.fetch(this.props.session.auth0Id);
   }
-
 
   render() {
-    if(this.state.component === 'Teacher') return <Teacher />;
-
+    if(this.props.user.userType === 'Teacher') return <Teacher />;
     return <Student />;
   }
 }
 
 const mapStateToProps = state => ({
-  auth0Id: getId(state)
+  auth0Id: getId(state),
+  user: getUser(state),
+  session: getSession(state)
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  fetch(auth0Id) {
+    console.log(auth0Id, 'hello');
+    dispatch(setUser(auth0Id));
+  }
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Home);

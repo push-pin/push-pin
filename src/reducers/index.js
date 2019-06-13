@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import teacherReducer from './teacherReducer';
 import session from './sessionReducer';
+import user from './userReducer';
 
 export default combineReducers({
-  teacherReducer,
-  session
+  session,
+  user
 });
