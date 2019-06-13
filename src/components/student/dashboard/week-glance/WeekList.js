@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 import DayList from './DayList';
 
 function WeekList({ assignments }) {
-  //assignments is an object that has been formatted by the getWeekAtGlance service to have key of day and value of an array of assignments related to that day
-  // { 
-  //   dates: ['5/25', '5/26', '5/27', '5/28', '5/29'],
-  //   monday: [{assign}, {assign}, {assign}],
-  //   tuesday: [{assign}, {assign}, {assign}]
-  // }
-  // this object will always be structured the same way - week at a glance will always be M-F for the week you're in. The service will need a way of accessing current date as well as day of the week to return the correct info. 
-
+  //figure out how to display date as part of header
   return (
     <div>
       <div>
@@ -18,54 +11,40 @@ function WeekList({ assignments }) {
       </div>
       <div>
         <div>
-          <header>
-            <h3>Monday</h3>
-            <h4>{assignments.dates[0]}</h4>
-          </header>
+          <h3>Monday</h3>
           <div>
-            <DayList dayArray={assignments.monday} />
+            <DayList dayArray={assignments.Mon} />
           </div>
         </div>
 
         <div>
-          <header>
-            <h3>Tuesday</h3>
-            <h4>{assignments.dates[1]}</h4>
-          </header>
+          <h3>Tuesday</h3>
           <div>
-            <DayList dayArray={assignments.tuesday} />
+            <DayList dayArray={assignments.Tues} />
           </div>
         </div>
 
         <div>
-          <header>
-            <h3>Wednesday</h3>
-            <h4>{assignments.dates[2]}</h4>
-          </header>
+          <h3>Wednesday</h3>
           <div>
-            <DayList dayArray={assignments.wednesday} />
+            <DayList dayArray={assignments.Wed} />
           </div>
         </div>
 
         <div>
-          <header>
-            <h3>Thursday</h3>
-            <h4>{assignments.dates[3]}</h4>
-          </header>
+          <h3>Thursday</h3>
           <div>
-            <DayList dayArray={assignments.thursday} />
+            <DayList dayArray={assignments.Thurs} />
           </div>
         </div>
 
         <div>
-          <header>
-            <h3>Friday</h3>
-            <h4>{assignments.dates[4]}</h4>
-          </header>
+          <h3>Friday</h3>
           <div>
-            <DayList dayArray={assignments.friday} />
+            <DayList dayArray={assignments.Fri} />
           </div>
         </div>
+
       </div>
     </div>
   );
