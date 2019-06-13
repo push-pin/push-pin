@@ -12,7 +12,6 @@ export const withSession = Component => {
 
     componentDidMount() {
       if(!this.props.token) {
-        console.log();
         login();
       }
     }
