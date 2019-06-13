@@ -1,38 +1,38 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { getRole } from '../selectors/sessionSelectors';
+import { getId } from '../selectors/sessionSelectors';
 import { connect } from 'react-redux';
+import { fetchUser } from '../services/user/fetchUser';
+import Student from './Student';
+import Teacher from './Teacher';
 
 
 class Home extends PureComponent {
   static propTypes = {
-    role: PropTypes.string.isRequired,
-    auth: PropTypes.object.isRequired
+    auth0Id: PropTypes.string.isRequired,
+    // auth: PropTypes.object.isRequired
   };
 
   state = {
-    component: 'Student'
+    component: ''
   }
 
   componentDidMount() {
-    if(this.props.role === 'teacher') {
-      this.setState({ component: 'Teacher' });
-    }
+    const user = fetchUser(this.props.auth0Id);
+    console.log('user', user);
+    this.setState({ component: user.userType });
   }
 
 
   render() {
+    if(this.state.component === 'Teacher') return <Teacher />;
 
-    return (
-      <>
-        <h1>{this.state.component}</h1>
-      </>
-    );
+    return <Student />;
   }
 }
 
 const mapStateToProps = state => ({
-  role: getRole(state)
+  auth0Id: getId(state)
 });
 
 export default connect(

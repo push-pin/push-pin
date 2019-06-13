@@ -25,12 +25,12 @@ export const handleAuth = () => {
         auth0.client.userInfo(results.accessToken, (err, profile) => {
           if(err) return reject('Could not get user profile');
           resolve({
-            id: profile.sub,
-            username: profile.name,
+            auth0Id: profile.sub,
+            // username: profile.name,
             token: results.idToken,
-            image: profile.picture,
-            // this was added to prof with rule, then added to state
-            role: profile['https://pushpin.com/role']
+            // image: profile.picture,
+            // // this was added to prof with rule, then added to state
+            // role: profile.role
           });
         });
       } else {
