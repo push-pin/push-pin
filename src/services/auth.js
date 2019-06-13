@@ -26,11 +26,7 @@ export const handleAuth = () => {
           if(err) return reject('Could not get user profile');
           resolve({
             auth0Id: profile.sub,
-            // username: profile.name,
             token: results.idToken,
-            // image: profile.picture,
-            // // this was added to prof with rule, then added to state
-            // role: profile.role
           });
         });
       } else {

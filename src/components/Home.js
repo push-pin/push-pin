@@ -9,8 +9,6 @@ import Teacher from './Teacher';
 
 class Home extends PureComponent {
   static propTypes = {
-    // auth0Id: PropTypes.string.isRequired,
-    // auth: PropTypes.object.isRequired,
     fetch: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
     session: PropTypes.object.isRequired
@@ -34,7 +32,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetch(auth0Id) {
-    console.log(auth0Id, 'hello');
     dispatch(setUser(auth0Id));
   }
 });
