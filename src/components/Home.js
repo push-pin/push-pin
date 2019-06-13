@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 
 class Home extends PureComponent {
   static propTypes = {
-    role: PropTypes.string.isRequired
+    role: PropTypes.string.isRequired,
+    auth: PropTypes.object.isRequired
   };
 
   state = {
@@ -18,6 +19,7 @@ class Home extends PureComponent {
       this.setState({ component: 'Teacher' });
     }
   }
+
 
   render() {
 

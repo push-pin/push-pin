@@ -13,6 +13,11 @@ export const login = () => {
   auth0.authorize();
 };
 
+
+export const logOut = () => {
+  auth0.logout();
+};
+
 export const handleAuth = () => {
   return new Promise((resolve, reject) => {
     auth0.parseHash((error, results) => {
