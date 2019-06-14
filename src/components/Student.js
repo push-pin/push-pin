@@ -4,7 +4,7 @@ import Announcements from '../containers/student/dashboard/AnnouncementsContaine
 
 function Student() {
   return (
-    <section>
+    <section style={{ display: 'flex' }}>
       <Announcements />
       <WeekAtGlance />
     </section>
