@@ -4,5 +4,6 @@ import { fetchAnnouncements } from '../../../services/student/dashboard/announce
 export const [
   getAnnouncements,
   GET_ANNOUNCEMENTS,
-  GET_ANNOUNCEMENTS_PENDING
+  GET_ANNOUNCEMENTS_PENDING,
+  GET_ANNOUNCEMENTS_ERROR
 ] = createAction('GET_ANNOUNCEMENTS', fetchAnnouncements);
