@@ -4,13 +4,15 @@ import WeekList from '../../../components/student/dashboard/week-glance/WeekList
 import { connect } from 'react-redux';
 import { getWeek, getWeekError, getWeekLoading } from '../../../selectors/student/dashboard/weekSelectors';
 import { getWeekAtGlance } from '../../../actions/student/dashboard/weekActions';
+import Styles from './WeekAtGlance.css';
+import { studentLink } from '../../../../assets/link-info/pageLinks';
 
 class WeekContainer extends PureComponent {
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     assignments: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired, 
-    error: PropTypes.string.isRequired
+    error: PropTypes.object
   }
 
   componentDidMount() {
@@ -27,8 +29,7 @@ class WeekContainer extends PureComponent {
     }
     else {
       return (
-        <section>
-          <h1>Week At Glance</h1>
+        <section className={Styles.WeekAtGlance}>
           <WeekList assignments={this.props.assignments} />
         </section>
       );
