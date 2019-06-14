@@ -12,8 +12,6 @@ function DayItem({ type, title, dueDate, submitted }) {
   );
 }
 
-//don't forget to pass id for clickability
-
 DayItem.propTypes = {
   type: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
