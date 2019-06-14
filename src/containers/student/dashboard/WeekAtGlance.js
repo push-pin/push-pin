@@ -4,6 +4,8 @@ import WeekList from '../../../components/student/dashboard/week-glance/WeekList
 import { connect } from 'react-redux';
 import { getWeek, getWeekError, getWeekLoading } from '../../../selectors/student/dashboard/weekSelectors';
 import { getWeekAtGlance } from '../../../actions/student/dashboard/weekActions';
+import Styles from './WeekAtGlance.css';
+import { studentLink } from '../../../../assets/link-info/pageLinks';
 
 class WeekContainer extends PureComponent {
   static propTypes = {
@@ -27,7 +29,7 @@ class WeekContainer extends PureComponent {
     }
     else {
       return (
-        <section>
+        <section className={Styles.WeekAtGlance}>
           <WeekList assignments={this.props.assignments} />
         </section>
       );
