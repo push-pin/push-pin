@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  width: 33vw;
+  width: 20vw;
   height: 100vh;
   padding: 1rem;
 
@@ -11,6 +11,14 @@
 
   text-align: center;
 
+  img {
+    height: 4rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
   a {
     display: block;
 

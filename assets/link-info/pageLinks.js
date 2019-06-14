@@ -5,22 +5,22 @@ import teacher from '../teacher.jpg';
 export const studentLink = [
   {
     address: '/teacher',
-    image: calendar,
+    image: home,
     description: 'Calendar',
   },
   {
     address: '/',
-    image: grades,
+    image: student,
     description: 'Grades'
   },
   {
     address: '/',
-    image: assignments,
+    image: teacher,
     description: 'Assignments'
   },
   {
     address: '/',
-    image: resources,
+    image: teacher,
     description: 'Resources'
   }
 ];
@@ -28,27 +28,27 @@ export const studentLink = [
 export const teacherLink = [
   {
     address: '/student',
-    image: calendar,
+    image: student,
     description: 'Calendar'
   },
   {
     address: '/',
-    image: grades,
+    image: home,
     description: 'Grade Book'
   },
   {
     address: '/',
-    image: attendance,
+    image: teacher,
     description: 'Attendance'
   },
   {
     address: '/',
-    image: resources,
+    image: teacher,
     description: 'Resources'
   },
   {
     address: '/',
-    image: createImage,
+    image: student,
     description: 'Create'
   }
 ];

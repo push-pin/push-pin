@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Sidebar.css';
 import NavLink from './NavLink';
+import { logOut } from '../../services/auth';
 
 function Sidebar({ links, user }) {
   console.log('link', links)
@@ -12,10 +13,11 @@ function Sidebar({ links, user }) {
   ))
   return (
     <nav className={styles.Sidebar}>
-      <img src={user.image || ''} />
       <ul>
         {linkList}
       </ul>
+      <img src={user.image || ''} />
+      <button onClick={logOut}>Log out</button>
     </nav>
   );
 }
