@@ -1,10 +1,14 @@
 import React from 'react';
 import WeekAtGlance from '../containers/student/dashboard/WeekAtGlance';
+import Announcements from '../containers/student/dashboard/AnnouncementsContainer';
 
 function Student() {
-
-  return <WeekAtGlance />;
-  // return <h1>Hi</h1>
+  return (
+    <section>
+      <Announcements />
+      <WeekAtGlance />
+    </section>
+  );
 }
 
 

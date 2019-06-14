@@ -12,7 +12,7 @@ class WeekContainer extends PureComponent {
     fetch: PropTypes.func.isRequired,
     assignments: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired, 
-    error: PropTypes.string.isRequired
+    error: PropTypes.object
   }
 
   componentDidMount() {
