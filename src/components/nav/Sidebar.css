@@ -1,0 +1,30 @@
+.Sidebar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 20vw;
+  height: 100vh;
+  padding: 1rem;
+
+  background-color: black;
+  color: white;
+
+  text-align: center;
+
+  img {
+    height: 4rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    display: block;
+
+    color: white;
+
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
