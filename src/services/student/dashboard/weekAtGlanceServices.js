@@ -1,4 +1,4 @@
-function getWeek() {
+export function getWeek() {
   const today = new Date();
   const diff = today.getDate() - today.getDay() + (today.getDay() === 0 ? -6 : 1);
   const monday =  new Date(today.setDate(diff));

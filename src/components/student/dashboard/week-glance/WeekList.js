@@ -10,6 +10,7 @@ function WeekList({ assignments }) {
         <h2>Week At A Glance</h2>
       </div>
       <div>
+        
         <div>
           <h3>Monday</h3>
           <div>
