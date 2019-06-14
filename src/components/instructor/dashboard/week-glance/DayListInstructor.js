@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayItem from './DayItem';
+import DayItemInstructor from './DayItemInstructor';
 
-function DayList({ dayArray }) {
+function DayListInstructor({ dayArray }) {
   const dayItems = dayArray.map(item => {
     return (
       <li key={item._id}>
-        <DayItem type={item.type} title={item.title} dueDate={item.dueDate} graded={item.graded} />
+        <DayItemInstructor type={item.type} title={item.title} dueDate={item.dueDate} graded={item.graded} />
       </li>
     );
   });
@@ -20,8 +20,8 @@ function DayList({ dayArray }) {
   );
 }
 
-DayList.propTypes = {
+DayListInstructor.propTypes = {
   dayArray: PropTypes.array.isRequired,
 };
 
-export default DayList;
+export default DayListInstructor;

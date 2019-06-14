@@ -7,7 +7,8 @@ function DayItem({ type, title, dueDate, graded }) {
       <h3>{type}</h3>
       <h4>{title}</h4>
       <p>{dueDate}</p>
-      <p>Graded: {submitted}</p> //this is where we want how many are graded
+      <p>Graded: {submitted}</p> 
+      //this is where we want how many are graded
     </>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayList from './DayList';
+import DayListInstructor from './DayListInstructor';
 
-function WeekList({ assignments }) {
+function WeekListInstructor({ assignments }) {
   //figure out how to display date as part of header
   return (
     <div>
@@ -14,35 +14,35 @@ function WeekList({ assignments }) {
         <div>
           <h3>Monday</h3>
           <div>
-            <DayList dayArray={assignments.Mon} />
+            <DayListInstructor dayArray={assignments.Mon} />
           </div>
         </div>
 
         <div>
           <h3>Tuesday</h3>
           <div>
-            <DayList dayArray={assignments.Tues} />
+            <DayListInstructor dayArray={assignments.Tues} />
           </div>
         </div>
 
         <div>
           <h3>Wednesday</h3>
           <div>
-            <DayList dayArray={assignments.Wed} />
+            <DayListInstructor dayArray={assignments.Wed} />
           </div>
         </div>
 
         <div>
           <h3>Thursday</h3>
           <div>
-            <DayList dayArray={assignments.Thurs} />
+            <DayListInstructor dayArray={assignments.Thurs} />
           </div>
         </div>
 
         <div>
           <h3>Friday</h3>
           <div>
-            <DayList dayArray={assignments.Fri} />
+            <DayListInstructor dayArray={assignments.Fri} />
           </div>
         </div>
 
@@ -51,8 +51,8 @@ function WeekList({ assignments }) {
   );
 }
 
-WeekList.propTypes = {
+WeekListInstructor.propTypes = {
   assignments: PropTypes.object.isRequired
 };
 
-export default WeekList;
+export default WeekListInstructor;
