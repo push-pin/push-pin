@@ -10,7 +10,7 @@ class WeekContainer extends PureComponent {
     fetch: PropTypes.func.isRequired,
     assignments: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired, 
-    error: PropTypes.string.isRequired
+    error: PropTypes.object
   }
 
   componentDidMount() {
@@ -28,7 +28,6 @@ class WeekContainer extends PureComponent {
     else {
       return (
         <section>
-          <h1>Week At Glance</h1>
           <WeekList assignments={this.props.assignments} />
         </section>
       );
