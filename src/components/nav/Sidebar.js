@@ -5,12 +5,11 @@ import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
 
 function Sidebar({ links, user }) {
-  console.log('link', links)
   const linkList = links.map((link, id) => (
     <li key={id}>
       <NavLink oneLink={link} />
     </li>
-  ))
+  ));
   return (
     <nav className={styles.Sidebar}>
       <ul>

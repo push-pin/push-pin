@@ -12,8 +12,6 @@ class NavContainer extends PureComponent {
 
   render() {
     const { user } = this.props;
-    console.log(teacherLink, 'teacher');
-    console.log('user', user);
     if(user.userType === 'Teacher') {
       return <Sidebar links={teacherLink} user={user} />;
     } else {
