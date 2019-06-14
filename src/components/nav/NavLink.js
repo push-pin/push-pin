@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function NavLink({ link }) {
+function NavLink({ oneLink }) {
+  console.log('link in NavLink', oneLink);
   return (
-    <Link to={link.link}>
-      <img src={link.image} />
+    <Link to={oneLink.address}>
+      <img src={oneLink.image} />
     </Link>
   );
 }
 
 NavLink.propTypes = {
-  link: PropTypes.object.isRequired
+  oneLink: PropTypes.object.isRequired
 };
 
 export default NavLink;

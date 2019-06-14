@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { setUser } from '../actions/userActions';
 import Student from './Student';
 import Teacher from './Teacher';
+import NavContainer from '../containers/navbar/NavContainer';
 
 
 class Home extends PureComponent {
@@ -19,8 +20,21 @@ class Home extends PureComponent {
   }
 
   render() {
-    if(this.props.user.userType === 'Teacher') return <Teacher />;
-    return <Student />;
+    if(this.props.user.userType === 'Teacher') {
+      return (
+      <>
+      <NavContainer />
+      <Teacher />
+      </>
+      );
+    } else {
+      return (
+        <>
+        <NavContainer />
+        <Student />
+        </>
+      );
+    }
   }
 }
 
