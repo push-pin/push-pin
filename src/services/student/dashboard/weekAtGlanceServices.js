@@ -1,11 +1,12 @@
-export function getWeek() {
-  const today = new Date();
-  const diff = today.getDate() - today.getDay() + (today.getDay() === 0 ? -6 : 1);
-  const monday =  new Date(today.setDate(diff));
+export function fetchWeek() {
+  // const today = new Date();
+  // const diff = today.getDate() - today.getDay() + (today.getDay() === 0 ? -6 : 1);
+  // const monday =  new Date(today.setDate(diff));
   //date.toString() gives you Mon June 10 2019 ...
 
   //fetch using monday date
-  //map the returned array of assingments into an object of arrays based on day
+  //map the returned array of assignments into an object of arrays based on day
+  console.log('in service');
   return {
     Mon: [
       {
