@@ -8,8 +8,8 @@ function DayItemInstructor({ type, title, dueDate, totalGraded, totalSubmissions
       <h3>{type}</h3>
       <h4>{title}</h4>
       <p>{dueDate}</p>
-      <p>{toGrade}</p>
-      <p>{totalSubmissions} / {totalStudents}</p> 
+      <p>To Grade: {toGrade}</p>
+      <p>Submitted: {totalSubmissions} / {totalStudents}</p> 
       <p></p>
     </>
   );
