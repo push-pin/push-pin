@@ -1,12 +1,35 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle `
-  * {
+  *,
+  *::after,
+  *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+  }
+
+  html {
     font-family: 'Roboto', sans-serif;
-    font-size: 62.5%;
+    /* defines what 1rem is -- 10px */
+    font-size: 62.5%; 
+    overflow: scroll;
+    overflow-x: hidden;
+
+    
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+  body {
+    box-sizing: border-box;
   }
 `;
 
