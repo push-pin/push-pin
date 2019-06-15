@@ -14,6 +14,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 15,
         totalGraded: 15
       },
       {
@@ -22,6 +23,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 6,
         totalGraded: 0
       }
     ],
@@ -32,6 +34,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 12,
         totalGraded: 10
       },
       {
@@ -40,6 +43,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 20,
         totalGraded: 10
       }
     ],
@@ -50,6 +54,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 20,
         totalGraded: 10
       },
       {
@@ -58,6 +63,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 20,
         totalGraded: 10
       }
     ],
@@ -68,6 +74,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 20,
         totalGraded: 10
       },
       {
@@ -76,6 +83,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 20,
         totalGraded: 13
       }
     ],
@@ -86,6 +94,7 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
+        totalSubmissions: 20,
         totalGraded: 10
       }
     ],
