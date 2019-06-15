@@ -6,7 +6,6 @@ export function fetchWeek() {
 
   //fetch using monday date
   //map the returned array of assignments into an object of arrays based on day
-  console.log('in service');
   return {
     Mon: [
       {
