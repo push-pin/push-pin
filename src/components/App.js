@@ -8,11 +8,12 @@ import Home from './Home';
 import Callback from '../containers/auth/Callback';
 import { withSession } from '../containers/auth/withSession';
 import NavContainer from '../containers/navbar/NavContainer';
-import Styles from './App.css';
+// import Styles from './App.css';
+import { MasterContainer } from '../../styles/layout/MasterContainer';
 
 export default function App() {
   return (
-    <section className={Styles.App}>
+    <MasterContainer>
       <Router>
         <NavContainer />
         <Switch>
@@ -20,6 +21,6 @@ export default function App() {
           <Route path="/callback" component={Callback} />
         </Switch>
       </Router>
-    </section>
+    </MasterContainer>
   );
 }

@@ -6,6 +6,7 @@ function NavLink({ oneLink }) {
   return (
     <Link to={oneLink.address}>
       <img src={oneLink.image} />
+      <h3>{oneLink.description}</h3>
     </Link>
   );
 }

@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Sidebar.css';
 import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
+import { Navbar, NavItemContainer } from '../../../styles/navbar/Navbar';
 
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
+    // eslint-disable-next-line react/jsx-key
     <li key={id}>
       <NavLink oneLink={link} />
     </li>
   ));
   return (
-    <nav className={styles.Sidebar}>
-      <ul>
+    <Navbar>
+      <img src="../../../assets/thumbtack.png" />
+      <NavItemContainer>
         {linkList}
-      </ul>
+      </NavItemContainer>
       <img src={user.image || ''} />
       <button onClick={logOut}>Log out</button>
-    </nav>
+    </Navbar>
   );
 }
 
