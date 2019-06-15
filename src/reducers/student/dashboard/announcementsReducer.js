@@ -3,7 +3,7 @@ import { GET_ANNOUNCEMENTS, GET_ANNOUNCEMENTS_PENDING, GET_ANNOUNCEMENTS_ERROR }
 const initialState = {
   announcements: [],
   loading: false,
-  error: '',
+  error: {},
   unread: 0
 };
 
@@ -18,7 +18,6 @@ function unreadCounter(announcements) {
 }
 
 export default function reducer(state = initialState, action) {
-  console.log(action.type, 'action');
   switch(action.type) {
     case GET_ANNOUNCEMENTS:
       return { ...state, announcements: action.payload, loading: false, unread: unreadCounter(action.payload) };

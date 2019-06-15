@@ -3,11 +3,10 @@ import { GET_WEEK, GET_WEEK_PENDING, GET_WEEK_ERROR } from '../../../actions/stu
 const initialState = {
   assignments: {},
   loading: false,
-  error: ''
+  error: {}
 };
 
 export default function reducer(state = initialState, action) {
-  console.log('action', action);
   switch(action.type) {
     case GET_WEEK:
       return { ...state, assignments: action.payload, loading: false };

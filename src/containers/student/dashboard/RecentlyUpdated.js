@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { selectRecents, selectUnreadRecents, selectRecentsLoading, selectRecentsError } from '../../../selectors/student/dashboard/recentsSelectors';
-import { fetchRecents } from '../../../services/student/dashboard/recentItemServices';
+import { getRecents } from '../../../actions/student/dashboard/recentsActions';
 import RecentList from '../../../components/student/dashboard/recently-added/RecentList';
 
 class DashboardRecentlyUpdated extends PureComponent {
@@ -13,7 +13,7 @@ class DashboardRecentlyUpdated extends PureComponent {
     recents: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
     unread: PropTypes.number.isRequired,
-    error: PropTypes.string
+    error: PropTypes.object
   }
 
   componentDidMount() {
@@ -27,7 +27,6 @@ class DashboardRecentlyUpdated extends PureComponent {
 
     return <RecentList recentlyArr={this.props.recents} unread={this.props.unread} />;
   }
-
 }
 
 const mapStateToProps = state => ({
@@ -39,7 +38,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    dispatch(fetchRecents());
+    dispatch(getRecents());
   }
 });
 

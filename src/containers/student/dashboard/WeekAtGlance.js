@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { getWeek, getWeekError, getWeekLoading } from '../../../selectors/student/dashboard/weekSelectors';
 import { getWeekAtGlance } from '../../../actions/student/dashboard/weekActions';
 import Styles from './WeekAtGlance.css';
-import { studentLink } from '../../../../assets/link-info/pageLinks';
 
 class WeekContainer extends PureComponent {
   static propTypes = {
@@ -16,13 +15,10 @@ class WeekContainer extends PureComponent {
   }
 
   componentDidMount() {
-    console.log('mounty');
     this.props.fetch();
   }
 
   render(){
-    console.log('render');
-    console.log(this.props.loading);
     // return <h1>week</h1>;
     if(!this.props.assignments.Mon) {  //change back to loading once fetch is a promise
       return <h1>Loading</h1>;
@@ -45,7 +41,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    console.log('in dispatch fetch');
     dispatch(getWeekAtGlance());
   }
 });
