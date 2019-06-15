@@ -32,4 +32,3 @@ AnnouncementList.propTypes = {
 
 export default AnnouncementList;
 // unread is the number of announcements that are new/haven't been opened in detail by a user. In the wireframe, its the number in the circle to the right of the "announcements" header 
-
