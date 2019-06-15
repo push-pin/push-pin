@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RecentlyAdded from './RecentlyAdded';
 
 function RecentAddList({ recentArray }) {
-  const recentAdds = recentArray.map(item => {
+  const recentSubs = recentArray.map(item => {
     return (
       <li key={item._id}>
         <RecentlyAdded date={item.date} time={item.time} itemTitle={item.title} user={item.user} id={item._id} />
@@ -17,7 +17,7 @@ function RecentAddList({ recentArray }) {
         <h2>Recently Added</h2>
       </div>
       <ul>
-        {recentAdds}
+        {recentSubs}
       </ul>
     </div>
   );

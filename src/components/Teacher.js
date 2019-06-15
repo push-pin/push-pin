@@ -1,13 +1,14 @@
 import React from 'react';
-import InstWeekAtGlance from '../containers/instructor/InstWeekAtGlance';
+import InstWeekAtGlance from '../containers/instructor/dashboard/InstWeekAtGlance';
+import RecentSubmissionContainer from '../containers/instructor/dashboard/RecentSubmissions';
 
 
 function Teacher() {
 
   return (
     <section style={{ display: 'flex' }}>
-      {/* <Announcements />
-      <DashboardRecentlyUpdated /> */}
+      {/* <Announcements /> */}
+      <RecentSubmissionContainer />
       <InstWeekAtGlance />
     </section>
   );

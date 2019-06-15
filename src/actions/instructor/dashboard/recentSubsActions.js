@@ -1,5 +1,5 @@
 import { createAction } from 'promise-middleware-redux';
-import { fetchRecentSubs } from '../../instructor/dashboard/instWeekActions';
+import { fetchRecentSubs } from '../../../services/instructor/dashboard/recentSubsService';
 
 export const [
   getRecentSubs,
