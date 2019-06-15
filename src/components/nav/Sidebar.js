@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
-import { Navbar, NavItemContainer, LogoStyled, ProfileStyled } from '../../../styles/navbar/Navbar';
+import { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
 
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
@@ -17,8 +17,11 @@ function Sidebar({ links, user }) {
       <NavItemContainer>
         {linkList}
       </NavItemContainer>
-      <ProfileStyled src={user.image || ''} />
-      <button onClick={logOut}>Log out</button>
+      <ProfileContainer>
+        <ProfileStyled src={user.image || ''} />
+        <h4 className="profile-username">{user.username}</h4>
+        <button onClick={logOut}>Log out</button>
+      </ProfileContainer>
     </Navbar>
   );
 }

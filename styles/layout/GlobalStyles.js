@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle `
   html {
     font-family: 'Roboto', sans-serif;
     /* defines what 1rem is -- 10px */
+    /* font-weight: 300; */
     font-size: 62.5%; 
     overflow: scroll;
     overflow-x: hidden;

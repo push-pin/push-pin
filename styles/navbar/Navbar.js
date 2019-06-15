@@ -2,21 +2,28 @@ import styled from 'styled-components';
 
 const Navbar = styled.nav `
   display: flex;
-  border: 2px solid yellow;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 0;
   width: 10vw;
   height: 120vh;
   /* padding: 1rem; */
 
-  background-color: black;
-  color: white;
-
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0,60,145, 1),
+    rgba(75, 182, 207, .8));
 
   .nav-description {
     height: 4rem;
     display: block;
+  }
+
+  .profile-username {
+    color: white;
+    font-weight: 300;
+    font-size: 1.25em;
   }
 
   ul {
@@ -25,7 +32,6 @@ const Navbar = styled.nav `
   }
   
   a {
-
     color: white;
 
     font-size: 2rem;
@@ -36,7 +42,6 @@ const Navbar = styled.nav `
 `;
 
 const NavItemContainer = styled.ul `
-  border: 2px solid yellow;
   width: 100%;
   
   li {   
@@ -44,7 +49,6 @@ const NavItemContainer = styled.ul `
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-    border: 5px solid pink;
 
     a {
       display: flex;
@@ -52,7 +56,6 @@ const NavItemContainer = styled.ul `
       
       .nav-description {
         padding: 0;
-        border: 2px solid green;
         align-self: center;
         width: 2.5em;
         height: auto;
@@ -60,26 +63,45 @@ const NavItemContainer = styled.ul `
   
       h3 {
         font-size: 1.25rem;
+        font-weight: 300;
       }
     }
 
       &:first-child {
         margin-top: 0;
-        border: 5px solid pink;
       }
   }
 `;
 
 const LogoStyled = styled.img `
-  width: 10rem;
+  width: 7rem;
   height: auto;
   border-radius: 100%;
 `;
 
 const ProfileStyled = styled.img `
-  width: 8rem;
+  width: 6rem;
   height: auto;
+  border: 2px solid pink;
   border-radius: 100%;
 `;
 
-export { Navbar, NavItemContainer, LogoStyled, ProfileStyled };
+const ProfileContainer = styled.section `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 9vw;
+
+    button {
+      margin-top: .8rem;
+      width: 8rem;
+      color: white;
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+`;
+
+export { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer };
