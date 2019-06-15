@@ -4,7 +4,6 @@ import DayList from './DayList';
 
 function WeekList({ assignments }) {
   //figure out how to display date as part of header
-  console.log('assignments', assignments);
   return (
     <div>
       <div>

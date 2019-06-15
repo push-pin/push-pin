@@ -13,18 +13,15 @@ class DashboardAnnouncements extends PureComponent {
     announcements: PropTypes.array.isRequired,
     unread: PropTypes.number.isRequired,
     loading: PropTypes.bool.isRequired,
-    error: PropTypes.string
+    error: PropTypes.object
   }
 
   componentDidMount() {
-    console.log('This mounts');
     this.props.fetch();
   }
 
   render(){
-    console.log('made it to render');
     if(!this.props.announcements[1]) {
-      console.log('announcements', this.props.announcements);
       return <h1>Loading</h1>;
     }
     return (
