@@ -10,11 +10,13 @@ import { withSession } from '../containers/auth/withSession';
 import NavContainer from '../containers/navbar/NavContainer';
 // import Styles from './App.css';
 import { MasterContainer } from '../../styles/layout/MasterContainer';
+import { GlobalStyle } from '../../styles/layout/GlobalStyles';
 
 export default function App() {
   return (
     <MasterContainer>
       <Router>
+        <GlobalStyle />
         <NavContainer />
         <Switch>
           <Route exact path="/" component={withSession(Home)} />
