@@ -47,8 +47,8 @@ const NavItemContainer = styled.ul `
   li {   
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 2rem;
+    text-align: center;
 
     a {
       display: flex;
@@ -93,7 +93,7 @@ const ProfileContainer = styled.section `
   justify-content: space-around;
   height: 9vw;
 
-    button {
+    .signout-button {
       margin-top: .8rem;
       width: 8rem;
       color: white;

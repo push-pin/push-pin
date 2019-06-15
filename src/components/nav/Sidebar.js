@@ -20,7 +20,7 @@ function Sidebar({ links, user }) {
       <ProfileContainer>
         <ProfileStyled src={user.image || ''} />
         <h4 className="profile-username">{user.username}</h4>
-        <button onClick={logOut}>Log out</button>
+        <button className="signout-button" onClick={logOut}>Log out</button>
       </ProfileContainer>
     </Navbar>
   );
