@@ -7,7 +7,8 @@ const DashboardContainer = styled.section `
   align-items: center;
   background-color: #F8FCFF;
   height: 140vh;
-  width: 100vw;
+  width: 105vw;
+  margin-left: 13rem;
 `;
 
 // const UpdatesContainer = styled.section `

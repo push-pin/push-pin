@@ -7,7 +7,8 @@ const Navbar = styled.nav `
   align-items: center;
   padding: 2rem 0;
   width: 10vw;
-  height: 150vh;
+  height: 100vh;
+  position: fixed;
   /* padding-bottom: rem; */
 
   background-image: linear-gradient(
@@ -24,13 +25,13 @@ const Navbar = styled.nav `
   ul {
     list-style-type: none;
     padding: 0;
-    margin-bottom: 10rem;
+    /* margin-bottom: 5rem; */
   }
   
   a {
     color: #EBECF6;
 
-    font-size: 2rem;
+    font-size: 1.5em;
     text-decoration: none;
   }
 
@@ -39,11 +40,12 @@ const Navbar = styled.nav `
 
 const NavItemContainer = styled.ul `
   width: 100%;
-  
+  margin-bottom: 2rem;
+
   li {   
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     text-align: center;
 
     a {
@@ -53,7 +55,7 @@ const NavItemContainer = styled.ul `
       .nav-description {
         padding: 1rem 0;
         align-self: center;
-        width: 3.75rem;
+        width: 3rem;
         height: auto;
 
         filter: invert(92%) sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
@@ -72,15 +74,16 @@ const NavItemContainer = styled.ul `
 `;
 
 const LogoStyled = styled.img `
-  width: 7rem;
+  width: 6rem;
   height: auto;
   border-radius: 100%;
 `;
 
 const ProfileStyled = styled.img `
-  width: 6rem;
+  width: 4rem;
   height: auto;
   border-radius: 100%;
+  margin-bottom: .5rem;
 `;
 
 const ProfileContainer = styled.section `
@@ -88,8 +91,7 @@ const ProfileContainer = styled.section `
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 9vw;
-
+  
     .signout-button {
       margin-top: .8rem;
       width: 8rem;
