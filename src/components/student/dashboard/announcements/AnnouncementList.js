@@ -13,7 +13,6 @@ function AnnouncementList({ announcements, unread }) {
       </ListItem>
     );
   });
-
   return (
     <UpperDashboardContainer>
       <ListItemHeader>

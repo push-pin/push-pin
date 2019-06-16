@@ -7,8 +7,8 @@ const Navbar = styled.nav `
   align-items: center;
   padding: 2rem 0;
   width: 10vw;
-  height: 120vh;
-  /* padding: 1rem; */
+  height: 150vh;
+  /* padding-bottom: rem; */
 
   background-image: linear-gradient(
     to right bottom,
@@ -24,6 +24,7 @@ const Navbar = styled.nav `
   ul {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 10rem;
   }
   
   a {

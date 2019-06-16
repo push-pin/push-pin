@@ -19,7 +19,7 @@ const ListItemHeader = styled.div `
   z-index: 100;
 
     h2 {
-      margin: 0 3rem;
+      margin: 0 2rem;
       font-size: 2.5em;
     }
 
@@ -34,7 +34,7 @@ const ListItemHeader = styled.div `
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 0 3rem;
+      margin: 0 2rem;
 
       background-color: #2CE6EA;
       width: 4rem;
