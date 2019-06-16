@@ -6,40 +6,49 @@ const DashboardContainer = styled.section `
   justify-content: space-evenly;
   align-items: center;
   background-color: #F8FCFF;
-  height: 120vh;
+  height: 140vh;
   width: 100vw;
 `;
 
-const UpdatesContainer = styled.section `
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid purple;
-  overflow: hidden;
-  width: 85vw;
-  height: 25rem;
-  `;
+// const UpdatesContainer = styled.section `
+//   display: flex;
+//   justify-content: center;
+//   overflow: hidden;
+//   width: 85vw;
+//   height: auto;
+//   border: 2px solid green;
+//   `;
 
 const AnnouncementsContainer = styled.section `
   display: flex;
-  /* border: 2px solid pink; */
-  overflow-y: scroll;
-  padding-right: 2rem;
+  justify-content: space-between;
   box-sizing: content-box;
-  width: 38vw;
-  height: 28rem;
+  width: 83vw;
+  height: auto;
+  overflow: hidden;
   `;
 
 const WeekAtGlanceContainer = styled.section `
   border: 2px solid aqua;
   overflow-y: auto;
-  width: 85vw;
+  width: 80vw;
   height: 60vh;
 
 `;
 
+const UpperDashboardContainer = styled.section `
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  margin: 0 2rem;
+  overflow: scroll;
+  width: 33vw;
+  height: 40rem;
+`;
+
 export {
   DashboardContainer,
-  UpdatesContainer,
   AnnouncementsContainer,
-  WeekAtGlanceContainer
+  WeekAtGlanceContainer,
+  UpperDashboardContainer
 };

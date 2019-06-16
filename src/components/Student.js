@@ -4,7 +4,6 @@ import Announcements from '../containers/student/dashboard/AnnouncementsContaine
 import DashboardRecentlyUpdated from '../containers/student/dashboard/RecentlyUpdated';
 import {
   DashboardContainer,
-  UpdatesContainer,
   AnnouncementsContainer,
   WeekAtGlanceContainer
 } from '../../styles/layout/DashboardContainer';
@@ -12,14 +11,13 @@ import {
 function Student() {
   return (
     <DashboardContainer>
-      <UpdatesContainer>
-        <AnnouncementsContainer>
-          <Announcements />
-        </AnnouncementsContainer>
-        <AnnouncementsContainer>
-          <DashboardRecentlyUpdated />
-        </AnnouncementsContainer>
-      </UpdatesContainer>
+
+      <AnnouncementsContainer>
+        <Announcements />
+        <DashboardRecentlyUpdated />
+      </AnnouncementsContainer>
+
+
       <WeekAtGlanceContainer>
         <WeekAtGlance />
       </WeekAtGlanceContainer>

@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RecentItem from './RecentItem';
-import { ListItem } from '../../../../../styles/components/ListItem';
+import { ListItem, ListItemUl } from '../../../../../styles/components/ListItem';
 import { ListItemHeader } from '../../../../../styles/components/ListItemHeader';
+import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function RecentList({ recentlyArr, unread }) {
   const recentItems = recentlyArr.map(item => {
@@ -14,15 +15,15 @@ function RecentList({ recentlyArr, unread }) {
   });
 
   return (
-    <div>
+    <UpperDashboardContainer>
       <ListItemHeader>
         <h2>Recent Updates</h2>
         <h2>{unread}</h2>
       </ListItemHeader>
-      <ul>
+      <ListItemUl>
         {recentItems}
-      </ul>
-    </div>
+      </ListItemUl>
+    </UpperDashboardContainer>
   );
 }
 

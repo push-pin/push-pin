@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Announcement from './Announcement';
-import { ListItem } from '../../../../../styles/components/ListItem';
+import { ListItem, ListItemUl } from '../../../../../styles/components/ListItem';
 import { ListItemHeader } from '../../../../../styles/components/ListItemHeader';
+import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function AnnouncementList({ announcements, unread }) {
   const announcementListItems = announcements.map(announcement => {   //where do we limit the number of announcements here?
@@ -14,15 +15,15 @@ function AnnouncementList({ announcements, unread }) {
   });
 
   return (
-    <div>
+    <UpperDashboardContainer>
       <ListItemHeader>
         <h2>Announcements</h2>
         <h2>{unread}</h2>
       </ListItemHeader>
-      <ul>
+      <ListItemUl>
         {announcementListItems}
-      </ul>
-    </div>
+      </ListItemUl>
+    </UpperDashboardContainer>
     
   );
 }

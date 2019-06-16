@@ -21,8 +21,10 @@ const GlobalStyle = createGlobalStyle `
   }
   
   ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    /* Remove scrollbar space */
+    width: 0px;  
+    background: transparent; 
+    /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 /* ::-webkit-scrollbar-thumb {
