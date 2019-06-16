@@ -6,7 +6,7 @@ function DayListInstructor({ dayArray }) {
   const dayItems = dayArray.map(item => {
     return (
       <li key={item._id}>
-        <DayItemInstructor type={item.type} title={item.title} dueDate={item.dueDate} graded={item.graded} />
+        <DayItemInstructor type={item.type} title={item.title} dueDate={item.dueDate} totalGraded={item.totalGraded} totalStudents={item.totalStudents} totalSubmissions={item.totalSubmissions}/>
       </li>
     );
   });

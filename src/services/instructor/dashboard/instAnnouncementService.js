@@ -1,5 +1,5 @@
-export function fetchAnnouncements() {
-  //aggregation that returns an array of announcement objects
+export function fetchInstAnnouncements() {
+  //aggregation that returns an array of announcement objects based on course(s) instructor has
 
   const example = [
     {
@@ -8,7 +8,7 @@ export function fetchAnnouncements() {
       previewText: 'We have moved',
       bodyText: 'our new location is at 666 daddy ave',
       read: false,
-      _id: 'iuhjl'
+      _id: 'ouigh'
     },
     {
       date: 'Wed Jun 12 2019 00:00:00 GMT+0000',
@@ -16,7 +16,7 @@ export function fetchAnnouncements() {
       previewText: 'Will be fixed tomorrow',
       bodyText: 'Sean spilled beer in the router sorry yall',
       read: false,
-      _id: 'iyufgih'
+      _id: 'goihuoj'
     },
     {
       date: 'Tues Jun 11 2019 00:00:00 GMT+0000',
@@ -24,7 +24,7 @@ export function fetchAnnouncements() {
       previewText: 'Its Anna Duh',
       bodyText: 'we are proud to announce that Anna is the best student to walk the halls of Alchemy code lab',
       read: false,
-      _id: 'ifuyogih'
+      _id: 'fogihu'
     },
     {
       date: 'Mon Jun 10 2019 00:00:00 GMT+0000',
@@ -32,7 +32,7 @@ export function fetchAnnouncements() {
       previewText: 'Please welcome Detective Pikachu',
       bodyText: 'D. Pikachu will be teaching Bootcamp Prep and Bootcamp I',
       read: false,
-      _id: 'oguih'
+      _id: 'g8ihuoj'
     }
   ];
 
