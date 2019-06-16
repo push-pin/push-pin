@@ -21,7 +21,7 @@ const ListItem = styled.li `
     width: 12rem;
     background-color: #3A69AA;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     padding: 1rem;
 
     h3 {
@@ -76,6 +76,28 @@ const ListItem = styled.li `
 
 `;
 
+const ListItemWeek = styled(ListItem) `
+  width: 100rem;
+  border: 2px solid yellow;
+
+  .type {
+    display: flex;
+    justify-content: center;
+    color: #313E50;
+    /* border-left: 5px solid #313E50; */
+    border: 2px solid black;
+    width: 25rem;
+  }
+
+  .assignment-detail {
+    border: 2px solid red;
+    width: 100%;
+  }
+
+
+
+`;
+
 
 
 const ListItemUl = styled.ul `
@@ -86,4 +108,10 @@ const ListItemUl = styled.ul `
   height: auto;
 `;
 
-export { ListItem, ListItemUl };
+const ListItemUlWeek = styled(ListItemUl) `
+  display: flex;
+  padding: 4rem;
+  align-items: center;
+`;
+
+export { ListItem, ListItemWeek, ListItemUl, ListItemUlWeek };
