@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import instWeekAtGlance from './dashboard/instWeekReducer';
-// import announcements from './dashboard/announcementsReducer';
+import instAnnouncements from './dashboard/instAnnouncementsReducer';
 import recentSubs from './dashboard/recentSubsReducer';
 
 export default combineReducers({
   instWeekAtGlance,
-  // announcements,
+  instAnnouncements,
   recentSubs
 });

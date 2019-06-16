@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Announcement from './Announcement';
+import Announcement from './InstAnnouncement';
 
 function AnnouncementList({ announcements, unread }) {
   const announcementListItems = announcements.map(announcement => {   //where do we limit the number of announcements here?
