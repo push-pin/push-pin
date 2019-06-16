@@ -25,9 +25,9 @@ const GlobalStyle = createGlobalStyle `
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
+/* ::-webkit-scrollbar-thumb {
+    background: #F8FCFF;
+} */
 
   body {
     box-sizing: border-box;

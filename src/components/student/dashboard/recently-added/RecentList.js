@@ -1,22 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RecentItem from './RecentItem';
+import { ListItem } from '../../../../../styles/components/ListItem';
+import { ListItemHeader } from '../../../../../styles/components/ListItemHeader';
 
 function RecentList({ recentlyArr, unread }) {
   const recentItems = recentlyArr.map(item => {
     return (
-      <li key={item._id}>
+      <ListItem key={item._id}>
         <RecentItem date={item.date} time={item.time} title={item.title} submissionType={item.submissionType} eventType={item.eventType} id={item._id} />
-      </li>
+      </ListItem>
     );
   });
 
   return (
     <div>
-      <div>
+      <ListItemHeader>
         <h2>Recent Updates</h2>
         <h2>{unread}</h2>
-      </div>
+      </ListItemHeader>
       <ul>
         {recentItems}
       </ul>

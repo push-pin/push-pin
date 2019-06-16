@@ -15,13 +15,8 @@ const Navbar = styled.nav `
     rgba(0,60,145, 1),
     rgba(75, 182, 207, .8));
 
-  .nav-description {
-    height: 4rem;
-    display: block;
-  }
-
   .profile-username {
-    color: white;
+    color: #EBECF6;
     font-weight: 300;
     font-size: 1.25em;
   }
@@ -32,7 +27,7 @@ const Navbar = styled.nav `
   }
   
   a {
-    color: white;
+    color: #EBECF6;
 
     font-size: 2rem;
     text-decoration: none;
@@ -55,10 +50,12 @@ const NavItemContainer = styled.ul `
       flex-direction: column;
       
       .nav-description {
-        padding: 0;
+        padding: 1rem 0;
         align-self: center;
-        width: 2.5em;
+        width: 3.75rem;
         height: auto;
+
+        filter: invert(92%) sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
       }
   
       h3 {
@@ -82,7 +79,6 @@ const LogoStyled = styled.img `
 const ProfileStyled = styled.img `
   width: 6rem;
   height: auto;
-  border: 2px solid pink;
   border-radius: 100%;
 `;
 
@@ -96,7 +92,7 @@ const ProfileContainer = styled.section `
     .signout-button {
       margin-top: .8rem;
       width: 8rem;
-      color: white;
+      color: #EBECF6;
       background-color: transparent;
       border: none;
       text-transform: uppercase;

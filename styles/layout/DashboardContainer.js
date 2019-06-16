@@ -5,7 +5,7 @@ const DashboardContainer = styled.section `
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border: 2px solid red;
+  background-color: #F8FCFF;
   height: 120vh;
   width: 100vw;
 `;
@@ -15,24 +15,24 @@ const UpdatesContainer = styled.section `
   justify-content: space-between;
   border: 2px solid purple;
   overflow: hidden;
-  width: 80vw;
-  height: 22rem;
+  width: 85vw;
+  height: 25rem;
   `;
 
 const AnnouncementsContainer = styled.section `
-  border: 2px solid pink;
+  display: flex;
+  /* border: 2px solid pink; */
   overflow-y: scroll;
   padding-right: 2rem;
   box-sizing: content-box;
-  width: 33vw;
-  height: 22rem;
-  
+  width: 38vw;
+  height: 28rem;
   `;
 
 const WeekAtGlanceContainer = styled.section `
   border: 2px solid aqua;
   overflow-y: auto;
-  width: 80vw;
+  width: 85vw;
   height: 60vh;
 
 `;
