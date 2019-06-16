@@ -45,10 +45,10 @@ const ListItem = styled.li `
 
     .preview {
       font-family: 'Open Sans', sans-serif;
-      font-size: 1.3em;
+      font-size: 1.4em;
       font-weight: 400;
       color: #313E50;
-      margin-bottom: .5rem;
+      margin-bottom: .4rem;
     }
 
     .recentEvent {
@@ -57,10 +57,16 @@ const ListItem = styled.li `
       color: #313E50;
     }
 
+    .recentSubmission {
+      font-size: 1.8em;
+      margin-bottom: 1.5rem;
+      color: #313E50;
+    }
+
     p {
       font-family: 'Open Sans', sans-serif;
-      font-size: 1.5em;
-      font-weight: 100;
+      font-size: 1.2em;
+      font-weight: 400;
       color: #313E50;
       line-height: 1.5em;
     }

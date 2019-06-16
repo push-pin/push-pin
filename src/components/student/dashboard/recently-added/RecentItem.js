@@ -12,7 +12,7 @@ function RecentItem({ date, time, title, submissionType, eventType, id }) {
       </div>
       <div className="info">
         <h4 className="recentEvent">{eventType}</h4>
-        <p>{submissionType}: {title}</p>
+        <p className="recentSubmission">{submissionType}: {title}</p>
         <p>{id}</p>
       </div>
     </>
