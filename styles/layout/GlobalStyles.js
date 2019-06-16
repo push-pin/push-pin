@@ -17,12 +17,14 @@ const GlobalStyle = createGlobalStyle `
     overflow: scroll;
     overflow-x: hidden;
 
+
     
   }
   
   ::-webkit-scrollbar {
     /* Remove scrollbar space */
     width: 0px;  
+    height: 0px;
     background: transparent; 
     /* Optional: just make scrollbar invisible */
 }

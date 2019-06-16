@@ -31,7 +31,7 @@ const AnnouncementsContainer = styled.section `
 const WeekAtGlanceContainer = styled.section `
   border: 2px solid aqua;
   overflow-y: auto;
-  width: 80vw;
+  width: 83vw;
   height: 60vh;
 
 `;
@@ -39,11 +39,15 @@ const WeekAtGlanceContainer = styled.section `
 const UpperDashboardContainer = styled.section `
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
-  margin: 0 2rem;
+  align-items: center;
+  /* background-color: lightgrey; */
+  /* margin: 0 2rem; */
   overflow: scroll;
-  width: 33vw;
-  height: 40rem;
+  width: 38.5vw;
+  height: 38rem;
+  border-bottom: .5rem solid rgba(0,60,145, .5);
+  box-shadow: inset 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+    
 `;
 
 export {

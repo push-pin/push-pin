@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const ListItem = styled.li `
-  margin-left: .5rem;
   background-color: #FDFDFD;
   height: 10rem;
-  width: 32vw;
+  width: 36vw;
   margin-top: 2rem;
   list-style-type: none;
   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
@@ -18,7 +17,7 @@ const ListItemUl = styled.ul `
   display:flex;
   flex-direction: column;
   position: relative;
-  margin-top: 8rem;
+  padding-top: 8rem;
   height: auto;
 `;
 

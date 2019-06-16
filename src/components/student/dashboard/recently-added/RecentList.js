@@ -18,7 +18,9 @@ function RecentList({ recentlyArr, unread }) {
     <UpperDashboardContainer>
       <ListItemHeader>
         <h2>Recent Updates</h2>
-        <h2>{unread}</h2>
+        <div>
+          <h3>{unread}</h3>
+        </div>
       </ListItemHeader>
       <ListItemUl>
         {recentItems}

@@ -18,7 +18,9 @@ function AnnouncementList({ announcements, unread }) {
     <UpperDashboardContainer>
       <ListItemHeader>
         <h2>Announcements</h2>
-        <h2>{unread}</h2>
+        <div>
+          <h3>{unread}</h3>
+        </div>
       </ListItemHeader>
       <ListItemUl>
         {announcementListItems}
