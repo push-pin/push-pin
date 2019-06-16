@@ -1,7 +1,7 @@
 import { getRecentSubs } from './recentSubsActions';
 
 describe('instructor recent submissions actions', () => {
-  it('creates an action to fetch week', () => {
+  it('creates an action to fetch recent submissions', () => {
     const action = getRecentSubs();
 
     expect(action).toEqual({
