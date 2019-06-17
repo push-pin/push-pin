@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../../selectors/sessionSelectors';
 import Sidebar from '../../components/nav/Sidebar';
-import { studentLink, teacherLink } from '../../../assets/link-info/pageLinks';
+import { studentLink } from '../../../assets/link-info/pageLinks';
 
 class NavContainer extends PureComponent {
   static propTypes = {
@@ -13,7 +13,7 @@ class NavContainer extends PureComponent {
   render() {
     const { user } = this.props;
     if(user.userType === 'Teacher') {
-      return <Sidebar links={teacherLink} user={user} />;
+      return <Sidebar links={studentLink} user={user} />;
     } else {
       return <Sidebar links={studentLink} user={user} />;
     }

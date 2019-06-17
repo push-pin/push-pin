@@ -5,6 +5,8 @@ import { getAnnouncements } from '../../../actions/student/dashboard/announcemen
 import { selectAnnouncements, selectUnreadAnnouncements, selectAnnouncementsLoading, selectAnnouncementsError } from '../../../selectors/student/dashboard/announcementSelectors';
 import AnnouncementList from '../../../components/student/dashboard/announcements/AnnouncementList';
 
+import { ListItemHeader } from '../../../../styles/components/ListItemHeader';
+
 class DashboardAnnouncements extends PureComponent {
   //should somehow update component once something is read
   //how does that interact with database? do an update on leaving the page somehow?
@@ -25,6 +27,7 @@ class DashboardAnnouncements extends PureComponent {
       return <h1>Loading</h1>;
     }
     return (
+      
       <AnnouncementList announcements={this.props.announcements} unread={this.props.unread} />
     );
   }
