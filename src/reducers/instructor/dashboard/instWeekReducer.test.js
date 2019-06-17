@@ -8,7 +8,7 @@ const initialState = {
   error: {}
 };
 
-describe('instructor week at a glance reducer', () => {
+describe('instructor week hi at a glance reducer', () => {
   it('handles the GET_INST_WEEK_PENDING action', () => {
     expect(reducer(initialState, { type: 'GET_INST_WEEK_PENDING' })).toEqual({
       loading: true,
