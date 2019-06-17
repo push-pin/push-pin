@@ -70,7 +70,8 @@ const DayContainer = styled.section `
   /* border: 2px solid purple; */
 
   .day-stripe {
-    background-color: lightsalmon;
+    background-color: #3A69AA;
+    color: #EDF2F7;
   }
 
   h3 {

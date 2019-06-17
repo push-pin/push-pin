@@ -78,23 +78,36 @@ const ListItem = styled.li `
 
 const ListItemWeek = styled(ListItem) `
   width: 100rem;
-  border: 2px solid yellow;
 
   .type {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    color: #313E50;
+    align-items: center;
     /* border-left: 5px solid #313E50; */
-    border: 2px solid black;
+    background-color: #3A69AA;
     width: 25rem;
+    color: white;
+    line-height: 0;
   }
+  
+  h4 {
+      font-size: 1.8em;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.5em;
+      font-weight: 400;
+      line-height: 1.5em;
+    }
 
   .assignment-detail {
-    border: 2px solid red;
     width: 100%;
+    padding: 1.5em;
   }
-
-
 
 `;
 
