@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ReadingSubmission({ handleSubmit, handleChange, textBody }) {
+function ReadingForm({ handleSubmit, handleChange, textBody }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -12,10 +12,10 @@ function ReadingSubmission({ handleSubmit, handleChange, textBody }) {
   );
 }
 
-ReadingSubmission.propTypes = {
+ReadingForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   textBody: PropTypes.string.isRequired
 };
 
-export default ReadingSubmission;
+export default ReadingForm;
