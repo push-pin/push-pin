@@ -48,9 +48,9 @@ const NavItemContainer = styled.ul `
     margin-top: 1.5rem;
     text-align: center;
     padding: .5rem;
-    position relative;
-      display: flex;
-      flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
       
       .nav-description {
         padding: 1rem 0;
