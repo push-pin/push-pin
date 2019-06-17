@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayItem from './dayItem';
+import DayItem from './DayItem';
 import { ListItemWeek, ListItemUlWeek } from '../../../../../styles/components/ListItem';
 
 function DayList({ dayArray }) {
