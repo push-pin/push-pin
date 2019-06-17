@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DayItem from './dayItem';
+import DayItem from './DayItem';
+import { ListItemWeek, ListItemUlWeek } from '../../../../../styles/components/ListItem';
 
 function DayList({ dayArray }) {
   const dayItems = dayArray.map(item => {
     return (
-      <li key={item._id}>
+      <ListItemWeek key={item._id}>
         <DayItem type={item.type} title={item.title} dueDate={item.dueDate} submitted={item.submitted} />
-      </li>
+      </ListItemWeek>
     );
   });
 
   return (
     <>
-      <ul>
+      <ListItemUlWeek>
         {dayItems}
-      </ul>
+      </ListItemUlWeek>
     </>
   );
 }

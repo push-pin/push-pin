@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Sidebar.css';
 import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
+import { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
 
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
-    <li key={id}>
+    // eslint-disable-next-line react/jsx-key
+    <li className="nav-links" key={id}>
       <NavLink oneLink={link} />
     </li>
   ));
   return (
-    <nav className={styles.Sidebar}>
-      <ul>
+    <Navbar>
+      <LogoStyled src="../../../assets/thumbtack.png" />
+      <NavItemContainer>
         {linkList}
-      </ul>
-      <img src={user.image || ''} />
-      <button onClick={logOut}>Log out</button>
-    </nav>
+      </NavItemContainer>
+      <ProfileContainer>
+        <ProfileStyled src={user.image || ''} />
+        <h4 className="profile-username">{user.username}</h4>
+        <button className="signout-button" onClick={logOut}>Log out</button>
+      </ProfileContainer>
+    </Navbar>
   );
 }
 

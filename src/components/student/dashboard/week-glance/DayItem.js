@@ -4,10 +4,14 @@ import PropTypes from 'prop-types';
 function DayItem({ type, title, dueDate, submitted }) {
   return (
     <>
-      <h3>{type}</h3>
-      <h4>{title}</h4>
-      <p>{dueDate}</p>
-      <p>Submitted: {submitted}</p>
+      <div className="type">
+        <h3>{type}</h3>
+      </div>
+      <div className="assignment-detail">
+        <h4>{title}</h4>
+        <p>{dueDate}</p>
+        <p>Submitted: {submitted}</p>
+      </div>
     </>
   );
 }
