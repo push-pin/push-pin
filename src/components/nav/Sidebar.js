@@ -7,7 +7,7 @@ import { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer }
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
     // eslint-disable-next-line react/jsx-key
-    <li key={id}>
+    <li className="nav-links" key={id}>
       <NavLink oneLink={link} />
     </li>
   ));

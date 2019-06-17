@@ -42,20 +42,20 @@ const NavItemContainer = styled.ul `
   width: 100%;
   margin-bottom: 2rem;
 
-  li {   
+  .nav-links {   
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
     text-align: center;
-
-    a {
+    padding: .5rem;
+    position relative;
       display: flex;
       flex-direction: column;
       
       .nav-description {
         padding: 1rem 0;
         align-self: center;
-        width: 3rem;
+        width: 2.5rem;
         height: auto;
 
         filter: invert(92%) sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
@@ -65,12 +65,35 @@ const NavItemContainer = styled.ul `
         font-size: 1.25rem;
         font-weight: 300;
       }
+
+    :hover {
+      /* background-color: #003784;
+      transform: translateY(-.2rem);
+      transition: .4s; */
+      color: red;
+      /* width: 0%; */
+    }
+
+    ::after {
+      position: absolute;
+      content: '';
+      top:0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #003784;
+      transform-origin:left;
+      transition:width 0.25s ease;
+      z-index:-1;
+    }
+
+    :hover::after {
+      width: 100%;
     }
 
       &:first-child {
         margin-top: 0;
       }
-  }
 `;
 
 const LogoStyled = styled.img `
