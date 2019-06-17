@@ -1,10 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<section
-  className="App"
->
+<styled.section>
   <BrowserRouter>
+    <GlobalStyleComponent />
     <Connect(NavContainer) />
     <Switch>
       <Route
@@ -34,5 +33,5 @@ exports[`App component renders App 1`] = `
       />
     </Switch>
   </BrowserRouter>
-</section>
+</styled.section>
 `;
