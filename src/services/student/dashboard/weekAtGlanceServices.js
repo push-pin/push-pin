@@ -2,10 +2,10 @@ export function fetchWeek() {
   // const today = new Date();
   // const diff = today.getDate() - today.getDay() + (today.getDay() === 0 ? -6 : 1);
   // const monday =  new Date(today.setDate(diff));
-  //date.toString() gives you Mon June 10 2019 ...
+  // date.toString() gives you Mon June 10 2019 ...
 
-  //fetch using monday date
-  //map the returned array of assignments into an object of arrays based on day
+  // fetch using monday date
+  // map the returned array of assignments into an object of arrays based on day
   return {
     Mon: [
       {

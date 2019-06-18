@@ -3,15 +3,18 @@ import InstWeekAtGlance from '../containers/instructor/dashboard/InstWeekAtGlanc
 import RecentSubmissionContainer from '../containers/instructor/dashboard/RecentSubmissions';
 import InstAnnouncementsContainer from '../containers/instructor/dashboard/InstAnnouncements';
 
+import {
+  DashboardContainer
+
+} from '../../styles/layout/DashboardContainer';
 
 function Teacher() {
-
   return (
-    <section style={{ display: 'flex' }}>
+    <DashboardContainer>
       <InstAnnouncementsContainer  />
       <RecentSubmissionContainer />
       <InstWeekAtGlance />
-    </section>
+    </DashboardContainer>
   );
 }
 
