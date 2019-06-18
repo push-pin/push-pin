@@ -7,28 +7,32 @@ export function fetchAnnouncements() {
       header: 'New Class Location',
       previewText: 'We have moved',
       bodyText: 'our new location is at 666 daddy ave',
-      read: false
+      read: false,
+      _id: 'iuhjl'
     },
     {
       date: 'Wed Jun 12 2019 00:00:00 GMT+0000',
       header: 'Wifi Is Down',
       previewText: 'Will be fixed tomorrow',
       bodyText: 'Sean spilled beer in the router sorry yall',
-      read: false
+      read: false,
+      _id: 'iyufgih'
     },
     {
       date: 'Tues Jun 11 2019 00:00:00 GMT+0000',
       header: 'Student of the month',
       previewText: 'Its Anna Duh',
       bodyText: 'we are proud to announce that Anna is the best student to walk the halls of Alchemy code lab',
-      read: false
+      read: false,
+      _id: 'ifuyogih'
     },
     {
       date: 'Mon Jun 10 2019 00:00:00 GMT+0000',
       header: 'New Instructor Hired',
       previewText: 'Please welcome Detective Pikachu',
       bodyText: 'D. Pikachu will be teaching Bootcamp Prep and Bootcamp I',
-      read: false
+      read: false,
+      _id: 'oguih'
     }
   ];
 

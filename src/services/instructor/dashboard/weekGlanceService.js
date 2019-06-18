@@ -1,4 +1,4 @@
-export function getInstWeek() {
+export function fetchInstWeek() {
   const today = new Date();
   const diff = today.getDate() - today.getDay() + (today.getDay() === 0 ? -6 : 1);
   const monday =  new Date(today.setDate(diff));
@@ -14,7 +14,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 15
+        totalSubmissions: 15,
+        totalGraded: 15,
+        _id: 'fghjk'
       },
       {
         classDate: 'Mon Jun 10 2019 00:00:00 GMT+0000',
@@ -22,7 +24,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 0
+        totalSubmissions: 6,
+        totalGraded: 0,
+        _id: 'ertdyfugv'
       }
     ],
     Tues: [
@@ -32,7 +36,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 10
+        totalSubmissions: 12,
+        totalGraded: 10,
+        _id: 'iuvblhjk'
       },
       {
         classDate: 'Tues Jun 11 2019 00:00:00 GMT+0000',
@@ -40,7 +46,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 10
+        totalSubmissions: 20,
+        totalGraded: 10,
+        _id: '456t7yuih'
       }
     ],
     Wed: [
@@ -50,7 +58,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 10
+        totalSubmissions: 20,
+        totalGraded: 10,
+        _id: '7fougyiho'
       },
       {
         classDate: 'Wed Jun 12 2019 00:00:00 GMT+0000',
@@ -58,7 +68,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 10
+        totalSubmissions: 20,
+        totalGraded: 10,
+        _id: 'iytfuglk'
       }
     ],
     Thurs: [
@@ -68,7 +80,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 10
+        totalSubmissions: 20,
+        totalGraded: 10,
+        _id: '76t8o'
       },
       {
         classDate: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
@@ -76,7 +90,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 13
+        totalSubmissions: 20,
+        totalGraded: 13,
+        _id: '86579t8ypuoij'
       }
     ],
     Fri: [
@@ -86,7 +102,9 @@ export function getInstWeek() {
         type: 'reading',
         title: 'intro to react',
         totalStudents: 20,
-        totalGraded: 10
+        totalSubmissions: 20,
+        totalGraded: 10,
+        _id: '9768oiuyhb'
       }
     ],
   };

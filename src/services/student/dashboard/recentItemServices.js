@@ -7,7 +7,7 @@ export function fetchRecents() {
       submissionType: 'mob',
       eventType: 'comment',
       id: '12345',
-      read: false
+      read: true
     },
     {
       date: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
