@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Announcement({ date, header, previewText, bodyText, id }) {
   return (
     <> 
-     {/*make this a link to announcement detail, using announcement id  */}
+     {/*make this a link to announcement detail, using announcement id!! */}
      <h3>{date}</h3>
      <h4>{header}</h4>
      <p>{previewText}</p>
