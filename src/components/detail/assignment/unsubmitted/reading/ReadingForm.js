@@ -5,7 +5,7 @@ function ReadingForm({ handleSubmit, handleChange, textBody }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <textarea value={textBody} onChange={handleChange}></textarea>
+        <textarea name="textBody" value={textBody} onChange={handleChange}></textarea>
         <button>Submit</button>
       </form>
     </>
