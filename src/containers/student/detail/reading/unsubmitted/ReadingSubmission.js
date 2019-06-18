@@ -26,9 +26,7 @@ class ReadingSubmission extends PureComponent {
     // const { submission, student, assignment } = this.state;
     this.props.post(this.props.assignment, this.props.student, this.state.submission);
     this.setState({
-      submission: '',
-      student: '',
-      assignment: ''
+      submission: ''
     });
   }
 
@@ -39,10 +37,10 @@ class ReadingSubmission extends PureComponent {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, props) => ({
   // student: selectUserId(state),
   student: '5d081634a08f000017f64a71',
-  assignment: '5d07e2db71a8382af43cd975'
+  // assignment: match.params.id
 });
 
 const mapDispatchToProps = dispatch => ({
