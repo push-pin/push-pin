@@ -19,7 +19,7 @@ class Home extends PureComponent {
   }
 
   render() {
-
+    
     if(this.props.user.role) {
       if(this.props.user.role === 'Teacher') return <Teacher />;
       return <Student />;
@@ -27,7 +27,7 @@ class Home extends PureComponent {
     return <h1>Loading...</h1>;
   }
 }
-
+//remove this comment later
 const mapStateToProps = state => ({
   auth0Id: getId(state),
   user: getUser(state),

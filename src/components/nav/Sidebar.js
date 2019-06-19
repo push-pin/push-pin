@@ -19,7 +19,7 @@ function Sidebar({ links, user }) {
       </NavItemContainer>
       <ProfileContainer>
         <ProfileStyled src={user.image || ''} />
-        <h4 className="profile-username">{user.username}</h4>
+        <h4 className="profile-username">{user.firstName} {user.lastName}</h4>
         <button className="signout-button" onClick={logOut}>Log out</button>
       </ProfileContainer>
     </Navbar>
