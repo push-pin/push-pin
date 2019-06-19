@@ -9,20 +9,19 @@ function Announcement({ date, header, previewText, bodyText, id }) {
   //     return (bodyText.subString(0, 5) + '...');
   //   }
   // }
-  
 
   return (
     <> 
      {/*make this a link to announcement detail, using announcement id  */}
-     <div className="date">
-       <h3>{date}</h3>
-     </div>
-     <div className="info">
-       <h4>{header}</h4>
-       <p className="preview">{previewText}</p>
-       <p>{bodyText}</p>
-       <p>{id}</p>  {/*delete this later once link is created */}
-     </div>
+      <div className="date">
+        <h3>{date}</h3>
+      </div>
+      <div className="info">
+        <h4>{header}</h4>
+        <p className="preview">{previewText}</p>
+        <p>{bodyText}</p>
+        <p>{id}</p>  {/*delete this later once link is created */}
+      </div>
     </>
   );
 }

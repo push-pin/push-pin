@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DayItemInstructor from './DayItemInstructor';
+import { ListItemWeek, ListItemUlWeek } from '../../../../../styles/components/ListItem';
+
 
 function DayListInstructor({ dayArray }) {
   const dayItems = dayArray.map(item => {
     return (
-      <li key={item._id}>
+      <ListItemWeek key={item._id}>
         <DayItemInstructor type={item.type} title={item.title} dueDate={item.dueDate} totalGraded={item.totalGraded} totalStudents={item.totalStudents} totalSubmissions={item.totalSubmissions}/>
-      </li>
+      </ListItemWeek>
     );
   });
 
   return (
     <>
-      <ul>
+      <ListItemUlWeek>
         {dayItems}
-      </ul>
+      </ListItemUlWeek>
     </>
   );
 }

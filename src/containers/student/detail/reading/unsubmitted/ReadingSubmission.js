@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ReadingForm from '../../../../../components/detail/assignment/unsubmitted/reading/ReadingForm';
-import { selectUserId, selectAssignmentId } from '../../../../../selectors/student/detail/submissionSelectors';
+// import { selectUserId } from '../../../../../selectors/student/detail/submissionSelectors';
 import { createSubmission } from '../../../../../actions/student/detail/assignment/reading/unsubmitted/readingSubmissionActions';
 
 class ReadingSubmission extends Component {
