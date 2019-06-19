@@ -68,18 +68,9 @@ export const fetchAssesByCourse = () => {
     ],
     subs: [
       {
-        '_id': '5d07e2db71a8382af43cd9d7',
+        '_id': '5d07e2db71a8382af43cd975',
         'graded': false,
-        'assignment': '5d07e2db71a8382af43cd975',
-        'student': '5d07e2db71a8382af43cd9bc',
-        'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
-        'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
-      },
-      {
-        '_id': '5d07e2db71a8382af43cd999',
-        'graded': false,
-        'assignment': '5d07e2db71a8382af43cd975',
+        'assignment': '5d07e2db71a8382af43cd999',
         'student': '5d07e2db71a8382af43cd9bc',
         'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
         'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
@@ -87,8 +78,17 @@ export const fetchAssesByCourse = () => {
       },
       {
         '_id': '5d07e2db71a8382af43cd981',
-        'graded': false,
-        'assignment': '5d07e2db71a8382af43cd975',
+        'graded': true,
+        'assignment': '5d07e2db71a8382af43cd97c',
+        'student': '5d07e2db71a8382af43cd9bc',
+        'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
+        'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+        'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
+      },
+      {
+        '_id': '5d07e2db71a8382af43cd981',
+        'graded': true,
+        'assignment': '5d07e2db71a8382af43cd999',
         'student': '5d07e2db71a8382af43cd9bc',
         'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
         'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
@@ -96,66 +96,77 @@ export const fetchAssesByCourse = () => {
       },
     ]
   };
-
-  const numWeeks = calculateWeeksBetween(response.course.startDate, response.course.endDate);
-
+  return leanedAsses(response);
 };
 
-
-
-function calculateWeeksBetween(date1, date2) {
-  // The number of milliseconds in one week
-  const ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
-  // Convert both dates to milliseconds
-  const date1_ms = date1.getTime();
-  const date2_ms = date2.getTime();
-  // Calculate the difference in milliseconds
-  const difference_ms = Math.abs(date1_ms - date2_ms);
-  // Convert back to weeks and return hole weeks
-  return Math.floor(difference_ms / ONE_WEEK);
-}
-
-const week = () => ({
-  mon: [],
-  tue: [],
-  wed: [],
-  thur: [],
-  fri: []
-});
-
-for (let i = 0; i < numWeeks; i++) {
-  const newWeekName = `week${i + 1}`;
-  courseAsses[newWeekName] = week();
-  return courseAsses;
-}
-
-const courseAsses = {
-  week1: {
-    mon: [],
-    tue: [],
-    wed: [],
-    thur: [],
-    fri: []
-  },
-  week2: {
-    mon: [],
-    tue: [],
-    wed: [],
-    thur: [],
-    fri: []
-  },
-  week3: {
-    mon: [],
-    tue: [],
-    wed: [],
-    thur: [],
-    fri: []
-  },
-  week4: {
-    mon: [],
-    tue: [],
-    wed: [],
-    thur: [],
-    fri: []
-  },
+const leanedAsses = ({ asses, subs }) => {
+  console.log(subs);
+  return asses.map(ass => {
+    let grade = false;
+    subs.forEach(sub => {if(sub.assignment === ass._id) grade = sub.graded;});
+    return {
+      _id: ass._id,
+      type: ass.type,
+      title: ass.title,
+      classDate: ass.classDate,
+      grade: grade
+    };
+  });
 };
+
+// function calculateWeeksBetween(date1, date2) {
+//   // The number of milliseconds in one week
+//   const ONE_WEEK = 1000 * 60 * 60 * 24 * 7;
+//   // Convert both dates to milliseconds
+//   const date1_ms = date1.getTime();
+//   const date2_ms = date2.getTime();
+//   // Calculate the difference in milliseconds
+//   const difference_ms = Math.abs(date1_ms - date2_ms);
+//   // Convert back to weeks and return hole weeks
+//   return Math.floor(difference_ms / ONE_WEEK);
+// }
+
+// const week = () => ({
+//   mon: [],
+//   tue: [],
+//   wed: [],
+//   thur: [],
+//   fri: []
+// });
+
+// for(let i = 0; i < numWeeks; i++) {
+//   const newWeekName = `week${i + 1}`;
+//   courseAsses[newWeekName] = week();
+//   return courseAsses;
+// }
+
+// const courseAsses = {
+//   week1: {
+//     mon: [],
+//     tue: [],
+//     wed: [],
+//     thur: [],
+//     fri: []
+//   },
+//   week2: {
+//     mon: [],
+//     tue: [],
+//     wed: [],
+//     thur: [],
+//     fri: []
+//   },
+//   week3: {
+//     mon: [],
+//     tue: [],
+//     wed: [],
+//     thur: [],
+//     fri: []
+//   },
+//   week4: {
+//     mon: [],
+//     tue: [],
+//     wed: [],
+//     thur: [],
+//     fri: []
+//   },
+// };
