@@ -11,7 +11,8 @@ class WeekContainer extends PureComponent {
     fetch: PropTypes.func.isRequired,
     assignments: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired, 
-    error: PropTypes.object
+    error: PropTypes.object,
+    _id: PropTypes.string
   }
 
   componentDidMount() {
@@ -39,7 +40,7 @@ const mapStateToProps = state => ({
   error: selectWeekError(state)
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   fetch() {
     dispatch(getWeekAtGlance());
   }
