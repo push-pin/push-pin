@@ -20,9 +20,8 @@ class Home extends PureComponent {
 
   render() {
 
-    if(this.props.user.userType) {
-      console.log(this.props.user);
-      if(this.props.user.userType === 'Teacher') return <Teacher />;
+    if(this.props.user.role) {
+      if(this.props.user.role === 'Teacher') return <Teacher />;
       return <Student />;
     }
     return <h1>Loading...</h1>;

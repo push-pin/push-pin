@@ -1,30 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RecentlyAdded from './RecentlyAdded';
+import { ListItem, ListItemUl } from '../../../../../styles/components/ListItem';
+import { ListItemHeader } from '../../../../../styles/components/ListItemHeader';
+import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardContainer';
 
-function RecentAddList({ recentArray }) {
-  const recentAdds = recentArray.map(item => {
+function RecentAddList({ recentArray, unread }) {
+  const recentSubs = recentArray.map(item => {
     return (
-      <li key={item._id}>
-        <RecentlyAdded date={item.date} time={item.time} itemTitle={item.title} user={item.user} id={item._id} />
-      </li>
+      <ListItem key={item._id}>
+        <RecentlyAdded date={item.date} time={item.time} itemTitle={item.itemTitle} user={item.user} id={item._id} />
+      </ListItem>
     );
   });
 
   return (
-    <div>
-      <div>
-        <h2>Recently Added</h2>
-      </div>
-      <ul>
-        {recentAdds}
-      </ul>
-    </div>
+    <UpperDashboardContainer>
+      <ListItemHeader>
+        <h2>Recently Submitted</h2>
+        <div>
+          <h3>{unread}</h3>
+        </div>
+      </ListItemHeader>
+      <ListItemUl>
+        {recentSubs}
+      </ListItemUl>
+    </UpperDashboardContainer>
   );
 }
 
 RecentAddList.propTypes = {
   recentArray: PropTypes.array.isRequired,
+  unread: PropTypes.number.isRequired
 };
 
 export default RecentAddList;

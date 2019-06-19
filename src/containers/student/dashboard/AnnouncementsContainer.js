@@ -25,6 +25,7 @@ class DashboardAnnouncements extends PureComponent {
       return <h1>Loading</h1>;
     }
     return (
+      
       <AnnouncementList announcements={this.props.announcements} unread={this.props.unread} />
     );
   }

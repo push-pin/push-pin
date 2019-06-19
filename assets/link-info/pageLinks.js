@@ -1,54 +1,55 @@
-import home from '../download.png';
-import student from '../student.jpg';
-import teacher from '../teacher.jpg';
+import assignments from '../nav-icons/assignments.png';
+import calendar from '../nav-icons/calendar.png';
+import grades from '../nav-icons/grades.png';
+import resources from '../nav-icons/resources.png';
 
 export const studentLink = [
   {
     address: '/teacher',
-    image: home,
+    image: calendar,
     description: 'Calendar',
   },
   {
     address: '/',
-    image: student,
-    description: 'Grades'
-  },
-  {
-    address: '/',
-    image: teacher,
+    image: assignments,
     description: 'Assignments'
   },
   {
     address: '/',
-    image: teacher,
+    image: grades,
+    description: 'grades'
+  },
+  {
+    address: '/',
+    image: resources,
     description: 'Resources'
   }
 ];
 
-export const teacherLink = [
-  {
-    address: '/student',
-    image: student,
-    description: 'Calendar'
-  },
-  {
-    address: '/',
-    image: home,
-    description: 'Grade Book'
-  },
-  {
-    address: '/',
-    image: teacher,
-    description: 'Attendance'
-  },
-  {
-    address: '/',
-    image: teacher,
-    description: 'Resources'
-  },
-  {
-    address: '/',
-    image: student,
-    description: 'Create'
-  }
-];
+// export const teacherLink = [
+//   {
+//     address: '/student',
+//     image: student,
+//     description: 'Calendar'
+//   },
+//   {
+//     address: '/',
+//     image: home,
+//     description: 'Grade Book'
+//   },
+//   {
+//     address: '/',
+//     image: teacher,
+//     description: 'Attendance'
+//   },
+//   {
+//     address: '/',
+//     image: teacher,
+//     description: 'Resources'
+//   },
+//   {
+//     address: '/',
+//     image: student,
+//     description: 'Create'
+//   }
+// ];

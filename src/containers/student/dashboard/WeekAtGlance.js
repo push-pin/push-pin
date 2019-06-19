@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import WeekList from '../../../components/student/dashboard/week-glance/WeekList';
 import { connect } from 'react-redux';
-import { getWeek, getWeekError, getWeekLoading } from '../../../selectors/student/dashboard/weekSelectors';
+import { selectWeek, selectWeekError, selectWeekLoading } from '../../../selectors/student/dashboard/weekSelectors';
 import { getWeekAtGlance } from '../../../actions/student/dashboard/weekActions';
-import Styles from './WeekAtGlance.css';
+// import Styles from './WeekAtGlance.css';
 
 class WeekContainer extends PureComponent {
   static propTypes = {
@@ -25,7 +25,7 @@ class WeekContainer extends PureComponent {
     }
     else {
       return (
-        <section className={Styles.WeekAtGlance}>
+        <section>
           <WeekList assignments={this.props.assignments} />
         </section>
       );
@@ -34,9 +34,9 @@ class WeekContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  assignments: getWeek(state),
-  loading: getWeekLoading(state),
-  error: getWeekError(state)
+  assignments: selectWeek(state),
+  loading: selectWeekLoading(state),
+  error: selectWeekError(state)
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -49,5 +49,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(WeekContainer);
-
-
