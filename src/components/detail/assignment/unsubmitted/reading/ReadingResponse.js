@@ -8,9 +8,7 @@ function ReadingResponse({ submission, student, createdAt }) {
       <h3>{student.firstName} {student.lastName}</h3>
       <p>{createdAt}</p>
     </section>
-    <p>
-      {submission}
-    </p>
+    <div dangerouslySetInnerHTML={createMarkup(submission)} />
     </>
   );
 }
@@ -22,3 +20,9 @@ ReadingResponse.propTypes = {
 };
 
 export default ReadingResponse;
+
+function createMarkup(string) {
+  return { __html: string };
+}
+
+
