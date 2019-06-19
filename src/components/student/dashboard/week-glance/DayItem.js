@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { LinkStyled } from '../../../../../styles/components/LinkStyled';
 
 function DayItem({ type, title, dateDue, submitted, _id }) {
