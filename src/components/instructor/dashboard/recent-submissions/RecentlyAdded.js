@@ -7,13 +7,13 @@ function RecentlyAdded({ date, time, itemTitle, id, user }) {
   //these will become links to grading form
   return (
     <>
-      <div>
+      <div className="date">
         <h3>{date}</h3>
-        <h4>{time}</h4>
+        {/* <h4>{time}</h4> */}
       </div>
-      <div>
-        <h4>{itemTitle}</h4>
-        <p>{user.firstName} {user.lastName}</p>
+      <div className="info">
+        <h4 className="recentEvent">{itemTitle}</h4>
+        <p className="recentSubmission">{user.firstName} {user.lastName}</p>
         <p>{id}</p>
       </div>
     </>
