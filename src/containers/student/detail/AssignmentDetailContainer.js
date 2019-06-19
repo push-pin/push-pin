@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -11,7 +11,7 @@ import ReadingResponses from '../../../components/detail/assignment/unsubmitted/
 import { fetchReadingResponses } from '../../../actions/student/detail/assignment/reading/readingResponsesActions';
 import { selectReadingResponses } from '../../../selectors/student/detail/responsesSelectors';
 
-class AssignmentDetailContainer extends PureComponent {
+class AssignmentDetailContainer extends Component {
 
   static propTypes = {
     fetch: PropTypes.func.isRequired,
@@ -22,16 +22,19 @@ class AssignmentDetailContainer extends PureComponent {
     responses: PropTypes.array.isRequired
   }
 
-  //state
-
   componentDidMount() {
     return Promise.all([
       this.props.fetch(),
       this.props.fetchResponses()
     ]);
-    //fetch assignment by id
-    //fetch submission by assignment id  (we will render these in the bottom section and also check them to see if the logged in user has a submission)
     //if that user has a submission, try to fetch the grade for that submission by submission id
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log('are you updating?', prevProps);
+    if(this.props.responses.length !== prevProps.responses.length) {
+      return this.props.fetchResponses();
+    }
   }
 
   render() {
@@ -48,10 +51,12 @@ class AssignmentDetailContainer extends PureComponent {
   }
 }
 
-const mapStateToProps = state => ({
-  assignment: selectAssignmentDetailById(state),
-  responses: selectReadingResponses(state)
-});
+const mapStateToProps = state => {
+  return {
+    assignment: selectAssignmentDetailById(state),
+    responses: selectReadingResponses(state)
+  };
+};
 
 const mapDispatchToProps = (dispatch, { match }) => ({
   fetch() {

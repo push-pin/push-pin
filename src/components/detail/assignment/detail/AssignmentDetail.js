@@ -4,14 +4,17 @@ import PropTypes from 'prop-types';
 
 function AssignmentDetail({ assignment, submitted, grade }) {
   return (
-    <section>
-      <h3>{assignment.type}</h3>
-      <h4>{assignment.title}</h4>
-      <p>{assignment.dateDue}</p>
-      <p>{assignment.instructions}</p>
-      <p>Submitted: {submitted}</p>
-      <p>Grade: {grade}</p>
-    </section>
+    <>
+    { assignment && 
+      <section>
+        <h3>{assignment.type}</h3>
+        <h4>{assignment.title}</h4>
+        <p>{assignment.dateDue}</p>
+        <p>{assignment.instructions}</p>
+        <p>Submitted: {submitted}</p>
+        <p>Grade: {grade}</p>
+      </section> }
+    </>
   );
 }
 

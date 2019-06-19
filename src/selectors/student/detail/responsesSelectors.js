@@ -1,1 +1,1 @@
-export const selectReadingResponses = state => state.submissionDetails.readingResponses;
+export const selectReadingResponses = state => state.submissionList.readingResponses;
