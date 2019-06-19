@@ -23,8 +23,9 @@ class ReadingSubmission extends Component {
       assignment: this.props.assignment
     });
   }
-  handleChange = ({ target }) => {
-    this.setState({ submission: target.value });
+  handleChange = html => {
+    console.log(html);
+    this.setState({ submission: html });
   }
 
   handleSubmit = event => {
