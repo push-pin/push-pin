@@ -4,16 +4,22 @@ import RecentSubmissionContainer from '../containers/instructor/dashboard/Recent
 import InstAnnouncementsContainer from '../containers/instructor/dashboard/InstAnnouncements';
 
 import {
-  DashboardContainer
-
+  DashboardContainer,
+  AnnouncementsContainer,
+  WeekAtGlanceContainer
 } from '../../styles/layout/DashboardContainer';
 
 function Teacher() {
   return (
     <DashboardContainer>
-      <InstAnnouncementsContainer  />
-      <RecentSubmissionContainer />
-      <InstWeekAtGlance />
+      <AnnouncementsContainer>
+        <InstAnnouncementsContainer  />
+        <RecentSubmissionContainer />
+      </AnnouncementsContainer>
+
+      <WeekAtGlanceContainer>
+        <InstWeekAtGlance />
+      </WeekAtGlanceContainer>
     </DashboardContainer>
   );
 }

@@ -5,12 +5,15 @@ function DayItemInstructor({ type, title, dueDate, totalGraded, totalSubmissions
   const toGrade = totalSubmissions - totalGraded;
   return (
     <>
-      <h3>{type}</h3>
-      <h4>{title}</h4>
-      <p>{dueDate}</p>
-      <p>To Grade: {toGrade}</p>
-      <p>Submitted: {totalSubmissions} / {totalStudents}</p> 
-      <p></p>
+      <div className="type">
+        <h3>{type}</h3>
+      </div>
+      <div className="assignment-detail">
+        <h4>{title}</h4>
+        <p>{dueDate}</p>
+        <p>To Grade: {toGrade}</p>
+        <p>Submitted: {totalSubmissions} / {totalStudents}</p> 
+      </div>
     </>
   );
 }
