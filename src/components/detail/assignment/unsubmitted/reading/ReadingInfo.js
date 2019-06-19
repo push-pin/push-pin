@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+//this is not being used anywhere - we are using ../../detail/AssignmentDetail
 function ReadingInfo({ title, dueDate, classDate, points, bodyText, submitted }) {
 
   return (
