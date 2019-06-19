@@ -8,8 +8,8 @@ export const fetchUser = (auth0Id) => {
     };
   } else {
     return {
-      userType: 'Student',
-      _id: '1234567890',
+      role: 'STUDENT',
+      _id: '5d081634a08f000017f64a71',
       username: 'Megan',
       image: '../../../assets/student.jpg',
     };
