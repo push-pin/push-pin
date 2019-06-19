@@ -100,15 +100,21 @@ export const fetchAssesByCourse = () => {
 };
 
 const leanedAsses = ({ asses, subs }) => {
-  console.log(subs);
   return asses.map(ass => {
     let grade = false;
-    subs.forEach(sub => {if(sub.assignment === ass._id) grade = sub.graded;});
+    let submitted = false;
+
+    subs.forEach(sub => {if(sub.assignment === ass._id) {
+      grade = sub.graded;
+      submitted = true;
+    }});
+
     return {
       _id: ass._id,
       type: ass.type,
       title: ass.title,
       classDate: ass.classDate,
+      submitted: submitted,
       grade: grade
     };
   });
