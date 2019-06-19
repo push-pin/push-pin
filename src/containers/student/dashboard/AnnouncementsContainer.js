@@ -13,7 +13,8 @@ class DashboardAnnouncements extends PureComponent {
     announcements: PropTypes.array.isRequired,
     unread: PropTypes.number.isRequired,
     loading: PropTypes.bool.isRequired,
-    error: PropTypes.object
+    error: PropTypes.object,
+    courseId: PropTypes.string.isRequired
   }
 
   componentDidMount() {
@@ -36,12 +37,13 @@ const mapStateToProps = state => ({
   announcements: selectAnnouncements(state),
   unread: selectUnreadAnnouncements(state),
   loading: selectAnnouncementsLoading(state),
-  error: selectAnnouncementsError(state)
+  error: selectAnnouncementsError(state),
+  courseId: state.user.courseId
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
-    dispatch(getAnnouncements());
+    dispatch(getAnnouncements(props.courseId));
   }
 });
 
