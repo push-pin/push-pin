@@ -5,6 +5,7 @@ import dashboard from './student/dashboardCombinedReducer';
 import instDashboard from './instructor/instDashboardCombinedReducers';
 import submission from './student/submissions/submissionsReducer';
 import assignment from './student/detail/assignmentDetailReducer';
+import submissionDetails from './student/detail/submissionDetailReducer';
 
 export default combineReducers({
   session,
@@ -12,5 +13,6 @@ export default combineReducers({
   dashboard,
   instDashboard,
   submission,
-  assignment
+  assignment,
+  submissionDetails
 });

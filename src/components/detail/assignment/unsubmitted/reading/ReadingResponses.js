@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import ReadingResponse from './ReadingResponse';
 
 function ReadingResponses({ responseArray }) {
+  console.log(responseArray, 'response array');
   const responseList = responseArray.map(response => (
     <li key={response._id}>
-      <ReadingResponse bodyText={response.bodyText} username={response.username} timeStamp={response.timeStamp} />
+      <ReadingResponse submission={response.submission} student={response.student} createdAt={response.createdAt} />
     </li>
   ));
 
