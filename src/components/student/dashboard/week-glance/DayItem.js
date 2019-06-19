@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { LinkStyled } from '../../../../../styles/components/LinkStyled';
 
 function DayItem({ type, title, dateDue, submitted, _id }) {
   return (
-    <Link to={`/${_id}`}>
+    <LinkStyled to={`/${_id}`}>
       <div className="type">
         <h3>{type}</h3>
       </div>
@@ -13,7 +14,7 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
         <p>{dateDue}</p>
         <p>Submitted: {submitted}</p>
       </div>
-    </Link>
+    </LinkStyled>
   );
 }
 
