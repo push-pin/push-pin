@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ReadingForm from '../../../../../components/detail/assignment/unsubmitted/reading/ReadingForm';
 import { selectUserId, selectAssignmentId } from '../../../../../selectors/student/detail/submissionSelectors';
 import { createSubmission } from '../../../../../actions/student/detail/assignment/reading/unsubmitted/readingSubmissionActions';
 
-class ReadingSubmission extends PureComponent {
+class ReadingSubmission extends Component {
   static propTypes = {
     post: PropTypes.func.isRequired,
     student: PropTypes.string.isRequired,
@@ -30,9 +30,13 @@ class ReadingSubmission extends PureComponent {
   handleSubmit = event => {
     event.preventDefault();
     this.props.post(this.props.assignment, this.state.student, this.state.submission);
-    this.setState({
-      submission: '',
-    });
+    // this.setState({
+    //   submission: '',
+    // });
+  }
+
+  componentDidUpdate() {
+    console.log('in the child');
   }
 
   render() {

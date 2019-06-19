@@ -17,8 +17,8 @@ class AssignmentDetailContainer extends Component {
     fetch: PropTypes.func.isRequired,
     fetchResponses: PropTypes.func.isRequired,
     assignment: PropTypes.object.isRequired,
-    submitted: PropTypes.bool,
-    grade: PropTypes.number,
+    // submitted: PropTypes.bool,
+    // grade: PropTypes.number,
     responses: PropTypes.array.isRequired
   }
 
@@ -30,15 +30,15 @@ class AssignmentDetailContainer extends Component {
     //if that user has a submission, try to fetch the grade for that submission by submission id
   }
 
-  componentDidUpdate(prevProps) {
-    console.log('are you updating?', prevProps);
-    if(this.props.responses.length !== prevProps.responses.length) {
-      return this.props.fetchResponses();
-    }
+  componentDidUpdate(prevProps, prevState) {
+    console.log('update', prevState);
+    // if(this.props.responses.length !== prevProps.responses.length) {
+    //   return this.props.fetchResponses();
+    // }
   }
 
   render() {
-    if(!this.props.assignment) {
+    if(!this.props.assignment.title) {
       return <h1>LOADING!</h1>;
     }
     return (
