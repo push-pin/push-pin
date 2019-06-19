@@ -7,7 +7,13 @@ function DayList({ dayArray }) {
   const dayItems = dayArray.map(item => {
     return (
       <ListItemWeek key={item._id}>
-        <DayItem type={item.type} title={item.title} dueDate={item.dueDate} submitted={item.submitted} />
+        <DayItem 
+          type={item.type} 
+          title={item.title}
+          dateDue={item.dateDue}
+          submitted={item.submitted}
+          _id={item._id}
+        />
       </ListItemWeek>
     );
   });

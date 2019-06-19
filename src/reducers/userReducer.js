@@ -1,8 +1,8 @@
 import { SET_USER } from '../actions/userActions';
 
 const initialState = {
-  userType: '',
-  id: '',
+  role: '',
+  _id: '',
   username: '',
   image: ''
 };

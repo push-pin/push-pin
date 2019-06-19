@@ -10,8 +10,8 @@ import {
 
 function Student() {
   return (
-    <DashboardContainer>
 
+    <DashboardContainer>
       <AnnouncementsContainer>
         <Announcements />
         <DashboardRecentlyUpdated />
@@ -22,6 +22,7 @@ function Student() {
         <WeekAtGlance />
       </WeekAtGlanceContainer>
     </DashboardContainer>
+
   );
 }
 

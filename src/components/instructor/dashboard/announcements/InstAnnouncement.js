@@ -5,10 +5,14 @@ function Announcement({ date, header, previewText, id }) {
   return (
     <> 
      {/*make this a link to announcement detail, using announcement id  */}
-     <h3>{date}</h3>
-     <h4>{header}</h4>
-     <p>{previewText}</p>
-     <p>{id}</p>  {/*delete this later once link is created */}
+     <div className="date">
+       <h3>{date}</h3>
+     </div>
+     <div className="info">
+       <h4>{header}</h4>
+       <p>{previewText}</p>
+       <p>{id}</p>  {/*delete this later once link is created */}
+     </div>
     </>
   );
 }
