@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ReadingResponse({ bodyText, username, timeStamp }) {
+function ReadingResponse({ submission, student, createdAt }) {
   return (
     <>
     <section>
-      <h3>{username}</h3>
-      <p>{timeStamp}</p>
+      <h3>{student}</h3>
+      <p>{createdAt}</p>
     </section>
     <p>
-      {bodyText}
+      {submission}
     </p>
     </>
   );
 }
 
 ReadingResponse.propTypes = {
-  bodyText: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-  timeStamp: PropTypes.string.isRequired
+  submission: PropTypes.string.isRequired,
+  student: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired
 };
 
 export default ReadingResponse;

@@ -21,13 +21,15 @@ function WeekList({ assignments }) {
           <DayList dayArray={assignments.Mon} />
         </div>
       </DayContainer>
+      
+{/* revert back to assignments.[dayofweek] instead of monday */}
 
       <DayContainer>
         <div className="day-stripe">
           <h3>Tuesday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Tues} />
+          <DayList dayArray={assignments.Mon} />
         </div>
       </DayContainer>
 
@@ -36,7 +38,7 @@ function WeekList({ assignments }) {
           <h3>Wednesday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Wed} />
+          <DayList dayArray={assignments.Mon} />
         </div>
       </DayContainer>
 
@@ -45,7 +47,7 @@ function WeekList({ assignments }) {
           <h3>Thursday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Thurs} />
+          <DayList dayArray={assignments.Mon} />
         </div>
       </DayContainer>
 
@@ -54,7 +56,7 @@ function WeekList({ assignments }) {
           <h3>Friday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Fri} />
+          <DayList dayArray={assignments.Mon} />
         </div>
       </DayContainer>
 
