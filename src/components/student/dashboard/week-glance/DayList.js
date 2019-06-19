@@ -4,9 +4,7 @@ import DayItem from './DayItem';
 import { ListItemWeek, ListItemUlWeek } from '../../../../../styles/components/ListItem';
 
 function DayList({ dayArray }) {
-  console.log('dayarray', dayArray);
   const dayItems = dayArray.map(item => {
-    console.log(item._id, 'id');
     return (
       <ListItemWeek key={item._id}>
         <DayItem 

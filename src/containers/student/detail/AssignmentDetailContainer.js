@@ -35,7 +35,6 @@ class AssignmentDetailContainer extends PureComponent {
   }
 
   render() {
-    console.log(this.props.assignment, 'assignment');
     if(!this.props.assignment) {
       return <h1>LOADING!</h1>;
     }

@@ -5,7 +5,6 @@ import { ListItemHeaderWeek } from '../../../../../styles/components/ListItemHea
 import { WeekAtGlanceListContainer, DayContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function WeekList({ assignments }) {
-  console.log('assignments', assignments.Mon);
   //figure out how to display date as part of header
   return (
     <>

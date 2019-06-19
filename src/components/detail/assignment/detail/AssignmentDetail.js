@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 //we want to add grade and possible points to this
 
 function AssignmentDetail({ assignment, submitted, grade }) {
-  console.log('assignment in assn detail', typeof assignment.type);
   return (
     <section>
       <h3>{assignment.type}</h3>
