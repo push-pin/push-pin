@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 //we want to add grade and possible points to this
 
 function AssignmentDetail({ assignment, submitted, grade }) {
-  console.log('assignment', assignment);
+  console.log('assignment in assn detail', typeof assignment.type);
   return (
     <section>
       <h3>{assignment.type}</h3>
@@ -20,8 +20,8 @@ AssignmentDetail.propTypes = {
   submitted: PropTypes.bool,
   grade: PropTypes.number,
   assignment: PropTypes.shape({
-    type: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     instructions: PropTypes.string.isRequired,
     dateDue: PropTypes.string.isRequired
   })

@@ -16,13 +16,7 @@ class AssignmentDetailContainer extends PureComponent {
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     fetchResponses: PropTypes.func.isRequired,
-    assignment: PropTypes.shape({
-      type: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      dateDue: PropTypes.string.isRequired,
-      instructions: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired
-    }).isRequired,
+    assignment: PropTypes.object.isRequired,
     submitted: PropTypes.bool,
     grade: PropTypes.number,
     responses: PropTypes.array.isRequired
@@ -31,15 +25,17 @@ class AssignmentDetailContainer extends PureComponent {
   //state
 
   componentDidMount() {
-    console.log('are you mounting?');
-    this.props.fetch();
-    this.props.fetchResponses();
+    return Promise.all([
+      this.props.fetch(),
+      this.props.fetchResponses()
+    ]);
     //fetch assignment by id
     //fetch submission by assignment id  (we will render these in the bottom section and also check them to see if the logged in user has a submission)
     //if that user has a submission, try to fetch the grade for that submission by submission id
   }
 
   render() {
+    console.log(this.props.assignment, 'assignment');
     if(!this.props.assignment) {
       return <h1>LOADING!</h1>;
     }
@@ -47,7 +43,6 @@ class AssignmentDetailContainer extends PureComponent {
       <DashboardContainer>
         <AssignmentDetail assignment={this.props.assignment} submitted={this.props.submitted} grade={this.props.grade}/>
         <ReadingSubmission />
-        {/* //submissions by assignment/course */}
         <ReadingResponses responseArray={this.props.responses} />
       </DashboardContainer>
     );

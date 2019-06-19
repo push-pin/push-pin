@@ -9,8 +9,8 @@ import { createSubmission } from '../../../../../actions/student/detail/assignme
 class ReadingSubmission extends PureComponent {
   static propTypes = {
     post: PropTypes.func.isRequired,
-    student: '',
-    assignment: ''
+    student: PropTypes.string.isRequired,
+    assignment: PropTypes.string.isRequired
   }
 
   state = {
