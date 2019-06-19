@@ -5,7 +5,7 @@ import Assignment from './Assignment';
 function Assignments({ assignments }) {
   const assignmentListItems = assignments.map(ass => {
     return (
-      <li key={ass._id}>
+      <li key={`${ass._id}-${ass._date}`}>
         <Assignment assignment={ass} />
       </li>
     );
@@ -21,3 +21,5 @@ function Assignments({ assignments }) {
 Assignments.propTypes = {
   assignments: PropTypes.array.isRequired
 };
+
+export default Assignments;

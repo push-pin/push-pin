@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Assignments component renders a Assignments 1`] = `
+<ul>
+  <li
+    key="undefined-undefined"
+  >
+    <Assignment
+      assignment={
+        Object {
+          "date": 2019-06-19T23:47:08.365Z,
+          "grade": false,
+          "submitted": false,
+          "title": "Ass 1",
+        }
+      }
+    />
+  </li>
+  <li
+    key="undefined-undefined"
+  >
+    <Assignment
+      assignment={
+        Object {
+          "date": 2019-06-19T23:47:08.365Z,
+          "grade": false,
+          "submitted": true,
+          "title": "Ass 11",
+        }
+      }
+    />
+  </li>
+  <li
+    key="undefined-undefined"
+  >
+    <Assignment
+      assignment={
+        Object {
+          "date": 2019-06-19T23:47:08.365Z,
+          "grade": false,
+          "submitted": false,
+          "title": "Ass 12",
+        }
+      }
+    />
+  </li>
+  <li
+    key="undefined-undefined"
+  >
+    <Assignment
+      assignment={
+        Object {
+          "date": 2019-06-19T23:47:08.365Z,
+          "grade": false,
+          "submitted": true,
+          "title": "Ass 13",
+        }
+      }
+    />
+  </li>
+</ul>
+`;
