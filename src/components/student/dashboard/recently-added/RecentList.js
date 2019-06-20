@@ -6,9 +6,9 @@ import { ListItemHeader } from '../../../../../styles/components/ListItemHeader'
 import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function RecentList({ recentlyArr, unread }) {
-  const recentItems = recentlyArr.map(item => {
+  const recentItems = recentlyArr.map((item, i) => {
     return (
-      <ListItem key={item._id}>
+      <ListItem key={`${item._id}-${i}`}>
         <RecentItem date={item.date} time={item.time} title={item.title} submissionType={item.submissionType} eventType={item.eventType} id={item._id} />
       </ListItem>
     );
