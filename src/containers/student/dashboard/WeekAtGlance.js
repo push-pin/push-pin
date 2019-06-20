@@ -20,17 +20,17 @@ class WeekContainer extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props.student, 'user id');
+    console.log(this.props.assignments, 'assignments in week at glance container');
     this.setState({
       student: this.props.student
     });
-    this.props.fetch();
-    console.log(this.props.student, 'user id');
-    console.log(this.state.student, 'state');
+
+    this.props.fetch(this.props.student);
   }
 
   render(){
-    // return <h1>week</h1>;
-    if(!this.props.assignments.Mon) {  //change back to loading once fetch is a promise
+    if(!this.props.assignments.mon) {  //change back to loading once fetch is a promise
       return <h1>Loading</h1>;
     }
     else {
@@ -51,8 +51,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetch() {
-    dispatch(getWeekAtGlance());
+  fetch(userId) {
+    dispatch(getWeekAtGlance(userId));
   }
 });
 

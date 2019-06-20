@@ -5,6 +5,7 @@ import { ListItemHeaderWeek } from '../../../../../styles/components/ListItemHea
 import { WeekAtGlanceListContainer, DayContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function WeekList({ assignments }) {
+  console.log('assignments in weeklist', assignments);
   //figure out how to display date as part of header
   return (
     <>
@@ -18,7 +19,7 @@ function WeekList({ assignments }) {
           <h3>Monday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Mon} />
+          {/* <DayList dayArray={assignments.tues} /> */}
         </div>
       </DayContainer>
       
@@ -29,7 +30,7 @@ function WeekList({ assignments }) {
           <h3>Tuesday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Mon} />
+          <DayList dayArray={assignments.tues} />
         </div>
       </DayContainer>
 
@@ -38,7 +39,7 @@ function WeekList({ assignments }) {
           <h3>Wednesday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Mon} />
+          {/* <DayList dayArray={assignments.tues} /> */}
         </div>
       </DayContainer>
 
@@ -47,7 +48,7 @@ function WeekList({ assignments }) {
           <h3>Thursday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Mon} />
+          {/* <DayList dayArray={assignments.tues} /> */}
         </div>
       </DayContainer>
 
@@ -56,7 +57,7 @@ function WeekList({ assignments }) {
           <h3>Friday</h3>
         </div>
         <div>
-          <DayList dayArray={assignments.Mon} />
+          {/* <DayList dayArray={assignments.tues} /> */}
         </div>
       </DayContainer>
 

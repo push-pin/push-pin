@@ -38,6 +38,10 @@
 
 import { get } from '../../request';
 
-export const fetchWeekAtGlance = () => {
-  return get('/api/v1/assignments/weekataglance/course/5d07e2d971a8382af43cd94f/student/5d0ad2320f3fe35c63c677bc');
+export const fetchWeekAtGlance = userId => {
+  return get(`/api/v1/assignments/weekataglance/course/5d07e2d971a8382af43cd94f/student/${userId}`);
 };
+
+// export const fetchWeekAtGlance = () => {
+//   return get('/api/v1/assignments/weekataglance/course/5d07e2d971a8382af43cd94f/student/5d0ad2320f3fe35c63c677bc');
+// };
