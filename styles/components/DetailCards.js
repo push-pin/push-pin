@@ -29,7 +29,7 @@ const DetailCardHeader = styled.div `
     color: white;
 
     .detail-text {
-      border: 2px solid red;
+      /* border: 2px solid red; */
       color: blue;
     }
     

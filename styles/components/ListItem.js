@@ -78,7 +78,7 @@ const ListItem = styled.li `
 
 const ListItemWeek = styled(ListItem) `
   width: 100%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 
 
   .type {
