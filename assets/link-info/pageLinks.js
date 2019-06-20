@@ -5,7 +5,7 @@ import resources from '../nav-icons/resources.png';
 
 export const studentLink = [
   {
-    address: '/teacher',
+    address: '/calendar',
     image: calendar,
     description: 'Calendar',
   },
