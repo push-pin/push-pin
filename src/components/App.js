@@ -13,6 +13,7 @@ import AssignmentDetailContainer from '../containers/student/detail/AssignmentDe
 // import Styles from './App.css';
 import { MasterContainer } from '../../styles/layout/MasterContainer';
 import { GlobalStyle } from '../../styles/layout/GlobalStyles';
+import CourseAssignments from '../containers/assignment/CourseAssignments';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={withSession(Home)} />
           <Route path="/callback" component={Callback} />
+          <Route path="/courseasses" component={CourseAssignments} />
           <Route path="/:assignmentId" component={withSession(AssignmentDetailContainer)} />
         </Switch>
       </Router>

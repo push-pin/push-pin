@@ -8,18 +8,18 @@ function Assignment({ assignment }) {
   }
 
   return (
-    <assContainer>
-      <p>{assignment.date}</p>
+    <>
+      <p>{assignment.classDate}</p>
       <p>{assignment.title}</p>
       <p>Submitted: {assignment.submitted}</p>
       <p>{gradeDisplay}</p>
-    </assContainer>
+    </>
   );
 }
 
 Assignment.propTypes = {
   assignment: PropTypes.shape({
-    date: PropTypes.object.isRequired,
+    classDate: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     submitted: PropTypes.bool.isRequired,
     // will eventually be a number if graded

@@ -8,7 +8,7 @@ exports[`Assignments component renders a Assignments 1`] = `
     <Assignment
       assignment={
         Object {
-          "date": 2019-06-19T23:47:08.365Z,
+          "date": 2019-06-19T23:57:53.896Z,
           "grade": false,
           "submitted": false,
           "title": "Ass 1",
@@ -22,7 +22,7 @@ exports[`Assignments component renders a Assignments 1`] = `
     <Assignment
       assignment={
         Object {
-          "date": 2019-06-19T23:47:08.365Z,
+          "date": 2019-06-19T23:57:53.896Z,
           "grade": false,
           "submitted": true,
           "title": "Ass 11",
@@ -36,7 +36,7 @@ exports[`Assignments component renders a Assignments 1`] = `
     <Assignment
       assignment={
         Object {
-          "date": 2019-06-19T23:47:08.365Z,
+          "date": 2019-06-19T23:57:53.896Z,
           "grade": false,
           "submitted": false,
           "title": "Ass 12",
@@ -50,7 +50,7 @@ exports[`Assignments component renders a Assignments 1`] = `
     <Assignment
       assignment={
         Object {
-          "date": 2019-06-19T23:47:08.365Z,
+          "date": 2019-06-19T23:57:53.896Z,
           "grade": false,
           "submitted": true,
           "title": "Ass 13",
