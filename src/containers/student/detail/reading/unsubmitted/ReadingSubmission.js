@@ -8,7 +8,7 @@ import { createSubmission } from '../../../../../actions/student/detail/assignme
 class ReadingSubmission extends Component {
   static propTypes = {
     post: PropTypes.func.isRequired,
-    student: PropTypes.string.isRequired,
+    student: PropTypes.object.isRequired,
     assignment: PropTypes.string.isRequired
   }
 
