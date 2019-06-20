@@ -7,7 +7,6 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  // console.log(action);
   switch(action.type) {
     case GET_ASSES_BY_COURSE:
       return { ...state, asses: action.payload, loading: false };

@@ -4,11 +4,7 @@ import { get } from '../request';
 // export const fetchAssesByCourse = () => {
 export const fetchAssesByCourse = (courseId, studentId) => {
   return get(`/api/v1/assignments/courseassignments/course/${courseId}/student/${studentId}`)
-    .then(res => {
-      // console.log(res);
-      return leanedAsses(res);
-    });
-
+    .then(res => leanedAsses(res));
 };
 
 const leanedAsses = ({ asses, subs }) => {
@@ -16,10 +12,11 @@ const leanedAsses = ({ asses, subs }) => {
     let grade = false;
     let submitted = false;
 
-    subs.forEach(sub => {if(sub.assignment === ass._id) {
-      grade = sub.graded;
-      submitted = true;
-    }});
+    subs.forEach(sub => {
+      if(sub.assignment._id === ass._id) {
+        grade = sub.graded;
+        submitted = true;
+      }});
 
     return {
       _id: ass._id,

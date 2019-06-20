@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { selectAssesByCourse, selectStudent, selectCourse } from '../../selectors/assignment/assSelectors';
 import { getAssesByCourse } from '../../actions/assignment/assActions';
 import Assignment from '../../components/assignments/Assignments';
+import { DashboardContainer, WeekAtGlanceListContainer, WeekAtGlanceContainer } from '../../../styles/layout/DashboardContainer';
+import { ListItemHeaderWeek } from '../../../styles/components/ListItemHeader';
 
 class CourseAssignments extends PureComponent {
   static propTypes = {
@@ -15,14 +17,22 @@ class CourseAssignments extends PureComponent {
 
   componentDidMount() {
     const { course, student } = this.props;
-    this.props.fetch(course, student);
+    this.props.fetch(course._id, student);
   }
 
   render() {
-    console.log(this.props.asses);
     return (
       <>
-        <Assignment assignments={this.props.asses} />
+      <DashboardContainer>
+        <WeekAtGlanceContainer>
+          <ListItemHeaderWeek>
+            <h2>{this.props.course.name}</h2>
+          </ListItemHeaderWeek>
+          <WeekAtGlanceListContainer>
+            <Assignment assignments={this.props.asses} />
+          </WeekAtGlanceListContainer>
+        </WeekAtGlanceContainer>
+      </DashboardContainer>
       </>
     );
   }
