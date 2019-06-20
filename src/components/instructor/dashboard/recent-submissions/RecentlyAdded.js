@@ -5,7 +5,7 @@ import abridgedText from '../../../../utils/text-abridge';
 
 function RecentlyAdded({ updatedAt, submission, student, id, assignment }) {
   const date = formattedDate(updatedAt);
-  const shortSub = abridgedText(submission);
+  const shortSub = abridgedText(submission, 20);
   //these will become links to grading form
   return (
     <>
@@ -13,9 +13,9 @@ function RecentlyAdded({ updatedAt, submission, student, id, assignment }) {
         <h3>{date.month}/{date.day}/{date.year} :: {date.time}</h3>
       </div>
       <div className="info">
-        <h4 className="recentEvent">{assignment}</h4>
-        <p className="recentSubmission">{student}: {shortSub}</p>
-        <p>{id}</p>
+        <h4 className="recentEvent">{assignment.title}</h4>
+        <p className="recentSubmission">{student ? student.firstName : 'Marty'} {student ? student.lastName : 'Nelson'}: {shortSub}</p>
+        <p style={{ visibility: 'hidden' }}>{id}</p>
       </div>
     </>
   );
@@ -23,9 +23,9 @@ function RecentlyAdded({ updatedAt, submission, student, id, assignment }) {
 
 RecentlyAdded.propTypes = {
   updatedAt: PropTypes.string.isRequired,
-  student: PropTypes.string.isRequired,
+  student: PropTypes.object,
   submission: PropTypes.string.isRequired,
-  assignment: PropTypes.string.isRequired,
+  assignment: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired
 };
 
