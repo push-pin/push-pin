@@ -22,17 +22,20 @@ class AssignmentCreation extends Component {
 
   handleChangeQuill = html => {
     console.log(html);
-    this.setState({ submission: html });
+    this.setState({ instructions: html });
   }
 
   handleChange = ({ target }) => {
     console.log(target.name, target.value);
     this.setState({ [target.name]: target.value });
+    console.log(this.state);
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.post(this.state.course, this.state.type, this.state.title, this.state.instructions, this.state.classDate, this.state.dateAvailable. this.state.dateDue, this.state.dateClosed);
+    console.log(this.state.course);
+    this.props.post(this.state.course, this.state.type, this.state.title, this.state.instructions, this.state.classDate, this.state.dateAvailable, this.state.dateDue, this.state.dateClosed);
+    this.setState({ course: '', type: '', title: '', instructions: '', classDate: '', dateAvailable: '', dateDue: '',  dateClosed: '' });
   }
 
   render() {
@@ -47,6 +50,7 @@ class AssignmentCreation extends Component {
 
 const mapDispatchToProps = dispatch => ({
   post(course, type, title, instructions, classDate, dateAvailable, dateDue, dateClosed) {
+    console.log(course);
     dispatch(createAssignment(course, type, title, instructions, classDate, dateAvailable, dateDue, dateClosed));
   }
 });

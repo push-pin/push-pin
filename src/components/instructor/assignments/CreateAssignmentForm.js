@@ -22,10 +22,10 @@ function CreateAssignmentForm({ handleSubmit, handleChange, handleChangeQuill, c
         modules={CreateAssignmentForm.modules}
         formats={CreateAssignmentForm.formats}
         bounds={'.app'} />
-    Relevant Class Date: <input type="datetime-local" name="classDate" value={classDate}></input>
-    Date Available: <input type="datetime-local" name="dateAvailable" value={dateAvailable}></input>
-    Date Due: <input type="datetime-local" name="dateDue" value={dateDue}></input>
-    Date Closed: <input type="datetime-local" name="dateClosed" value={dateClosed}></input>
+    Relevant Class Date: <input type="datetime-local" name="classDate" value={classDate} onChange={handleChange}></input>
+    Date Available: <input type="datetime-local" name="dateAvailable" value={dateAvailable} onChange={handleChange}></input>
+    Date Due: <input type="datetime-local" name="dateDue" value={dateDue} onChange={handleChange}></input>
+    Date Closed: <input type="datetime-local" name="dateClosed" value={dateClosed} onChange={handleChange}></input>
       <button>Submit</button>
     </form>
   );
