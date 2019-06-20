@@ -9,6 +9,7 @@ import Callback from '../containers/auth/Callback';
 import { withSession } from '../containers/auth/withSession';
 import NavContainer from '../containers/navbar/NavContainer';
 import AssignmentDetailContainer from '../containers/student/detail/AssignmentDetailContainer';
+import Calendar from './Calendar';
 
 // import Styles from './App.css';
 import { MasterContainer } from '../../styles/layout/MasterContainer';
@@ -22,6 +23,7 @@ export default function App() {
         <NavContainer />
         <Switch>
           <Route exact path="/" component={withSession(Home)} />
+          <Route path="/calendar" component={Calendar} />
           <Route path="/callback" component={Callback} />
           <Route path="/:assignmentId" component={withSession(AssignmentDetailContainer)} />
         </Switch>
