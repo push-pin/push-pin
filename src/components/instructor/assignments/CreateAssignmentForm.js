@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactQuill from 'react-quill';
 
-function CreateAssignmentForm({ handleSubmit, handleChange, course, type, title, instructions, classDate, dateAvailable, dateDue, dateClosed }) {
+function CreateAssignmentForm({ handleSubmit, handleChange, handleChangeQuill, course, type, title, instructions, classDate, dateAvailable, dateDue, dateClosed }) {
   return (
     <form onSubmit={handleSubmit}>
     Course: <input type="text" name="course" value={course} onChange={handleChange} />
@@ -17,7 +17,7 @@ function CreateAssignmentForm({ handleSubmit, handleChange, course, type, title,
     Instructions: <ReactQuill 
         theme="snow"
         name="instructions"
-        onChange={handleChange}
+        onChange={handleChangeQuill}
         value={instructions}
         modules={CreateAssignmentForm.modules}
         formats={CreateAssignmentForm.formats}
@@ -56,6 +56,7 @@ CreateAssignmentForm.formats = [
 CreateAssignmentForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired, 
+  handleChangeQuill: PropTypes.func.isRequired,
   course: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

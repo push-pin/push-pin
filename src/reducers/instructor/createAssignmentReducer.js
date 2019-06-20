@@ -1,4 +1,4 @@
-import { CREATE_ASSIGNMENT, CREATE_ASSIGNMENT_PENDING, CREATE_ASSIGNMENT_ERROR } from '../../../actions/instructor/createAssignmentActions';
+import { CREATE_ASSIGNMENT, CREATE_ASSIGNMENT_PENDING, CREATE_ASSIGNMENT_ERROR } from '../../actions/instructor/createAssignmentActions';
 
 const initialState = {
   loading: false,
