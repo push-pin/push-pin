@@ -34,13 +34,6 @@ class AssignmentDetailContainer extends Component {
     //if that user has a submission, try to fetch the grade for that submission by submission id
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log('update', prevState);
-    // if(this.props.responses.length !== prevProps.responses.length) {
-    //   return this.props.fetchResponses();
-    // }
-  }
-
   render() {
     if(!this.props.assignment.title) {
       return <h1>LOADING!</h1>;
