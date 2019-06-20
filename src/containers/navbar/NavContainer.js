@@ -12,7 +12,6 @@ class NavContainer extends PureComponent {
 
   render() {
     const { user } = this.props;
-    console.log(user);
     if(user === {}) {
       return <h1>Loading</h1>;
     } 
