@@ -10,7 +10,7 @@ export const studentLink = [
     description: 'Calendar',
   },
   {
-    address: '/',
+    address: '/courseasses',
     image: assignments,
     description: 'Assignments'
   },

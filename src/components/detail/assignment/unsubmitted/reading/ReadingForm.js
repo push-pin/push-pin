@@ -1,22 +1,24 @@
 import ReactQuill from 'react-quill';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SubmitField } from '../../../../../../styles/components/SubmissionFields';
+import { SubmitField, SubmitButton } from '../../../../../../styles/components/SubmissionFields';
 function ReadingForm({ handleSubmit, handleChange, textBody }) {
   return (
     <SubmitField>
-      <form onSubmit={handleSubmit}>
-        <ReactQuill 
-          theme="snow"
-          name="textBody"
-          onChange={handleChange}
-          value={textBody}
-          modules={ReadingForm.modules}
-          formats={ReadingForm.formats}
-          bounds={'.app'}
-        />
-        <button>Submit</button>
-      </form>
+      <section>
+        <form onSubmit={handleSubmit}>
+          <ReactQuill 
+            theme="snow"
+            name="textBody"
+            onChange={handleChange}
+            value={textBody}
+            modules={ReadingForm.modules}
+            formats={ReadingForm.formats}
+            bounds={'.app'}
+          />
+          <SubmitButton>Submit</SubmitButton>
+        </form>
+      </section>
     </SubmitField>
   );
 }
