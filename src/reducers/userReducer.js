@@ -1,10 +1,9 @@
 import { SET_USER } from '../actions/userActions';
 
 const initialState = {
-  role: '',
-  _id: '',
-  username: '',
-  image: ''
+  user: {},
+  profile: {},
+  currentCourses: []
 };
 
 export default function reducer(state = initialState, action) {

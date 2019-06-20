@@ -12,13 +12,13 @@ class NavContainer extends PureComponent {
 
   render() {
     const { user } = this.props;
-    if(user.userType === 'Teacher') {
-      return <Sidebar links={studentLink} user={user} />;
-    } else {
-      return <Sidebar links={studentLink} user={user} />;
-    }
+    if(user === {}) {
+      return <h1>Loading</h1>;
+    } 
+    return <Sidebar links={studentLink} user={user} />;
   }
 }
+
 
 const mapStateToProps = state => ({
   user: getUser(state),

@@ -1,10 +1,10 @@
 import ReactQuill from 'react-quill';
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { SubmitField } from '../../../../../../styles/components/SubmissionFields';
 function ReadingForm({ handleSubmit, handleChange, textBody }) {
   return (
-    <>
+    <SubmitField>
       <form onSubmit={handleSubmit}>
         <ReactQuill 
           theme="snow"
@@ -17,7 +17,7 @@ function ReadingForm({ handleSubmit, handleChange, textBody }) {
         />
         <button>Submit</button>
       </form>
-    </>
+    </SubmitField>
   );
 }
 

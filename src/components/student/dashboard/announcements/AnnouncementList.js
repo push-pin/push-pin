@@ -8,8 +8,8 @@ import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardC
 function AnnouncementList({ announcements, unread }) {
   const announcementListItems = announcements.map(announcement => {   //where do we limit the number of announcements here?
     return (
-      <ListItem key={announcement.id}>
-        <Announcement date={announcement.date} header={announcement.header} previewText={announcement.previewText} bodyText={announcement.bodyText} id={announcement._id} />
+      <ListItem key={announcement._id}>
+        <Announcement updatedAt={announcement.updatedAt} title={announcement.title} body={announcement.body} id={announcement._id} />
       </ListItem>
     );
   });
