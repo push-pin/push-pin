@@ -2,6 +2,20 @@ import reducer from './recentsReducers';
 
 jest.mock('../../../services/student/dashboard/recentItemServices.js');
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+
+jest.mock('../../../actions/student/dashboard/recentsActions.js', () => {
+  return Promise.resolve([]);
+});
+
 const initialState = {
   recents: [],
   loading: false,
@@ -10,14 +24,6 @@ const initialState = {
 };
 
 describe('recent items reducer', () => {
-  it('handles the GET_RECENTS_PENDING action', () => {
-    expect(reducer(initialState, { type: 'GET_RECENTS_PENDING' })).toEqual({
-      loading: true,
-      recents: [],
-      error: {},
-      unread: 0
-    });
-  });
   it('handles the GET_RECENTS action', () => {
     const newState = reducer(initialState, {
       type: 'GET_RECENTS',

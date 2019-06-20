@@ -1,5 +1,21 @@
 import { getRecents } from './recentsActions';
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+//implement this when service is up and running
+// jest.mock('../../../services/student/dashboard/recentItemServices.js', () => ({
+//   getRecents() {
+//     return Promise.resolve([]);
+//   }
+// }));
+
 describe('student recents actions', () => {
   it('creates an action to fetch recents', () => {
     const action = getRecents();
