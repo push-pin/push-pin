@@ -5,10 +5,10 @@ const DetailCard = styled.section `
   flex-direction: column;
   box-sizing: content-box;
   width: 83vw;
-  /* border: 2px solid green; */
-  height: 25rem;
+  /* border: 2px solid red; */
+  height: 45rem;
   background-color: #FDFDFD;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2); */
   padding-bottom: 3rem;
 `;
 
@@ -29,7 +29,6 @@ const DetailCardHeader = styled.div `
     color: white;
 
     .detail-text {
-      /* border: 2px solid red; */
       color: blue;
     }
     
@@ -45,7 +44,8 @@ const DetailCardHeader = styled.div `
 const DetailInfo = styled.section `
 padding-left: 4rem;
 padding-top: 4rem;
-border-bottom: 2px solid #313E50;
+padding-bottom: 10rem;
+border-bottom: 4px solid #313E50;
 
   h4 {
     font-size: 2em;

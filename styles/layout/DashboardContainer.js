@@ -94,6 +94,7 @@ const AssignmentContainer = styled(AnnouncementsContainer) `
     /* border: 2px solid yellow; */
     height: 40vw;
     margin: 4rem 0;
+    background-color: #FDFDFD;
   `;
 
 export {

@@ -5,18 +5,20 @@ import { SubmitField } from '../../../../../../styles/components/SubmissionField
 function ReadingForm({ handleSubmit, handleChange, textBody }) {
   return (
     <SubmitField>
-      <form onSubmit={handleSubmit}>
-        <ReactQuill 
-          theme="snow"
-          name="textBody"
-          onChange={handleChange}
-          value={textBody}
-          modules={ReadingForm.modules}
-          formats={ReadingForm.formats}
-          bounds={'.app'}
-        />
-        <button>Submit</button>
-      </form>
+      <section>
+        <form onSubmit={handleSubmit}>
+          <ReactQuill 
+            theme="snow"
+            name="textBody"
+            onChange={handleChange}
+            value={textBody}
+            modules={ReadingForm.modules}
+            formats={ReadingForm.formats}
+            bounds={'.app'}
+          />
+          <button>Submit</button>
+        </form>
+      </section>
     </SubmitField>
   );
 }
