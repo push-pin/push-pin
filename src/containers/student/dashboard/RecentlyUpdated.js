@@ -13,14 +13,16 @@ class DashboardRecentlyUpdated extends PureComponent {
     recents: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
     unread: PropTypes.number.isRequired,
-    error: PropTypes.object
+    error: PropTypes.object,
+    studentId: PropTypes.string.isRequired
   }
 
   componentDidMount() {
-    this.props.fetch();
+    this.props.fetch(this.props.studentId);
   }
   //similar unread feature to announcements
   render() {
+    console.log(this.props);
     if(!this.props.recents[0]) {
       return <h1>Loading</h1>;
     }
@@ -33,12 +35,13 @@ const mapStateToProps = state => ({
   recents: selectRecents(state),
   loading: selectRecentsLoading(state),
   unread: selectUnreadRecents(state),
-  error: selectRecentsError(state)
+  error: selectRecentsError(state),
+  studentId: state.user.profile._id
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(getRecents());
+  fetch(studentId) {
+    dispatch(getRecents(studentId));
   }
 });
 

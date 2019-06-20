@@ -9,7 +9,8 @@ function RecentList({ recentlyArr, unread }) {
   const recentItems = recentlyArr.map(item => {
     return (
       <ListItem key={item._id}>
-        <RecentItem date={item.date} time={item.time} title={item.title} submissionType={item.submissionType} eventType={item.eventType} id={item._id} />
+        <RecentItem updatedAt={item.updatedAt} comment={item.comment} />
+        {/* <RecentItem updatedAt={item.updatedAt} comment={item.comment} firstName={item.firstName} lastName={item.lastName} eventType={item.eventType} grade={item.grade} itemId={item._id} assignmentTitle={item.assignment.title} assignmentId={item.assignment._id} /> */}
       </ListItem>
     );
   });
