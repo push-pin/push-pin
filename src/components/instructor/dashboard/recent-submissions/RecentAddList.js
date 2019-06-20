@@ -9,7 +9,7 @@ function RecentAddList({ recentArray, unread }) {
   const recentSubs = recentArray.map(item => {
     return (
       <ListItem key={item._id}>
-        <RecentlyAdded date={item.date} time={item.time} itemTitle={item.itemTitle} user={item.user} id={item._id} />
+        <RecentlyAdded updatedAt={item.updatedAt} student={item.student} assignment={item.assignment} submission={item.submission} id={item._id} />
       </ListItem>
     );
   });

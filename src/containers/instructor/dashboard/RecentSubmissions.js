@@ -13,11 +13,12 @@ class RecentSubmissionContainer extends PureComponent {
     recentSubs: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
     unread: PropTypes.number.isRequired,
-    error: PropTypes.object
+    error: PropTypes.object,
+    courseId: PropTypes.string.isRequired
   }
 
   componentDidMount() {
-    this.props.fetch();
+    this.props.fetch(this.props.courseId);
   }
   //similar unread feature to announcements
   render() {
@@ -33,12 +34,13 @@ const mapStateToProps = state => ({
   recentSubs: selectRecentSubs(state),
   loading: selectRecentSubsLoading(state),
   unread: selectRecentSubsUnread(state),
-  error: selectRecentSubsError(state)
+  error: selectRecentSubsError(state),
+  courseId: state.user.currentCourses[0]._id
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(getRecentSubs());
+  fetch(courseId) {
+    dispatch(getRecentSubs(courseId));
   }
 });
 

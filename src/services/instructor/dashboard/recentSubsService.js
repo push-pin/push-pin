@@ -1,6 +1,6 @@
 import { get } from '../../request';
 
-export const fetchRecents = courseId => {
+export const fetchRecentSubs = courseId => {
   return get(`/api/v1/submissions/recent/${courseId}`);
 };
 
