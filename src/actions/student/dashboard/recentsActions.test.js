@@ -9,12 +9,13 @@ jest.mock('../../../services/auth.js', () => ({
     ]);
   }
 }));
-//implement this when service is up and running
-// jest.mock('../../../services/student/dashboard/recentItemServices.js', () => ({
-//   getRecents() {
-//     return Promise.resolve([]);
-//   }
-// }));
+
+jest.mock('../../../services/student/dashboard/recentItemServices.js', () => ({
+  getRecents() {
+    return Promise.resolve([]);
+  }
+}));
+
 
 describe('student recents actions', () => {
   it('creates an action to fetch recents', () => {

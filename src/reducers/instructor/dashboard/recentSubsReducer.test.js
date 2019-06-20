@@ -2,6 +2,16 @@ import reducer from './recentSubsReducer';
 
 jest.mock('../../../services/instructor/dashboard/recentSubsService.js');
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+
 const initialState = {
   recentSubs: [],
   loading: false,
