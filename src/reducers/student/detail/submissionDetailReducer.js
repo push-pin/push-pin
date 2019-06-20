@@ -20,7 +20,7 @@ export default function reducer(state = initialState, action) {
     case FETCH_READING_RESPONSES_ERROR:
       return { ...state, loading: false, error: action.payload };
     case CREATE_SUBMISSION:
-      return { ...state, readingResponses: [...state.readingResponses, action.payload] }
+      return { ...state, readingResponses: [...state.readingResponses, action.payload] };
     default: 
       return state;
   }

@@ -8,35 +8,29 @@ import { createSubmission } from '../../../../../actions/student/detail/assignme
 class ReadingSubmission extends Component {
   static propTypes = {
     post: PropTypes.func.isRequired,
-    student: PropTypes.string.isRequired,
+    studentId: PropTypes.string.isRequired,
     assignment: PropTypes.string.isRequired
   }
 
   state = {
     submission: '',
-    student: '',
+    studentId: '',
     assignment: ''
   }
   componentDidMount() {
     this.setState({
-      student: this.props.student,
+      studentId: this.props.studentId,
       assignment: this.props.assignment
     });
   }
-  handleChange = ({ target }) => {
-    this.setState({ submission: target.value });
+  handleChange = html => {
+    console.log(html);
+    this.setState({ submission: html });
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.post(this.props.assignment, this.state.student, this.state.submission);
-    // this.setState({
-    //   submission: '',
-    // });
-  }
-
-  componentDidUpdate() {
-    console.log('in the child');
+    this.props.post(this.props.assignment, this.state.studentId, this.state.submission);
   }
 
   render() {
@@ -48,7 +42,7 @@ class ReadingSubmission extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    student: selectUserId(state),
+    studentId: selectUserId(state),
     assignment: selectAssignmentId(state)
   };
 };

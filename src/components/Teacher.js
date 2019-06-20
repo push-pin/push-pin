@@ -1,17 +1,26 @@
 import React from 'react';
 import InstWeekAtGlance from '../containers/instructor/dashboard/InstWeekAtGlance';
 import RecentSubmissionContainer from '../containers/instructor/dashboard/RecentSubmissions';
-import InstAnnouncementsContainer from '../containers/instructor/dashboard/InstAnnouncements';
+import DashboardAnnouncements from '../containers/student/dashboard/AnnouncementsContainer';
 
+import {
+  DashboardContainer,
+  AnnouncementsContainer,
+  WeekAtGlanceContainer
+} from '../../styles/layout/DashboardContainer';
 
 function Teacher() {
-
   return (
-    <section style={{ display: 'flex' }}>
-      <InstAnnouncementsContainer  />
-      <RecentSubmissionContainer />
-      <InstWeekAtGlance />
-    </section>
+    <DashboardContainer>
+      <AnnouncementsContainer>
+        <DashboardAnnouncements  />
+        <RecentSubmissionContainer />
+      </AnnouncementsContainer>
+
+      <WeekAtGlanceContainer>
+        <InstWeekAtGlance />
+      </WeekAtGlanceContainer>
+    </DashboardContainer>
   );
 }
 

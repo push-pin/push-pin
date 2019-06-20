@@ -1,38 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { LinkStyled } from '../../../../../styles/components/LinkStyled';
+import formattedDate from '../../../../utils/date-formatter';
+import abridgedText from '../../../../utils/text-abridge';
 
-function Announcement({ date, header, previewText, bodyText, id }) {
-  
-  //POSSIBLE means to have the body text get reformatted for the LI, breaking everything at the moment
-  // function abridgedText(bodyText) {
-  //   if(bodyText.length > 5) {
-  //     return (bodyText.subString(0, 5) + '...');
-  //   }
-  // }
-  
+
+function Announcement({ title, body, id, updatedAt }) {
+
+  const date = formattedDate(updatedAt);
+  const shortBody = abridgedText(body, 20);
 
   return (
     <> 
-     {/*make this a link to announcement detail, using announcement id  */}
-     <div className="date">
-       <h3>{date}</h3>
-     </div>
-     <div className="info">
-       <h4>{header}</h4>
-       <p className="preview">{previewText}</p>
-       <p>{bodyText}</p>
-       <p>{id}</p>  {/*delete this later once link is created */}
-     </div>
+     {/*make this a link to mark as read and increment unread counter - how will we track whether a specific user has read an announcement? */}
+     {/* <LinkStyled > */}
+       <div className="date">
+         <h3>{date.month}/{date.day}/{date.year} :: {date.time}</h3>
+       </div>
+       <div className="info">
+         <h4>{title}</h4>
+         <p className="preview">{shortBody}</p>
+         <p>{id}</p>  {/*delete this later once link is created */}
+       </div>
+     {/* </LinkStyled> */}
     </>
   );
 }
 
 Announcement.propTypes = {
-  date: PropTypes.string.isRequired,
-  header: PropTypes.string.isRequired,
-  previewText: PropTypes.string.isRequired,
-  id: PropTypes.string,
-  bodyText: PropTypes.string.isRequired
+  updatedAt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 };
 
 export default Announcement;

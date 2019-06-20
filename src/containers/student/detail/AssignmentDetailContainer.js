@@ -4,12 +4,16 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ReadingSubmission from './reading/unsubmitted/ReadingSubmission';
 import AssignmentDetail from '../../../components/detail/assignment/detail/AssignmentDetail';
-import { DashboardContainer } from '../../../../styles/layout/DashboardContainer';
 import { selectAssignmentDetailById } from '../../../selectors/student/detail/assignments/assignmentSelectors';
 import { fetchAssignmentDetail } from '../../../actions/student/detail/assignment/assignmentDetailActions';
 import ReadingResponses from '../../../components/detail/assignment/unsubmitted/reading/ReadingResponses';
 import { fetchReadingResponses } from '../../../actions/student/detail/assignment/reading/readingResponsesActions';
 import { selectReadingResponses } from '../../../selectors/student/detail/responsesSelectors';
+import {
+  DashboardContainer,
+  WeekAtGlanceContainer, 
+  AssignmentContainer
+} from '../../../../styles/layout/DashboardContainer';
 
 class AssignmentDetailContainer extends Component {
 
@@ -30,22 +34,19 @@ class AssignmentDetailContainer extends Component {
     //if that user has a submission, try to fetch the grade for that submission by submission id
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log('update', prevState);
-    // if(this.props.responses.length !== prevProps.responses.length) {
-    //   return this.props.fetchResponses();
-    // }
-  }
-
   render() {
     if(!this.props.assignment.title) {
       return <h1>LOADING!</h1>;
     }
     return (
       <DashboardContainer>
-        <AssignmentDetail assignment={this.props.assignment} submitted={this.props.submitted} grade={this.props.grade}/>
-        <ReadingSubmission />
-        <ReadingResponses responseArray={this.props.responses} />
+        <AssignmentContainer>
+          <AssignmentDetail assignment={this.props.assignment} submitted={this.props.submitted} grade={this.props.grade}/>
+          <ReadingSubmission />
+        </AssignmentContainer>
+        <WeekAtGlanceContainer>
+          <ReadingResponses responseArray={this.props.responses} />
+        </WeekAtGlanceContainer>
       </DashboardContainer>
     );
   }

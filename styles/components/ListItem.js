@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ListItem = styled.li `
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   background-color: #FDFDFD;
   height: 10rem;
@@ -77,14 +77,15 @@ const ListItem = styled.li `
 `;
 
 const ListItemWeek = styled(ListItem) `
-  width: 100rem;
+  width: 100%;
+  /* border: 2px solid yellow; */
+
 
   .type {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border-left: 5px solid #313E50; */
     background-color: #3A69AA;
     width: 25rem;
     color: white;
@@ -107,6 +108,7 @@ const ListItemWeek = styled(ListItem) `
   .assignment-detail {
     width: 100%;
     padding: 1.5em;
+    border: 2px solid blue;
   }
 
 `;
