@@ -1,19 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  DetailCard,
+  DetailCardHeader,
+  DetailInfo
+} from '../../../../../styles/components/DetailCards';
 //we want to add grade and possible points to this
 
 function AssignmentDetail({ assignment, submitted, grade }) {
   return (
     <>
     { assignment && 
-      <section>
-        <h3>{assignment.type}</h3>
-        <h4>{assignment.title}</h4>
-        <p>{assignment.dateDue}</p>
-        <p>{assignment.instructions}</p>
-        <p>Submitted: {submitted}</p>
-        <p>Grade: {grade}</p>
-      </section> }
+      <DetailCard>
+        <DetailCardHeader>
+            <h3>{assignment.type}</h3>
+          <section className="submission-details">
+            <p>Submitted: {submitted}</p>
+            <p>Grade: {grade}</p>
+          </section>
+        </DetailCardHeader>
+        <DetailInfo>
+          <h4>{assignment.title}</h4>
+          <p className="info-date">{assignment.dateDue}</p>
+          <p>{assignment.instructions}</p>
+        </DetailInfo>
+
+      </DetailCard> }
     </>
   );
 }

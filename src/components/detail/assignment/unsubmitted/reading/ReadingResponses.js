@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReadingResponse from './ReadingResponse';
+import { ListItemSubmission, ListItemUlWeek } from '../../../../../../styles/components/ListItem';
 
 function ReadingResponses({ responseArray }) {
-  console.log(responseArray, 'response array');
   const responseList = responseArray.map(response => (
-    <li key={response._id}>
+    <ListItemSubmission key={response._id}>
       <ReadingResponse submission={response.submission} student={response.student} createdAt={response.createdAt} />
-    </li>
+    </ListItemSubmission>
   ));
 
   return (
-    <ul>
+    <ListItemUlWeek>
       {responseList}  
-    </ul>
+    </ListItemUlWeek>
   );
 }
 

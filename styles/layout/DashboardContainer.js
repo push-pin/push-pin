@@ -8,7 +8,7 @@ const DashboardContainer = styled.section `
   background-color: #F8FCFF;
   height: 160vh;
   width: 105vw;
-  margin-left: 13rem;
+  margin-left: 3rem;
 `;
 
 // const UpdatesContainer = styled.section `
@@ -29,6 +29,7 @@ const AnnouncementsContainer = styled.section `
   overflow: hidden;
   `;
 
+
 const WeekAtGlanceContainer = styled.section `
   display: flex;
   justify-content: center;
@@ -37,7 +38,7 @@ const WeekAtGlanceContainer = styled.section `
   width: 83vw;
   height: 80vh;
   box-shadow: inset 0 .5rem .5rem rgba(0, 0, 0, 0.2);
-
+  
   /* not sure how I feel about this color being the background of the cards*/
   background-color: #EDF2F7;
   `;
@@ -47,7 +48,7 @@ const WeekAtGlanceListContainer = styled.section `
   justify-content: center;
   margin-top: 8rem;
   width: 83vw;
-`;
+  `;
 
 const UpperDashboardContainer = styled.section `
   display: flex;
@@ -62,26 +63,39 @@ const UpperDashboardContainer = styled.section `
   box-shadow: inset 0 .5rem .5rem rgba(0, 0, 0, 0.2);
   
   background-color: #EDF2F7;
-`;
+  `;
 
 const DayContainer = styled.section `
   display: flex;
   flex-direction: column;
   /* border: 2px solid purple; */
-
+  
   .day-stripe {
     background-color: #3A69AA;
     color: #EDF2F7;
   }
-
+  
   h3 {
     font-size: 3.5em;
     /* color: white; */
     letter-spacing: 1px;
     padding: 2rem;
-
+    
   }
-`;
+  `;
+
+
+//PERTAINS TO ASSIGNMENT DETAILS CONTAINER
+const AssignmentContainer = styled(AnnouncementsContainer) `
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+    height: 70vw;
+    margin: 4rem 0;
+    background-color: #FDFDFD;
+    /* border: 2px solid green; */
+  `;
 
 export {
   DashboardContainer,
@@ -89,5 +103,6 @@ export {
   WeekAtGlanceContainer,
   WeekAtGlanceListContainer,
   UpperDashboardContainer,
-  DayContainer
+  DayContainer,
+  AssignmentContainer
 };

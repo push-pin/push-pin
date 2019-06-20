@@ -25,7 +25,7 @@ RecentItem.propTypes = {
   title: PropTypes.string.isRequired,
   submissionType: PropTypes.string.isRequired,
   eventType: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string
 };
 
 //id is a p right now, but will eventually be used to link to the submission?

@@ -78,8 +78,6 @@ const ListItem = styled.li `
 
 const ListItemWeek = styled(ListItem) `
   width: 100%;
-  border: 2px solid yellow;
-
 
   .type {
     display: flex;
@@ -110,6 +108,56 @@ const ListItemWeek = styled(ListItem) `
     padding: 1.5em;
     border: 2px solid blue;
   }
+`;
+
+const ListItemSubmission = styled.li `
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background-color: #FDFDFD;
+  width: 80rem;
+  margin-top: 2rem;
+  list-style-type: none;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+
+  .type {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: #3A69AA;
+    width: 100%;
+    color: white;
+    line-height: 0;
+    height: 10rem;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 10rem;
+    width: 100%;
+    padding-left: 4rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+  }
+  
+  .assignment-detail {
+    width: 100%;
+    height: 20rem;
+    padding: 4em;
+  }
 
 `;
 
@@ -129,4 +177,10 @@ const ListItemUlWeek = styled(ListItemUl) `
   align-items: center;
 `;
 
-export { ListItem, ListItemWeek, ListItemUl, ListItemUlWeek };
+export {
+  ListItem,
+  ListItemWeek,
+  ListItemUl,
+  ListItemUlWeek,
+  ListItemSubmission
+};

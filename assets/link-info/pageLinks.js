@@ -5,12 +5,12 @@ import resources from '../nav-icons/resources.png';
 
 export const studentLink = [
   {
-    address: '/teacher',
+    address: '/calendar',
     image: calendar,
     description: 'Calendar',
   },
   {
-    address: '/',
+    address: '/courseasses',
     image: assignments,
     description: 'Assignments'
   },

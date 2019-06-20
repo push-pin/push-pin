@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { LinkStyled } from '../../../../../styles/components/LinkStyled';
 
 function DayItem({ type, title, dateDue, submitted, _id }) {
+  let hasSubed = 'Unsubmitted';
+  if(submitted) hasSubed = 'Submitted';
   return (
     <LinkStyled to={`/${_id}`}>
       <div className="type">
@@ -11,7 +13,7 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
       <div className="assignment-detail">
         <h4>{title}</h4>
         <p>{dateDue}</p>
-        <p>Submitted: {submitted}</p>
+        <p>Submitted: {hasSubed}</p>
       </div>
     </LinkStyled>
   );
