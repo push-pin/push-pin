@@ -8,7 +8,7 @@ const DashboardContainer = styled.section `
   background-color: #F8FCFF;
   height: 160vh;
   width: 105vw;
-  margin-left: 13rem;
+  margin-left: 3rem;
 `;
 
 // const UpdatesContainer = styled.section `

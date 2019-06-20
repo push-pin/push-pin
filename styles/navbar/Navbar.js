@@ -20,6 +20,7 @@ const Navbar = styled.nav `
     color: #EBECF6;
     font-weight: 300;
     font-size: 1.25em;
+    padding: .25em;
   }
 
   ul {
@@ -91,9 +92,11 @@ const NavItemContainer = styled.ul `
       width: 100%;
     }
 
-      &:first-child {
-        margin-top: 0;
-      }
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
 `;
 
 const LogoStyled = styled.img `
@@ -103,10 +106,16 @@ const LogoStyled = styled.img `
 `;
 
 const ProfileStyled = styled.img `
-  width: 4rem;
+  width: 3.5rem;
   height: auto;
   border-radius: 100%;
   margin-bottom: .5rem;
+  filter: invert(92%) sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
+
+  :hover {
+    transition: .2s;
+    filter: invert(99%) sepia(78%) saturate(5663%) hue-rotate(129deg) brightness(94%) contrast(93%);
+  }
 `;
 
 const ProfileContainer = styled.section `
@@ -114,15 +123,23 @@ const ProfileContainer = styled.section `
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  /* margin-bottom: 2rem; */
   
     .signout-button {
       margin-top: .8rem;
       width: 8rem;
+      height: 2.5rem;
+      border-radius: 10px;
       color: #EBECF6;
       background-color: transparent;
       border: none;
       text-transform: uppercase;
       font-weight: 400;
+
+      :hover {
+        transition: .2s;
+        background-color: lightsalmon;
+      }
     }
 `;
 

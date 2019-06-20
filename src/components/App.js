@@ -15,17 +15,22 @@ import { MasterContainer } from '../../styles/layout/MasterContainer';
 import { GlobalStyle } from '../../styles/layout/GlobalStyles';
 
 export default function App() {
+
   return (
     <MasterContainer>
-      <Router>
-        <GlobalStyle />
-        <NavContainer />
-        <Switch>
-          <Route exact path="/" component={withSession(Home)} />
-          <Route path="/callback" component={Callback} />
-          <Route path="/:assignmentId" component={withSession(AssignmentDetailContainer)} />
-        </Switch>
-      </Router>
+      <section className="container">
+        <section className="fade-in">
+          <Router>
+            <GlobalStyle />
+            <NavContainer />
+            <Switch>
+              <Route exact path="/" component={withSession(Home)} />
+              <Route path="/callback" component={Callback} />
+              <Route path="/:assignmentId" component={withSession(AssignmentDetailContainer)} />
+            </Switch>
+          </Router>
+        </section>
+      </section>
     </MasterContainer>
   );
 }
