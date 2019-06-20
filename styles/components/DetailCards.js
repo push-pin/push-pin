@@ -38,13 +38,24 @@ const DetailCardHeader = styled.div `
       color: white;
       z-index: 100;
     }
+
+    .submission-details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 7rem;
+
+      p {
+        padding: .25em;
+      }
+    }
     
 `;
 
 const DetailInfo = styled.section `
 padding-left: 4rem;
 padding-top: 4rem;
-padding-bottom: 10rem;
+padding-bottom: 4rem;
 border-bottom: 4px solid #313E50;
 
   h4 {
@@ -69,7 +80,5 @@ border-bottom: 4px solid #313E50;
     }
   }
 `;
-
-// const DetailCardHeader = styled.header
 
 export { DetailCard, DetailCardHeader, DetailInfo };

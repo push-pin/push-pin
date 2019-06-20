@@ -1,7 +1,7 @@
 import ReactQuill from 'react-quill';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SubmitField } from '../../../../../../styles/components/SubmissionFields';
+import { SubmitField, SubmitButton } from '../../../../../../styles/components/SubmissionFields';
 function ReadingForm({ handleSubmit, handleChange, textBody }) {
   return (
     <SubmitField>
@@ -16,7 +16,7 @@ function ReadingForm({ handleSubmit, handleChange, textBody }) {
             formats={ReadingForm.formats}
             bounds={'.app'}
           />
-          <button>Submit</button>
+          <SubmitButton>Submit</SubmitButton>
         </form>
       </section>
     </SubmitField>

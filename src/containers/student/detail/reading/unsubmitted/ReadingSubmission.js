@@ -35,7 +35,6 @@ class ReadingSubmission extends Component {
 
   render() {
     return (
-      
       <ReadingForm handleSubmit={this.handleSubmit} handleChange={this.handleChange} textBody={this.state.submission} />
     );
   }
