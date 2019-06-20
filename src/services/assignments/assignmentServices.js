@@ -3,7 +3,7 @@ import { get } from '../request';
 // returning dumby data that is expected from back end 
 // export const fetchAssesByCourse = () => {
 export const fetchAssesByCourse = (courseId, studentId) => {
-  return get('/api/v1/assignments/courseassignments/course/5d0ba754b48203673a7d3714/student/5d0ba754b48203673a7d36ea')
+  return get(`/api/v1/assignments/courseassignments/course/${courseId}/student/${studentId}`)
     .then(res => {
       // console.log(res);
       return leanedAsses(res);
