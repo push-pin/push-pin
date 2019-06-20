@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Assignment component renders a Assignment 1`] = `
+<assContainer>
+  <p>
+    <Component />
+  </p>
+  <p>
+    Ass 1
+  </p>
+  <p>
+    Submitted: 
+  </p>
+  <p>
+    Incomplete
+  </p>
+</assContainer>
+`;

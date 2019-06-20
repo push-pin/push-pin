@@ -7,6 +7,7 @@ import submission from './student/submissions/submissionsReducer';
 import assignment from './student/detail/assignmentDetailReducer';
 import submissionList from './student/detail/submissionDetailReducer';
 import createAssignment from './instructor/createAssignmentReducer';
+import courseAsses from './assignment/assReducer';
 
 export default combineReducers({
   session,
@@ -16,5 +17,6 @@ export default combineReducers({
   submission,
   assignment,
   submissionList,
-  createAssignment
+  createAssignment,
+  courseAsses
 });
