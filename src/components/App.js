@@ -24,7 +24,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={withSession(Home)} />
           <Route path="/callback" component={Callback} />
-          <Route path="/courseasses" component={CourseAssignments} />
+          <Route path="/courseasses" component={withSession(CourseAssignments)} />
           <Route path="/:assignmentId" component={withSession(AssignmentDetailContainer)} />
         </Switch>
       </Router>

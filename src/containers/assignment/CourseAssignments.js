@@ -4,15 +4,19 @@ import { connect } from 'react-redux';
 import { selectAssesByCourse } from '../../selectors/assignment/assSelectors';
 import { getAssesByCourse } from '../../actions/assignment/assActions';
 import Assignment from '../../components/assignments/Assignments';
+import { selectUserId } from '../../selectors/student/detail/submissionSelectors';
 
 class CourseAssignments extends PureComponent {
   static propTypes = {
     asses: PropTypes.array.isRequired,
+    course: PropTypes.string.isRequired,
+    student: PropTypes.isRequired,
     fetch: PropTypes.func.isRequired
   };
 
   componentDidMount() {
-    this.props.fetch();
+    const { course, student } = this.props;
+    this.props.fetch(course, student);
   }
 
   render() {
@@ -26,12 +30,14 @@ class CourseAssignments extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  asses: selectAssesByCourse(state)
+  asses: selectAssesByCourse(state),
+  course: selectAssesByCourse(state),
+  student: selectUserId(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch() {
-    dispatch(getAssesByCourse());
+  fetch(course, student) {
+    dispatch(getAssesByCourse(course, student));
   }
 });
 

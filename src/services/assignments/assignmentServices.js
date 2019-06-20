@@ -1,102 +1,14 @@
-// import { get } from '../../request';
-
-
+import { get } from '../request';
 
 // returning dumby data that is expected from back end 
-export const fetchAssesByCourse = () => {
-// export const getAssesByCourse = (courseId, studentId) => {
-  // return get(`/api/v1/assignment/course/${courseId}/student/${studentId}`);
-  const response = {
-    course: {
-      _id: '5d07e2d971a8382af43cd954',
-      active: true,
-      name: 'JavaScript Lead Software Test Engineer',
-      term: 'Spring 2103',
-      startDate: 'Mond Jun 03 2019 00:00:00 GMT+0000',
-      endDate: 'Frie Jun 28 2019 00:00:00 GMT+0000',
-      courseType: 'BootCamp2'
-    },
-    asses: [
-      {
-        _id: '5d07e2db71a8382af43cd975',
-        active: true,
-        courseId: '5d07e2d971a8382af43cd954',
-        type: 'solo',
-        title: 'noza',
-        instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
-        dateAvailable: 'Thurs Jun 06 2019 00:00:00 GMT+0000',
-        dateDue: 'Thurs Jun 06 2019 00:00:00 GMT+0000',
-        dateClosed: 'Thurs Jun 06 2019 00:00:00 GMT+0000',
-        classDate: 'Thurs Jun 06 2019 00:00:00 GMT+0000'
-      },
-      {
-        _id: '5d07e2db71a8382af43cd97c',
-        active: true,
-        courseId: '5d07e2d971a8382af43cd954',
-        type: 'solo',
-        title: 'noza',
-        instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
-        dateAvailable: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
-        dateDue: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
-        dateClosed: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
-        classDate: 'Thurs Jun 13 2019 00:00:00 GMT+0000'
-      },
-      {
-        _id: '5d07e2db71a8382af43cd981',
-        active: true,
-        courseId: '5d07e2d971a8382af43cd954',
-        type: 'solo',
-        title: 'noza',
-        instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
-        dateAvailable: 'Thurs Jun 20 2019 00:00:00 GMT+0000',
-        dateDue: 'Thurs Jun 20 2019 00:00:00 GMT+0000',
-        dateClosed: 'Thurs Jun 20 2019 00:00:00 GMT+0000',
-        classDate: 'Thurs Jun 20 2019 00:00:00 GMT+0000'
-      },
-      {
-        _id: '5d07e2db71a8382af43cd999',
-        active: true,
-        courseId: '5d07e2d971a8382af43cd954',
-        type: 'solo',
-        title: 'noza',
-        instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
-        dateAvailable: 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        dateDue: 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        dateClosed: 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        classDate: 'Thurs Jun 27 2019 00:00:00 GMT+0000'
-      }
-    ],
-    subs: [
-      {
-        '_id': '5d07e2db71a8382af43cd975',
-        'graded': false,
-        'assignment': '5d07e2db71a8382af43cd999',
-        'student': '5d07e2db71a8382af43cd9bc',
-        'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
-        'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
-      },
-      {
-        '_id': '5d07e2db71a8382af43cd981',
-        'graded': true,
-        'assignment': '5d07e2db71a8382af43cd97c',
-        'student': '5d07e2db71a8382af43cd9bc',
-        'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
-        'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
-      },
-      {
-        '_id': '5d07e2db71a8382af43cd981',
-        'graded': true,
-        'assignment': '5d07e2db71a8382af43cd999',
-        'student': '5d07e2db71a8382af43cd9bc',
-        'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
-        'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
-        'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
-      },
-    ]
-  };
-  return leanedAsses(response);
+// export const fetchAssesByCourse = () => {
+export const fetchAssesByCourse = (courseId, studentId) => {
+  return get('/api/v1/assignments/courseassignments/course/5d0ba754b48203673a7d3714/student/5d0ba754b48203673a7d36ea')
+    .then(res => {
+      // console.log(res);
+      return leanedAsses(res);
+    });
+
 };
 
 const leanedAsses = ({ asses, subs }) => {
@@ -119,6 +31,97 @@ const leanedAsses = ({ asses, subs }) => {
     };
   });
 };
+
+// const response = {
+//   course: {
+//     _id: '5d07e2d971a8382af43cd954',
+//     active: true,
+//     name: 'JavaScript Lead Software Test Engineer',
+//     term: 'Spring 2103',
+//     startDate: 'Mond Jun 03 2019 00:00:00 GMT+0000',
+//     endDate: 'Frie Jun 28 2019 00:00:00 GMT+0000',
+//     courseType: 'BootCamp2'
+//   },
+//   asses: [
+//     {
+//       _id: '5d07e2db71a8382af43cd975',
+//       active: true,
+//       courseId: '5d07e2d971a8382af43cd954',
+//       type: 'solo',
+//       title: 'noza',
+//       instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
+//       dateAvailable: 'Thurs Jun 06 2019 00:00:00 GMT+0000',
+//       dateDue: 'Thurs Jun 06 2019 00:00:00 GMT+0000',
+//       dateClosed: 'Thurs Jun 06 2019 00:00:00 GMT+0000',
+//       classDate: 'Thurs Jun 06 2019 00:00:00 GMT+0000'
+//     },
+//     {
+//       _id: '5d07e2db71a8382af43cd97c',
+//       active: true,
+//       courseId: '5d07e2d971a8382af43cd954',
+//       type: 'solo',
+//       title: 'noza',
+//       instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
+//       dateAvailable: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
+//       dateDue: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
+//       dateClosed: 'Thurs Jun 13 2019 00:00:00 GMT+0000',
+//       classDate: 'Thurs Jun 13 2019 00:00:00 GMT+0000'
+//     },
+//     {
+//       _id: '5d07e2db71a8382af43cd981',
+//       active: true,
+//       courseId: '5d07e2d971a8382af43cd954',
+//       type: 'solo',
+//       title: 'noza',
+//       instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
+//       dateAvailable: 'Thurs Jun 20 2019 00:00:00 GMT+0000',
+//       dateDue: 'Thurs Jun 20 2019 00:00:00 GMT+0000',
+//       dateClosed: 'Thurs Jun 20 2019 00:00:00 GMT+0000',
+//       classDate: 'Thurs Jun 20 2019 00:00:00 GMT+0000'
+//     },
+//     {
+//       _id: '5d07e2db71a8382af43cd999',
+//       active: true,
+//       courseId: '5d07e2d971a8382af43cd954',
+//       type: 'solo',
+//       title: 'noza',
+//       instructions: 'Sabzisini uzojivab mulijo opo ofu kimfewnu giberve fez nas izjowga hobum goolji.',
+//       dateAvailable: 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+//       dateDue: 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+//       dateClosed: 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+//       classDate: 'Thurs Jun 27 2019 00:00:00 GMT+0000'
+//     }
+//   ],
+//   subs: [
+//     {
+//       '_id': '5d07e2db71a8382af43cd975',
+//       'graded': false,
+//       'assignment': '5d07e2db71a8382af43cd999',
+//       'student': '5d07e2db71a8382af43cd9bc',
+//       'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
+//       'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+//       'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
+//     },
+//     {
+//       '_id': '5d07e2db71a8382af43cd981',
+//       'graded': true,
+//       'assignment': '5d07e2db71a8382af43cd97c',
+//       'student': '5d07e2db71a8382af43cd9bc',
+//       'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
+//       'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+//       'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
+//     },
+//     {
+//       '_id': '5d07e2db71a8382af43cd981',
+//       'graded': true,
+//       'assignment': '5d07e2db71a8382af43cd999',
+//       'student': '5d07e2db71a8382af43cd9bc',
+//       'submission': 'Mo gup fucabmig nu iti it evesa ovirew dalkoju avhi zipgoh ato mad.',
+//       'updatedAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000',
+//       'createdAt': 'Thurs Jun 27 2019 00:00:00 GMT+0000'
+//     },
+//   ]
+// };
 
 // function calculateWeeksBetween(date1, date2) {
 //   // The number of milliseconds in one week
