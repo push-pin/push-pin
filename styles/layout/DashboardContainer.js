@@ -29,6 +29,13 @@ const AnnouncementsContainer = styled.section `
   overflow: hidden;
   `;
 
+const AssignmentContainer = styled(AnnouncementsContainer) `
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid yellow;
+`;
+
 const WeekAtGlanceContainer = styled.section `
   display: flex;
   justify-content: center;
@@ -89,5 +96,6 @@ export {
   WeekAtGlanceContainer,
   WeekAtGlanceListContainer,
   UpperDashboardContainer,
-  DayContainer
+  DayContainer,
+  AssignmentContainer
 };
