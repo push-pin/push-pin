@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Announcement({ date, header, previewText, bodyText, id }) {
+function Announcement({ title, body, id, updatedAt }) {
   
   //POSSIBLE means to have the body text get reformatted for the LI, breaking everything at the moment
   // function abridgedText(bodyText) {
@@ -14,12 +14,12 @@ function Announcement({ date, header, previewText, bodyText, id }) {
     <> 
      {/*make this a link to announcement detail, using announcement id  */}
       <div className="date">
-        <h3>{date}</h3>
+        <h3>{updatedAt}</h3>
       </div>
       <div className="info">
-        <h4>{header}</h4>
-        <p className="preview">{previewText}</p>
-        <p>{bodyText}</p>
+        <h4>{title}</h4>
+        <p className="preview">{body}</p>
+        <p>{body}</p>
         <p>{id}</p>  {/*delete this later once link is created */}
       </div>
     </>
@@ -27,11 +27,12 @@ function Announcement({ date, header, previewText, bodyText, id }) {
 }
 
 Announcement.propTypes = {
-  date: PropTypes.string.isRequired,
-  header: PropTypes.string.isRequired,
-  previewText: PropTypes.string.isRequired,
-  id: PropTypes.string,
-  bodyText: PropTypes.string.isRequired
+  announcement: PropTypes.shape({
+    updatedAt: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired
+  })
 };
 
 export default Announcement;
