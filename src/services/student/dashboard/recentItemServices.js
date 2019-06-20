@@ -1,3 +1,9 @@
+import { get } from '../../request';
+
+export const getAnnouncementsByCourse = courseId => {
+  return get(`/api/v1/announcements/${courseId}`);
+};
+
 export function fetchRecents() {
   const example = [
     {
