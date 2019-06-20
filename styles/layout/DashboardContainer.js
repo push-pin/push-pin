@@ -8,7 +8,7 @@ const DashboardContainer = styled.section `
   background-color: #F8FCFF;
   height: 160vh;
   width: 105vw;
-  margin-left: 13rem;
+  margin-left: 3rem;
 `;
 
 // const UpdatesContainer = styled.section `
@@ -91,9 +91,10 @@ const AssignmentContainer = styled(AnnouncementsContainer) `
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
-    /* border: 2px solid yellow; */
-    height: 40vw;
+    height: 70vw;
     margin: 4rem 0;
+    background-color: #FDFDFD;
+    /* border: 2px solid green; */
   `;
 
 export {
