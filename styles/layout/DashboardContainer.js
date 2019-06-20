@@ -90,10 +90,11 @@ const AssignmentContainer = styled(AnnouncementsContainer) `
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    border: 2px solid yellow;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+    /* border: 2px solid yellow; */
     height: 40vw;
-    margin-top: 4rem;
+    margin: 4rem 0;
+
   `;
 
 export {
