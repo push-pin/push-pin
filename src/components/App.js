@@ -13,6 +13,7 @@ import AssignmentDetailContainer from '../containers/student/detail/AssignmentDe
 // import Styles from './App.css';
 import { MasterContainer } from '../../styles/layout/MasterContainer';
 import { GlobalStyle } from '../../styles/layout/GlobalStyles';
+import CourseAssignments from '../containers/assignment/CourseAssignments';
 
 export default function App() {
 
