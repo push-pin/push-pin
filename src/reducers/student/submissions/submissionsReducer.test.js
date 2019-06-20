@@ -1,6 +1,5 @@
 import reducer from './submissionsReducer';
-
-jest.mock('../../../services/student/detail/assignmentSubmissionServices.js');
+import { CREATE_SUBMISSION } from '../../../actions/student/detail/assignment/reading/unsubmitted/readingSubmissionActions';
 
 jest.mock('../../../services/auth.js', () => ({
   handleAuth() {
@@ -25,7 +24,7 @@ const initialState = {
 describe('assignment submission reducer', () => {
   it('handles the CREATE_SUBMISSION action', () => {
     const newState = reducer(initialState, {
-      type: 'CREATE_SUBMISSION',
+      type: CREATE_SUBMISSION,
       payload: 'hello'
     });
 
