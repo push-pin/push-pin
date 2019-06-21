@@ -8,7 +8,7 @@ export const fetchAssesByCourse = (courseId, studentId) => {
 };
 
 const leanedAsses = ({ asses, subs }) => {
-  return asses.map(ass => {
+  const mapped = asses.map(ass => {
     let grade = false;
     let submitted = false;
 
@@ -27,6 +27,9 @@ const leanedAsses = ({ asses, subs }) => {
       grade: grade
     };
   });
+
+  mapped.sort((a, b) => (a.classDate > b.classDate) ? 1 : -1);
+  return mapped;
 };
 
 // const response = {
