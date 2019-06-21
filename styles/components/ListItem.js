@@ -86,7 +86,7 @@ const ListItemWeek = styled(ListItem) `
   .type {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #3A69AA;
     width: 25rem;
