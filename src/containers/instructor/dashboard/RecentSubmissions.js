@@ -18,7 +18,7 @@ class RecentSubmissionContainer extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.fetch(this.props.courseId);
+    this.props.fetch('5d0c50e51136040017b428fa');
   }
 
   render() {

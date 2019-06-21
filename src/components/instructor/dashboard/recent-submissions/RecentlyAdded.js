@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import formattedDate from '../../../../utils/date-formatter';
 import abridgedText from '../../../../utils/text-abridge';
 
-function RecentlyAdded({ updatedAt, submission, student, id, assignment }) {
+function RecentlyAdded({ updatedAt, student, id, assignment }) {
   const date = formattedDate(updatedAt);
-  const shortSub = abridgedText(submission, 20);
   //these will become links to grading form
   return (
     <>
@@ -14,7 +13,7 @@ function RecentlyAdded({ updatedAt, submission, student, id, assignment }) {
       </div>
       <div className="info">
         <h4 className="recentEvent">{assignment.title}</h4>
-        <p className="recentSubmission">{student ? student.firstName : 'Marty'} {student ? student.lastName : 'Nelson'}: {shortSub}</p>
+        <p className="recentSubmission">{student.firstName} {student.lastName}</p>
         <p style={{ visibility: 'hidden' }}>{id}</p>
       </div>
     </>
@@ -24,7 +23,6 @@ function RecentlyAdded({ updatedAt, submission, student, id, assignment }) {
 RecentlyAdded.propTypes = {
   updatedAt: PropTypes.string.isRequired,
   student: PropTypes.object,
-  submission: PropTypes.string.isRequired,
   assignment: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired
 };
