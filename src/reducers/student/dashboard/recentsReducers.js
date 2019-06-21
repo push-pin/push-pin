@@ -1,5 +1,4 @@
 import { GET_RECENTS, GET_RECENTS_PENDING, GET_RECENTS_ERROR } from '../../../actions/student/dashboard/recentsActions';
-import formattedDate from '../../../utils/date-formatter';
 
 const initialState = {
   recents: [],
@@ -9,16 +8,18 @@ const initialState = {
 };
 
 function recentCounter(recentSubs) {
-  let recent = 0;
-  const today = new Date();
-  const todayObject = formattedDate(today);
+  let recent = recentSubs.length;
+  //commenting this out for now and will come back to it later
+  // let recent = 0;
+  // const today = new Date();
+  // const todayObject = formattedDate(today);
 
-  for(let i = 0; i < recentSubs.length; i++) {
-    const subDateObj = recentSubs[i].updatedAt;
-    if(todayObject.day - subDateObj.day >= 2) {
-      recent ++;
-    }
-  }
+  // for(let i = 0; i < recentSubs.length; i++) {
+  //   const subDateObj = recentSubs[i].updatedAt;
+  //   if(todayObject.day - subDateObj.day >= 2) {
+  //     recent ++;
+  //   }
+  // }
   return recent;
 }
 

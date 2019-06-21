@@ -8,23 +8,24 @@ const initialState = {
 };
 
 function recentCounter(recentSubs) {
-  let recent = 0;
-  const today = new Date();
-  for(let i = 0; i < recentSubs.length; i++) {
-    const subDate = new Date(recentSubs[i].updatedAt);
-    if((today - subDate) >= 2) {
-      console.log(today - subDate);
-      recent ++;
-    }
-  }
+  let recent = recentSubs.length;
+  //commenting this out for now and will come back to it later
+  // let recent = 0;
+  // const today = new Date();
+  // for(let i = 0; i < recentSubs.length; i++) {
+  //   const subDate = new Date(recentSubs[i].updatedAt);
+  //   if((today - subDate) >= 2) {
+  //     console.log(today - subDate);
+  //     recent ++;
+  //   }
+  // }
   return recent;
 }
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case GET_ANNOUNCEMENTS:
-      return { ...state, announcements: action.payload, loading: false 
-        // recent: recentCounter(action.payload) 
+      return { ...state, announcements: action.payload, loading: false, recent: recentCounter(action.payload) 
       };
     case GET_ANNOUNCEMENTS_PENDING:
       return { ...state, loading: true };
