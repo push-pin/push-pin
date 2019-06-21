@@ -14,7 +14,7 @@ class WeekContainer extends Component {
     loading: PropTypes.bool.isRequired, 
     error: PropTypes.object,
     student: PropTypes.string,
-    coursId: PropTypes.string
+    courseId: PropTypes.string
   }
 
   state = {

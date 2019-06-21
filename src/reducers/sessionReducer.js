@@ -6,7 +6,6 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  console.log('session', action.payload);
   switch(action.type) {
     case SET_SESSION:
       return action.payload;
