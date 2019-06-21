@@ -9,6 +9,7 @@ const ListItem = styled.li `
   margin-top: 2rem;
   list-style-type: none;
   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+  color: #313E50;
 
   &:last-child {
     margin-bottom: 2rem;
@@ -72,8 +73,6 @@ const ListItem = styled.li `
       color: #313E50;
       line-height: 1.5em;
     }
-
-
   }
 
 `;
