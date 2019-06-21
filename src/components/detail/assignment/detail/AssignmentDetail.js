@@ -23,7 +23,7 @@ function AssignmentDetail({ assignment, submitted, grade }) {
         <DetailInfo>
           <h4>{assignment.title}</h4>
           <p className="info-date">{assignment.dateDue}</p>
-          <p>{assignment.instructions}</p>
+          <div dangerouslySetInnerHTML={createMarkup(assignment.instructions)} />
         </DetailInfo>
       </DetailCard>
     </>
@@ -44,3 +44,7 @@ AssignmentDetail.propTypes = {
 };
 
 export default AssignmentDetail;
+
+function createMarkup(string) {
+  return { __html: string };
+}
