@@ -46,7 +46,6 @@ const CourseAssignmentListContainer = styled(WeekAtGlanceListContainer) `
   align-items: center;
   width: 100%;
   margin-top: 140rem;
-  border: 2px solid red;
 `;
 
 const UpperDashboardContainer = styled.section `
