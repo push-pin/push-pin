@@ -13,7 +13,7 @@ function RecentlyAdded({ updatedAt, student, id, assignment }) {
       </div>
       <div className="info">
         <h4 className="recentEvent">{assignment.title}</h4>
-        <p className="recentSubmission">{student.firstName} {student.lastName}</p>
+        <p className="recentSubmission">Student: {student.firstName} {student.lastName}</p>
         <p style={{ visibility: 'hidden' }}>{id}</p>
       </div>
     </>
