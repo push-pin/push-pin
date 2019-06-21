@@ -13,7 +13,7 @@ function Sidebar({ links, user }) {
   ));
   return (
     <Navbar>
-      <LogoStyled src="../../../assets/thumbtack.png" />
+      <LogoStyled src="../../../assets/nav-icons/logo/pushpin_logomark_vertical.png" />
       <NavItemContainer>
         {linkList}
       </NavItemContainer>
