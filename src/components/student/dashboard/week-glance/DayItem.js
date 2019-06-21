@@ -18,6 +18,7 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
         <h4>{title}</h4>
         <p>{dateDue}</p>
         <p>{hasSubed}</p>
+        <p>Grade: </p>
       </div>
     </LinkStyled>
   );
