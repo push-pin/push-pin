@@ -4,9 +4,9 @@ import { LinkStyled } from '../../../../../styles/components/LinkStyled';
 import formattedDate from '../../../../utils/date-formatter';
 
 
-function DayItem({ type, title, dateDue, submitted, _id }) {
-  let dueDay = formattedDate(dateDue);
-  let classDay = formattedDate(classDate);
+function DayItem({ type, title, dateDue, submitted, _id, classDate }) {
+  // let dueDay = formattedDate(dateDue);
+  // let classDay = formattedDate(classDate);
 
   let hasSubed = 'Unsubmitted';
   if(submitted) hasSubed = 'Submitted';
@@ -18,8 +18,8 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
       </div>
       <div className="assignment-detail">
         <h4>{title}</h4>
-        <p>{classDate}</p>
-        {/* <p>Submitted: {hasSubed}</p> */}
+        {/* <p>{classDay}</p> */}
+        <p>Submitted: {hasSubed}</p>
       </div>
     </LinkStyled>
   );
