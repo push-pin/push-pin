@@ -23,6 +23,7 @@ function Sidebar({ links, user }) {
         <h4 className="profile-username">{user.user.firstName}</h4>
         <h4 className="profile-username">{user.user.lastName}</h4>
         <button className="signout-button" onClick={logOut}>Log out</button>
+        <div className="sign-out"></div>
       </ProfileContainer>
     </Navbar>
   );

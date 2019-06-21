@@ -8,7 +8,7 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
   return (
     <LinkStyled to={`/${_id}`}>
       <div className="type">
-        <h3>{type}</h3>
+        <h4 className="sub-title">{type}</h4>
       </div>
       <div className="assignment-detail">
         <h4>{title}</h4>

@@ -40,6 +40,15 @@ const WeekAtGlanceListContainer = styled.section `
   width: 83vw;
   `;
 
+const CourseAssignmentListContainer = styled(WeekAtGlanceListContainer) `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 140rem;
+  border: 2px solid red;
+`;
+
 const UpperDashboardContainer = styled.section `
   display: flex;
   flex-direction: column;
@@ -79,8 +88,12 @@ const AssignmentContainer = styled(AnnouncementsContainer) `
     height: 70%;
     margin: 4rem 0;
     background-color: #FDFDFD;
-    border:2px solid green;
   `;
+
+const CourseAssignmentContainer = styled(DashboardContainer) `
+  height: 100vh;
+`;
+
 
 export {
   DashboardContainer,
@@ -89,5 +102,7 @@ export {
   WeekAtGlanceListContainer,
   UpperDashboardContainer,
   DayContainer,
-  AssignmentContainer
+  AssignmentContainer,
+  CourseAssignmentContainer,
+  CourseAssignmentListContainer
 };

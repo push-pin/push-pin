@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { selectAssesByCourse, selectStudent, selectCourse } from '../../selectors/assignment/assSelectors';
 import { getAssesByCourse } from '../../actions/assignment/assActions';
 import Assignment from '../../components/assignments/Assignments';
-import { DashboardContainer, WeekAtGlanceListContainer, WeekAtGlanceContainer } from '../../../styles/layout/DashboardContainer';
+import { CourseAssignmentContainer, CourseAssignmentListContainer, WeekAtGlanceContainer } from '../../../styles/layout/DashboardContainer';
 import { ListItemHeaderWeek } from '../../../styles/components/ListItemHeader';
 
 class CourseAssignments extends PureComponent {
@@ -23,16 +23,16 @@ class CourseAssignments extends PureComponent {
   render() {
     return (
       <>
-      <DashboardContainer>
+      <CourseAssignmentContainer>
         <WeekAtGlanceContainer>
           <ListItemHeaderWeek>
             <h2>{this.props.course.name}</h2>
           </ListItemHeaderWeek>
-          <WeekAtGlanceListContainer>
+          <CourseAssignmentListContainer>
             <Assignment assignments={this.props.asses} />
-          </WeekAtGlanceListContainer>
+          </CourseAssignmentListContainer>
         </WeekAtGlanceContainer>
-      </DashboardContainer>
+      </CourseAssignmentContainer>
       </>
     );
   }
@@ -54,4 +54,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CourseAssignments);
-
