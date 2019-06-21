@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import WeekList from '../../../components/student/dashboard/week-glance/WeekList';
 import { connect } from 'react-redux';
 import { selectWeek, selectWeekError, selectWeekLoading } from '../../../selectors/student/dashboard/weekSelectors';
+import { selectCourseId } from '../../../selectors/student/dashboard/courseSelectors';
 import { getWeekAtGlance } from '../../../actions/student/dashboard/weekActions';
 import { selectUserId } from '../../../selectors/student/detail/submissionSelectors';
 
@@ -12,7 +13,8 @@ class WeekContainer extends Component {
     assignments: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired, 
     error: PropTypes.object,
-    student: PropTypes.string
+    student: PropTypes.string,
+    courseId: PropTypes.string
   }
 
   state = {
@@ -20,13 +22,11 @@ class WeekContainer extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.student, 'user id');
-    console.log(this.props.assignments, 'assignments in week at glance container');
     this.setState({
       student: this.props.student
     });
 
-    this.props.fetch(this.props.student);
+    this.props.fetch(this.props.student, this.props.courseId);
   }
 
   render(){
@@ -47,12 +47,13 @@ const mapStateToProps = state => ({
   assignments: selectWeek(state),
   loading: selectWeekLoading(state),
   error: selectWeekError(state),
-  student: selectUserId(state)
+  student: selectUserId(state),
+  courseId: selectCourseId(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetch(userId) {
-    dispatch(getWeekAtGlance(userId));
+  fetch(userId, courseId) {
+    dispatch(getWeekAtGlance(userId, courseId));
   }
 });
 
