@@ -3,9 +3,10 @@ import styled from 'styled-components';
 const MasterContainer = styled.section `
   display: flex;
 
-  .container {
+  /* .container {
   top: 25%;
-  left: 25%;}
+  left: 25%;
+  } */
 
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

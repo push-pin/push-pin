@@ -16,6 +16,7 @@ const ListItem = styled.li `
 
   .date {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 12rem;
@@ -26,6 +27,7 @@ const ListItem = styled.li `
 
     h3 {
       font-weight: 100;
+      padding: .25em;
     }
   }
 
@@ -77,6 +79,7 @@ const ListItem = styled.li `
 `;
 
 const ListItemWeek = styled(ListItem) `
+  
 /* was 85% for card  */
   width: 100%;
 
@@ -109,12 +112,12 @@ const ListItemWeek = styled(ListItem) `
     width: 100%;
     padding: 1.5em;
   }
+
 `;
 
 const ListItemSubmission = styled.li `
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   background-color: #FDFDFD;
   width: 80rem;
   margin-top: 2rem;

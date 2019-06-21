@@ -26,7 +26,6 @@ const Navbar = styled.nav `
   ul {
     list-style-type: none;
     padding: 0;
-    /* margin-bottom: 5rem; */
   }
   
   a {
@@ -104,6 +103,12 @@ const LogoStyled = styled.img `
   height: auto;
   border-radius: 100%;
   filter: invert(92%)sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
+  z-index: 100;
+
+    :hover {
+      transition: .2s ease-in;
+      filter: invert(81%) sepia(14%) saturate(1229%) hue-rotate(172deg) brightness(98%) contrast(103%);
+    }
 `;
 
 const ProfileStyled = styled.img `
@@ -124,10 +129,9 @@ const ProfileContainer = styled.section `
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  /* margin-bottom: 2rem; */
   
     .signout-button {
-      margin-top: 1.5rem;
+      margin-top: 2.5rem;
       padding-top: 1.5rem;
       width: 8rem;
       height: 2.5rem;
@@ -149,7 +153,7 @@ const ProfileContainer = styled.section `
     ::after {
       position: absolute;
       content: '';
-      top: 92%;
+      top: 94%;
       left: 0;
       width: 0;
       height: 10%;
