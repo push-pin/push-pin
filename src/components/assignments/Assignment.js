@@ -1,30 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { LinkStyled } from '../../../styles/components/LinkStyled';
+import formattedDate from '../../utils/date-formatter';
 
-function Assignment({ assignment }) {
-  let gradeDisplay = 'Incomplete';
-  if(assignment.grade) {
-    gradeDisplay = 'Completed';
-  }
+function DayItem({ type, title, dateDue, submitted, _id, classDate }) {
+  let dueDay = formattedDate(dateDue);
+  let classDay = formattedDate(classDate);
 
+  let hasSubed = 'Unsubmitted';
+  if(submitted) hasSubed = 'Submitted';
   return (
-    <>
-      <p>{assignment.classDate}</p>
-      <p>{assignment.title}</p>
-      <p>Submitted: {assignment.submitted}</p>
-      <p>{gradeDisplay}</p>
-    </>
+    <LinkStyled to={`/${_id}`}>
+      <div className="type">
+        <h4 className="sub-title">{type}</h4>
+        <h4 className="sub-title">{classDay.day} {classDay.month}</h4>
+      </div>
+      <div className="assignment-detail">
+        <h4>{title}</h4>
+        <p>Due: {dueDay.month} {dueDay.day} @ {dueDay.time}</p>
+        <p>Submitted: {hasSubed}</p>
+      </div>
+    </LinkStyled>
   );
 }
 
-Assignment.propTypes = {
-  assignment: PropTypes.shape({
-    classDate: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    submitted: PropTypes.bool.isRequired,
-    // will eventually be a number if graded
-    grade: PropTypes.bool.isRequired
-  }).isRequired
+DayItem.propTypes = {
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  dateDue: PropTypes.string,
+  classDate: PropTypes.string,
+  submitted: PropTypes.bool.isRequired,
+  _id: PropTypes.string.isRequired
 };
 
-export default Assignment;
+//completed is a boolean, will eventually be represented as checkmark, color, something along those lines
+
+export default DayItem;

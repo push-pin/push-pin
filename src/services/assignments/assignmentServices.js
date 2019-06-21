@@ -23,6 +23,7 @@ const leanedAsses = ({ asses, subs }) => {
       type: ass.type,
       title: ass.title,
       classDate: ass.classDate,
+      dateDue: ass.dateDue,
       submitted: submitted,
       grade: grade
     };
