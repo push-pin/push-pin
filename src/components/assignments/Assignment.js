@@ -20,7 +20,6 @@ function DayItem({ type, title, dateDue, submitted, _id, classDate }) {
         <h4>{title}</h4>
         <p>Due: {dueDay.month} {dueDay.day} @ {dueDay.time}</p>
         <p>{hasSubed}</p>
-        <p>Grade: </p>
       </div>
 
     </LinkStyled>
