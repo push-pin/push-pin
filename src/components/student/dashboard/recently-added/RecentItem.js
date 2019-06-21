@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import formattedDate from '../../../../utils/date-formatter';
 
 function RecentItem({ date, time, title, submissionType, eventType, id }) {
   //date/time will probably be saved in the database as one string timestamp
 
+  const formatted = formattedDate(date);
   return (
     <>
       <div className="date">
-        <h3>{date}</h3>
-        {/* <>{time}</h4> */}
+        <h3>{formatted.month} {formatted.date}</h3>
+        <h4>{formatted.time}</h4>
       </div>
       <div className="info">
         <h4 className="recentEvent">{eventType}</h4>

@@ -15,7 +15,7 @@ function Announcement({ title, body, id, updatedAt }) {
      {/*make this a link to mark as read and increment unread counter - how will we track whether a specific user has read an announcement? */}
      {/* <LinkStyled > */}
        <div className="date">
-         <h3>{date.month}/{date.day}/{date.year}</h3>
+         <h3>{date.month} {date.day}</h3>
          <h3>{date.time}</h3>
        </div>
        <div className="info">

@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LinkStyled } from '../../../../../styles/components/LinkStyled';
+import formattedDate from '../../../../utils/date-formatter';
 
-function DayItem({ type, title, classDate, _id }) {
-  // let hasSubed = 'Unsubmitted';
-  // if(submitted) hasSubed = 'Submitted';
+
+function DayItem({ type, title, dateDue, submitted, _id }) {
+  let dueDay = formattedDate(dateDue);
+  let classDay = formattedDate(classDate);
+
+  let hasSubed = 'Unsubmitted';
+  if(submitted) hasSubed = 'Submitted';
+
   return (
     <LinkStyled to={`/${_id}`}>
       <div className="type">
