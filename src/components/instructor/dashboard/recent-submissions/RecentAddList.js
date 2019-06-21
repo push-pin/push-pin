@@ -7,7 +7,6 @@ import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardC
 
 function RecentAddList({ recentArray, recent }) {
   const recentSubs = recentArray.map(item => {
-    console.log(recentArray, 'recentArray');
     return (
       <ListItem key={item._id}>
         <RecentlyAdded updatedAt={item.updatedAt} student={item.student} assignment={item.assignment} submission={item.submission} id={item._id} />

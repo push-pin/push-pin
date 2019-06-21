@@ -7,12 +7,12 @@ import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardC
 
 function RecentList({ recentlyArr }) {
   const recentItems = recentlyArr.map(item => {
-    if(item.assignment) {
-      <ListItem key={item._id}>
+    if(item.grade) {
+      return <ListItem key={item._id}>
         <RecentItem updatedAt={item.updatedAt} assignment={item.assignment.title} grade={item.grade} />
       </ListItem>;
     } else {
-      <ListItem key={item._id}>
+      return <ListItem key={item._id}>
         <RecentItem updatedAt={item.updatedAt} assignment={item.submission.assignment.title} firstName={item.commenter.firstName} lastName={item.commenter.lastName} comment={item.comment}/>
       </ListItem>;
     }

@@ -6,7 +6,6 @@ import abridgedText from '../../../../utils/text-abridge';
 function RecentItem({ updatedAt, assignment, grade, firstName, lastName, comment }) {
 
   const date = formattedDate(updatedAt);
-  const shortComment = abridgedText(comment, 20);
 
   return (
     <>
@@ -16,7 +15,7 @@ function RecentItem({ updatedAt, assignment, grade, firstName, lastName, comment
       <div className="info">
         <h4 className="recentEvent">{grade}</h4>
         <p className="recentSubmission">{assignment}</p>
-        <p className="recentSubmission">{firstName} {lastName}: {shortComment}</p>
+        <p className="recentSubmission">{firstName} {lastName}: {comment}</p>
         {/* <p>{itemId} {assignmentId}</p> */}
       </div>
     </>

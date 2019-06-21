@@ -7,7 +7,6 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  console.log(action, 'action in reducer');
   switch(action.type) {
     case GET_RECENTS:
       return { ...state, recents: action.payload, loading: false };
