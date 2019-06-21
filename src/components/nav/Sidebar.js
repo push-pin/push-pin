@@ -4,6 +4,7 @@ import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
 import { Navbar, NavItemContainer, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
 import LogoLink from './LogoLink';
+import placeholder from '../../../assets/place-holder.png';
 
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
@@ -19,7 +20,7 @@ function Sidebar({ links, user }) {
         {linkList}
       </NavItemContainer>
       <ProfileContainer>
-        <ProfileStyled src={user.image || '../../../assets/place-holder.png'} />
+        <ProfileStyled src={ placeholder } />
         <h4 className="profile-username">{user.user.firstName}</h4>
         <h4 className="profile-username">{user.user.lastName}</h4>
         <button className="signout-button" onClick={logOut}>Log out</button>
