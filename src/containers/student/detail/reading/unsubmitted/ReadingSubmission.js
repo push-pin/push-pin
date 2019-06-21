@@ -24,6 +24,7 @@ class ReadingSubmission extends Component {
     });
   }
   handleChange = html => {
+    console.log(html);
     this.setState({ submission: html });
   }
 
