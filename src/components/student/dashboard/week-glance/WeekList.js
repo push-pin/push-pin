@@ -5,62 +5,60 @@ import { ListItemHeaderWeek } from '../../../../../styles/components/ListItemHea
 import { WeekAtGlanceListContainer, DayContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function WeekList({ assignments }) {
-  //figure out how to display date as part of header
+  console.log('weeklist', assignments);
   return (
     <>
       <ListItemHeaderWeek>
         <h2>Week At A Glance</h2>
       </ListItemHeaderWeek>
         
-    <WeekAtGlanceListContainer>
-      <DayContainer>
-        <div className="day-stripe">
-          <h3>Monday</h3>
-        </div>
-        <div>
-          <DayList dayArray={assignments.Mon} />
-        </div>
-      </DayContainer>
+      <WeekAtGlanceListContainer>
+        <DayContainer>
+          <div className="day-stripe">
+            <h3>Monday</h3>
+          </div>
+          <div>
+            <DayList dayArray={assignments.mon || []} />
+          </div>
+        </DayContainer>
       
-{/* revert back to assignments.[dayofweek] instead of monday */}
+        <DayContainer>
+          <div className="day-stripe">
+            <h3>Tuesday</h3>
+          </div>
+          <div>
+            <DayList dayArray={assignments.tues || []} />
+          </div>
+        </DayContainer>
 
-      <DayContainer>
-        <div className="day-stripe">
-          <h3>Tuesday</h3>
-        </div>
-        <div>
-          <DayList dayArray={assignments.Mon} />
-        </div>
-      </DayContainer>
+        <DayContainer>
+          <div className="day-stripe">
+            <h3>Wednesday</h3>
+          </div>
+          <div>
+            <DayList dayArray={assignments.weds || []} />
+          </div>
+        </DayContainer>
 
-      <DayContainer>
-        <div className="day-stripe">
-          <h3>Wednesday</h3>
-        </div>
-        <div>
-          <DayList dayArray={assignments.Mon} />
-        </div>
-      </DayContainer>
+        <DayContainer>
+          <div className="day-stripe">
+            <h3>Thursday</h3>
+          </div>
+          <div>
+            <DayList dayArray={assignments.thurs || []} />
+          </div>
+        </DayContainer>
 
-      <DayContainer>
-        <div className="day-stripe">
-          <h3>Thursday</h3>
-        </div>
-        <div>
-          <DayList dayArray={assignments.Mon} />
-        </div>
-      </DayContainer>
+        <DayContainer>
+          <div className="day-stripe">
+            <h3>Friday</h3>
+          </div>
+          <div>
+            <DayList dayArray={assignments.fri || []} />
+          </div>
+        </DayContainer>
 
-      <DayContainer>
-        <div className="day-stripe">
-          <h3>Friday</h3>
-        </div>
-        <div>
-          <DayList dayArray={assignments.Mon} />
-        </div>
-      </DayContainer>
-
-    </WeekAtGlanceListContainer>
+      </WeekAtGlanceListContainer>
     </>
   );
 }

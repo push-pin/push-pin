@@ -11,21 +11,23 @@ function AssignmentDetail({ assignment, submitted, grade }) {
   return (
     <>
     { assignment && 
-      <DetailCard>
+    <>
         <DetailCardHeader>
-          <section>
-            <h3>{assignment.type}</h3>
+          <h3>{assignment.type}</h3>
+          <section className="submission-details">
+            <p>Submitted: {submitted}</p>
+            <p>Grade: {grade}</p>
           </section>
         </DetailCardHeader>
+      <DetailCard>
         <DetailInfo>
           <h4>{assignment.title}</h4>
           <p className="info-date">{assignment.dateDue}</p>
-          <p>{assignment.instructions}</p>
-          <p>Submitted: {submitted}</p>
-          <p>Grade: {grade}</p>
+          <div dangerouslySetInnerHTML={createMarkup(assignment.instructions)} />
         </DetailInfo>
-
-      </DetailCard> }
+      </DetailCard>
+    </>
+    }
     </>
   );
 }
@@ -42,3 +44,7 @@ AssignmentDetail.propTypes = {
 };
 
 export default AssignmentDetail;
+
+function createMarkup(string) {
+  return { __html: string };
+}

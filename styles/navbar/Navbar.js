@@ -20,12 +20,12 @@ const Navbar = styled.nav `
     color: #EBECF6;
     font-weight: 300;
     font-size: 1.25em;
+    padding: .25em;
   }
 
   ul {
     list-style-type: none;
     padding: 0;
-    /* margin-bottom: 5rem; */
   }
   
   a {
@@ -91,22 +91,37 @@ const NavItemContainer = styled.ul `
       width: 100%;
     }
 
-      &:first-child {
-        margin-top: 0;
-      }
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
 `;
 
 const LogoStyled = styled.img `
-  width: 6rem;
+  width: 5rem;
   height: auto;
   border-radius: 100%;
+  filter: invert(92%)sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
+  z-index: 100;
+
+    :hover {
+      transition: .2s ease-in;
+      filter: invert(81%) sepia(14%) saturate(1229%) hue-rotate(172deg) brightness(98%) contrast(103%);
+    }
 `;
 
 const ProfileStyled = styled.img `
-  width: 4rem;
+  width: 3.5rem;
   height: auto;
   border-radius: 100%;
   margin-bottom: .5rem;
+  filter: invert(92%) sepia(21%) saturate(69%) hue-rotate(197deg) brightness(96%) contrast(101%);
+
+  :hover {
+    transition: .2s;
+    filter: invert(99%) sepia(78%) saturate(5663%) hue-rotate(129deg) brightness(94%) contrast(93%);
+  }
 `;
 
 const ProfileContainer = styled.section `
@@ -116,14 +131,41 @@ const ProfileContainer = styled.section `
   justify-content: space-around;
   
     .signout-button {
-      margin-top: .8rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
       width: 8rem;
+      height: 2.5rem;
+      border-radius: 10px;
       color: #EBECF6;
       background-color: transparent;
       border: none;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 700;
+      letter-spacing: 2px;
+
+      font-size: 1.25rem;
+      :hover {
+      color: #2CE6EA;
+      transition: .2s ease-in;
     }
+
+    ::after {
+      position: absolute;
+      content: '';
+      top: 94%;
+      left: 0;
+      width: 0;
+      height: 10%;
+      background-color: #003784;
+      transform-origin:left;
+      transition:width 0.25s ease;
+      z-index:-1;
+    }
+
+    :hover::after {
+      width: 100%;
+    }
+      }
 `;
 
 export { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer };

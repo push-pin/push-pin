@@ -5,10 +5,9 @@ const DetailCard = styled.section `
   flex-direction: column;
   box-sizing: content-box;
   width: 83vw;
-  /* border: 2px solid green; */
-  height: 25rem;
+  height: 100vh;
+  overflow-y: scroll;
   background-color: #FDFDFD;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
   padding-bottom: 3rem;
 `;
 
@@ -29,7 +28,6 @@ const DetailCardHeader = styled.div `
     color: white;
 
     .detail-text {
-      border: 2px solid red;
       color: blue;
     }
     
@@ -39,13 +37,26 @@ const DetailCardHeader = styled.div `
       color: white;
       z-index: 100;
     }
+
+    .submission-details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 7rem;
+
+      p {
+        padding: .25em;
+      }
+    }
     
 `;
 
 const DetailInfo = styled.section `
+flex: 1 1 auto;
 padding-left: 4rem;
 padding-top: 4rem;
-border-bottom: 2px solid #313E50;
+padding-bottom: 4rem;
+border-bottom: 4px solid #313E50;
 
   h4 {
     font-size: 2em;
@@ -69,7 +80,5 @@ border-bottom: 2px solid #313E50;
     }
   }
 `;
-
-// const DetailCardHeader = styled.header
 
 export { DetailCard, DetailCardHeader, DetailInfo };

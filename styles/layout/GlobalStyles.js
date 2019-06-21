@@ -16,8 +16,6 @@ const GlobalStyle = createGlobalStyle `
     font-size: 62.5%; 
     overflow: scroll;
     overflow-x: hidden;
-
-
     
   }
   
@@ -35,7 +33,10 @@ const GlobalStyle = createGlobalStyle `
 
   body {
     box-sizing: border-box;
+    /* padding: 0;
+    margin: 0; */
   }
 `;
+
 
 export { GlobalStyle };

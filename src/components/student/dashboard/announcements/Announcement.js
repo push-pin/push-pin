@@ -12,7 +12,8 @@ function Announcement({ title, body, id, updatedAt }) {
   return (
     <> 
        <div className="date">
-         <h3>{date.month}/{date.day}/{date.year} :: {date.time}</h3>
+         <h3>{date.month} {date.day}</h3>
+         <h3>{date.time}</h3>
        </div>
        <div className="info">
          <h4>{title}</h4>

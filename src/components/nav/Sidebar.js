@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
-import { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
+import { Navbar, NavItemContainer, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
+import LogoLink from './LogoLink';
 
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
@@ -13,14 +14,16 @@ function Sidebar({ links, user }) {
   ));
   return (
     <Navbar>
-      <LogoStyled src="../../../assets/thumbtack.png" />
+      <LogoLink />
       <NavItemContainer>
         {linkList}
       </NavItemContainer>
       <ProfileContainer>
-        <ProfileStyled src={user.image || ''} />
-        <h4 className="profile-username">{user.user.firstName} {user.user.lastName}</h4>
+        <ProfileStyled src={user.image || '../../../assets/place-holder.png'} />
+        <h4 className="profile-username">{user.user.firstName}</h4>
+        <h4 className="profile-username">{user.user.lastName}</h4>
         <button className="signout-button" onClick={logOut}>Log out</button>
+        <div className="sign-out"></div>
       </ProfileContainer>
     </Navbar>
   );
