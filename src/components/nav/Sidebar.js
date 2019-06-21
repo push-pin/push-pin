@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
 import { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
+import LogoLink from './LogoLink';
 
 function Sidebar({ links, user }) {
   const linkList = links.map((link, id) => (
@@ -13,7 +14,7 @@ function Sidebar({ links, user }) {
   ));
   return (
     <Navbar>
-      <LogoStyled src="../../../assets/nav-icons/logo/pushpin_logomark_vertical.png" />
+      <LogoLink />
       <NavItemContainer>
         {linkList}
       </NavItemContainer>
