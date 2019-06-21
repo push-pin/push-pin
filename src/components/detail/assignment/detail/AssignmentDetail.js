@@ -11,7 +11,7 @@ import formattedDate from '../../../../utils/date-formatter';
 
 function AssignmentDetail({ assignment, submitted, grade }) {
   const date = formattedDate(assignment.dateDue);
-  
+  console.log(assignment);
   return (
     <>
     { assignment && 
@@ -19,7 +19,7 @@ function AssignmentDetail({ assignment, submitted, grade }) {
         <DetailCardHeader>
           <h3>{capitalize(assignment.type)}</h3>
           <section className="submission-details">
-            <p>Submitted: {submitted}</p>
+            {/* <p>Submitted: {submitted}</p> */}
             <p>Grade: {grade}</p>
           </section>
         </DetailCardHeader>
