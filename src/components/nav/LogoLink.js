@@ -6,6 +6,7 @@ function LogoLink() {
   return (
     <Link to={'/'}>
       <LogoStyled src="../../../assets/nav-icons/logo/pushpin_logomark_vertical.png"/>
+      {/* <LogoStyled src="../../../assets/nav-icons/logo/pushpin_logomark_circle.png"/> */}
     </Link>
   );
 }

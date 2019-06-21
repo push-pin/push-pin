@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavLink from './NavLink';
 import { logOut } from '../../services/auth';
-import { Navbar, NavItemContainer, LogoStyled, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
+import { Navbar, NavItemContainer, ProfileStyled, ProfileContainer } from '../../../styles/navbar/Navbar';
 import LogoLink from './LogoLink';
 
 function Sidebar({ links, user }) {
