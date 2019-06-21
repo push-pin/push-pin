@@ -27,7 +27,7 @@ export default function App() {
             <NavContainer />
             <Switch>
               <Route exact path="/" component={withSession(Home)} />
-            <Route path="/calendar" component={Calendar} />
+              <Route path="/calendar" component={Calendar} />
               <Route path="/courseasses" component={withSession(withSession(CourseAssignments))} />
               <Route path="/callback" component={Callback} />
               <Route path="/:assignmentId" component={withSession(AssignmentDetailContainer)} />

@@ -5,7 +5,6 @@ const DetailCard = styled.section `
   flex-direction: column;
   box-sizing: content-box;
   width: 83vw;
-  border: 2px solid red;
   height: 100vh;
   overflow-y: scroll;
   background-color: #FDFDFD;
@@ -54,7 +53,6 @@ const DetailCardHeader = styled.div `
 
 const DetailInfo = styled.section `
 flex: 1 1 auto;
-border: 2px solid yellow;
 padding-left: 4rem;
 padding-top: 4rem;
 padding-bottom: 4rem;
