@@ -21,7 +21,6 @@ class DashboardRecentlyUpdated extends PureComponent {
   }
 
   render() {
-    console.log(this.props.recents);
     if(!this.props.recents) {
       return <h1>Loading</h1>;
     }
@@ -31,7 +30,6 @@ class DashboardRecentlyUpdated extends PureComponent {
 }
 
 const mapStateToProps = state => {
-  console.log(selectRecents(state), state.dashboard.recents, 'in mstp');
   return {
     recents: selectRecents(state),
     loading: selectRecentsLoading(state),
