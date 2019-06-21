@@ -4,23 +4,29 @@ const initialState = {
   announcements: [],
   loading: false,
   error: {},
-  unread: 0
+  recent: 0
 };
 
-function unreadCounter(announcements) {
-  let unread = 0;
-  for(let i = 0; i < announcements.length; i++) {
-    if(!announcements[i].read) {
-      unread++;
-    }
-  }
-  return unread;
+function recentCounter(recentSubs) {
+  let recent = recentSubs.length;
+  //commenting this out for now and will come back to it later
+  // let recent = 0;
+  // const today = new Date();
+  // for(let i = 0; i < recentSubs.length; i++) {
+  //   const subDate = new Date(recentSubs[i].updatedAt);
+  //   if((today - subDate) >= 2) {
+  //     console.log(today - subDate);
+  //     recent ++;
+  //   }
+  // }
+  return recent;
 }
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case GET_ANNOUNCEMENTS:
-      return { ...state, announcements: action.payload, loading: false, unread: unreadCounter(action.payload) };
+      return { ...state, announcements: action.payload, loading: false, recent: recentCounter(action.payload) 
+      };
     case GET_ANNOUNCEMENTS_PENDING:
       return { ...state, loading: true };
     case GET_ANNOUNCEMENTS_ERROR:

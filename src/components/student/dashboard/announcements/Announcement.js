@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LinkStyled } from '../../../../../styles/components/LinkStyled';
 import formattedDate from '../../../../utils/date-formatter';
 import abridgedText from '../../../../utils/text-abridge';
 
@@ -12,18 +11,15 @@ function Announcement({ title, body, id, updatedAt }) {
 
   return (
     <> 
-     {/*make this a link to mark as read and increment unread counter - how will we track whether a specific user has read an announcement? */}
-     {/* <LinkStyled > */}
        <div className="date">
-         <h3>{date.month}/{date.day}/{date.year}</h3>
+         <h3>{date.month} {date.day}</h3>
          <h3>{date.time}</h3>
        </div>
        <div className="info">
          <h4>{title}</h4>
          <p className="preview">{shortBody}</p>
-         <p>{id}</p>  {/*delete this later once link is created */}
+         <p style={{ visibility: 'hidden' }}>{id}</p>  
        </div>
-     {/* </LinkStyled> */}
     </>
   );
 }
