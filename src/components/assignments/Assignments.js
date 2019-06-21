@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ListItemWeek } from '../../../styles/components/ListItem';
-import DayItem from '../student/dashboard/week-glance/DayItem';
+import Assignment from './Assignment';
 
 function Assignments({ assignments }) {
   const assignmentListItems = assignments.map(ass => {
+    console.log(ass);
     return (
       <ListItemWeek key={`${ass._id}-${ass._date}`}>
-        <DayItem 
+        <Assignment 
           type={ass.type} 
           title={ass.title}
           dateDue={ass.classDate}
           submitted={ass.submitted}
           _id={ass._id}
+          classDate={ass.classDate}
         />
       </ListItemWeek>
     );

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { selectAssesByCourse, selectStudent, selectCourse } from '../../selectors/assignment/assSelectors';
 import { getAssesByCourse } from '../../actions/assignment/assActions';
-import Assignment from '../../components/assignments/Assignments';
+import Assignments from '../../components/assignments/Assignments';
 import { CourseAssignmentContainer, CourseAssignmentListContainer, WeekAtGlanceContainer } from '../../../styles/layout/DashboardContainer';
 import { ListItemHeaderWeek } from '../../../styles/components/ListItemHeader';
 
@@ -29,7 +29,7 @@ class CourseAssignments extends PureComponent {
             <h2>{this.props.course.name}</h2>
           </ListItemHeaderWeek>
           <CourseAssignmentListContainer>
-            <Assignment assignments={this.props.asses} />
+            <Assignments assignments={this.props.asses} />
           </CourseAssignmentListContainer>
         </WeekAtGlanceContainer>
       </CourseAssignmentContainer>
