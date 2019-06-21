@@ -3,32 +3,14 @@ import { GET_RECENTS, GET_RECENTS_PENDING, GET_RECENTS_ERROR } from '../../../ac
 const initialState = {
   recents: [],
   loading: false,
-  error: {}, 
-  recent: 0
+  error: {}
 };
 
-// function recentCounter(recentSubs) {
-//   let recent = recentSubs.length;
-//   //commenting this out for now and will come back to it later
-//   // let recent = 0;
-//   // const today = new Date();
-//   // const todayObject = formattedDate(today);
-
-//   // for(let i = 0; i < recentSubs.length; i++) {
-//   //   const subDateObj = recentSubs[i].updatedAt;
-//   //   if(todayObject.day - subDateObj.day >= 2) {
-//   //     recent ++;
-//   //   }
-//   // }
-//   return recent;
-// }
-
 export default function reducer(state = initialState, action) {
+  console.log(action, 'action in reducer');
   switch(action.type) {
     case GET_RECENTS:
-      return { ...state, recents: action.payload, loading: false, 
-        // recent: recentCounter(action.payload) 
-      };
+      return { ...state, recents: action.payload, loading: false };
     case GET_RECENTS_PENDING:
       return { ...state, loading: true };
     case GET_RECENTS_ERROR:

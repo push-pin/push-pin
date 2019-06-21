@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import formattedDate from '../../../../utils/date-formatter';
 import abridgedText from '../../../../utils/text-abridge';
 
-function RecentItem({ updatedAt, comment, firstName, lastName, eventType, itemId, grade, assignmentTitle, assignmentId }) {
+function RecentItem({ updatedAt, assignment, grade, firstName, lastName, comment }) {
 
   const date = formattedDate(updatedAt);
   const shortComment = abridgedText(comment, 20);
@@ -14,10 +14,10 @@ function RecentItem({ updatedAt, comment, firstName, lastName, eventType, itemId
         <h3>{date.month}/{date.day}/{date.year} :: {date.time}</h3>
       </div>
       <div className="info">
-        <h4 className="recentEvent">{eventType}</h4>
-        <p className="recentSubmission">{assignmentTitle}</p>
-        <p className="recentSubmission">{firstName} {lastName}: {shortComment || grade}</p>
-        <p>{itemId} {assignmentId}</p>
+        <h4 className="recentEvent">{grade}</h4>
+        <p className="recentSubmission">{assignment}</p>
+        <p className="recentSubmission">{firstName} {lastName}: {shortComment}</p>
+        {/* <p>{itemId} {assignmentId}</p> */}
       </div>
     </>
   );
@@ -28,11 +28,8 @@ RecentItem.propTypes = {
   comment: PropTypes.string,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
-  eventType: PropTypes.string,
-  itemId: PropTypes.string,
   grade: PropTypes.number,
-  assignmentTitle: PropTypes.string,
-  assignmentId: PropTypes.string
+  assignment: PropTypes.string,
 };
 
 //id is a p right now, but will eventually be used to link to the submission?
