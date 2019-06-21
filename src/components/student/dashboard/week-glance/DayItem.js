@@ -8,6 +8,7 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
   let dueDay = formattedDate(dateDue);
   let classDay = formattedDate(classDate);
 
+
   let hasSubed = 'Unsubmitted';
   if(submitted) hasSubed = 'Submitted';
 
@@ -21,6 +22,9 @@ function DayItem({ type, title, dateDue, submitted, _id }) {
 
         <p>{hasSubed}</p>
         <p>Grade: </p>
+
+        {/* <p>{classDay}</p> */}
+        <p>Submitted: {hasSubed}</p>
 
       </div>
     </LinkStyled>

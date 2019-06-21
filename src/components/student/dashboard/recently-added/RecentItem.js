@@ -2,32 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import formattedDate from '../../../../utils/date-formatter';
 
-function RecentItem({ date, time, title, submissionType, eventType, id }) {
-  //date/time will probably be saved in the database as one string timestamp
+import abridgedText from '../../../../utils/text-abridge';
 
-  const formatted = formattedDate(date);
+function RecentItem({ updatedAt, assignment, grade, firstName, lastName, comment }) {
+  const date = formattedDate(updatedAt);
+  
   return (
     <>
       <div className="date">
-        <h3>{formatted.month} {formatted.date}</h3>
-        <h4>{formatted.time}</h4>
+        <h3>{date.month} {date.day}</h3>
+        <h3>{date.time}</h3>
+
       </div>
       <div className="info">
-        <h4 className="recentEvent">{eventType}</h4>
-        <p className="recentSubmission">{submissionType}: {title}</p>
-        <p>{id}</p>
+        <h4 className="recentEvent">{assignment}</h4>
+        <p className="recentSubmission">{firstName} {lastName} {comment ? ': ' + abridgedText(comment, 15) : ''}</p>
+        <p className="recentSubmission">{grade}</p>
+        {/* <p>{itemId} {assignmentId}</p> */}
       </div>
     </>
   );
 }
 
 RecentItem.propTypes = {
-  date: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  submissionType: PropTypes.string.isRequired,
-  eventType: PropTypes.string.isRequired,
-  id: PropTypes.string
+  updatedAt: PropTypes.string,
+  comment: PropTypes.string,
+  firstName: PropTypes.string,
+  lastName: PropTypes.string,
+  grade: PropTypes.number,
+  assignment: PropTypes.string,
 };
 
 //id is a p right now, but will eventually be used to link to the submission?

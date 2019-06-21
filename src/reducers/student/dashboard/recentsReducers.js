@@ -3,24 +3,13 @@ import { GET_RECENTS, GET_RECENTS_PENDING, GET_RECENTS_ERROR } from '../../../ac
 const initialState = {
   recents: [],
   loading: false,
-  error: {}, 
-  unread: 0
+  error: {}
 };
-
-function unreadCounter(recents) {
-  let unread = 0;
-  for(let i = 0; i < recents.length; i++) {
-    if(!recents[i].read) {
-      unread++;
-    }
-  }
-  return unread;
-}
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case GET_RECENTS:
-      return { ...state, recents: action.payload, loading: false, unread: unreadCounter(action.payload) };
+      return { ...state, recents: action.payload, loading: false };
     case GET_RECENTS_PENDING:
       return { ...state, loading: true };
     case GET_RECENTS_ERROR:

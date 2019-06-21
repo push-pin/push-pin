@@ -2,18 +2,15 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAnnouncements } from '../../../actions/student/dashboard/announcementActions';
-import { selectAnnouncements, selectUnreadAnnouncements, selectAnnouncementsLoading, selectAnnouncementsError } from '../../../selectors/student/dashboard/announcementSelectors';
+import { selectAnnouncements, selectRecentAnnouncements, selectAnnouncementsLoading, selectAnnouncementsError } from '../../../selectors/student/dashboard/announcementSelectors';
 import AnnouncementList from '../../../components/student/dashboard/announcements/AnnouncementList';
 import { getUser } from '../../../selectors/sessionSelectors';
 
 class DashboardAnnouncements extends PureComponent {
-  // should somehow update component once something is read
-  // how does that interact with database? do an update on leaving the page somehow?
-
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     announcements: PropTypes.array.isRequired,
-    unread: PropTypes.number.isRequired,
+    recent: PropTypes.number.isRequired,
     loading: PropTypes.bool.isRequired,
     user: PropTypes.object.isRequired,
     error: PropTypes.object,
@@ -27,13 +24,13 @@ class DashboardAnnouncements extends PureComponent {
     if(!this.props.announcements[0]) {
       return <h1>Loading</h1>;
     }
-    return <AnnouncementList announcements={this.props.announcements} unread={this.props.unread} />;
+    return <AnnouncementList announcements={this.props.announcements} recent={this.props.recent} />;
   }
 }
 
 const mapStateToProps = state => ({
   announcements: selectAnnouncements(state),
-  unread: selectUnreadAnnouncements(state),
+  recent: selectRecentAnnouncements(state),
   loading: selectAnnouncementsLoading(state),
   error: selectAnnouncementsError(state),
   user: getUser(state)

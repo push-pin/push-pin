@@ -1,5 +1,15 @@
 import { getInstWeek } from './instWeekActions';
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+
 describe('instructor week at a glance actions', () => {
   it('creates an action to fetch week', () => {
     const action = getInstWeek();

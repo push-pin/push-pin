@@ -1,4 +1,4 @@
-import { selectRecents, selectRecentsError, selectRecentsLoading, selectUnreadRecents } from './recentsSelectors';
+import { selectRecents, selectRecentsError, selectRecentsLoading, selectRecentRecents } from './recentsSelectors';
 
 const state = { dashboard: {
   recents: {
@@ -15,7 +15,7 @@ const state = { dashboard: {
     ],
     loading: false,
     error: {},
-    unread: 1
+    recent: 1
   } 
 }
 };
@@ -40,7 +40,7 @@ describe('recent assignments/comments selectors', () => {
   it('gets instructor recent subs error', () => {
     expect(selectRecentsError(state)).toEqual({});
   });
-  it('gets instructor recent subs unread', () => {
-    expect(selectUnreadRecents(state)).toEqual(1);
+  it('gets instructor recent subs recent', () => {
+    expect(selectRecentRecents(state)).toEqual(1);
   });
 });
