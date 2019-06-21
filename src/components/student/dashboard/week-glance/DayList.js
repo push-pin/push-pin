@@ -4,14 +4,16 @@ import DayItem from './DayItem';
 import { ListItemWeek, ListItemUlWeek } from '../../../../../styles/components/ListItem';
 
 function DayList({ dayArray }) {
+  console.log('daryarr', dayArray);
+
   const dayItems = dayArray.map(item => {
     return (
       <ListItemWeek key={item._id}>
         <DayItem 
           type={item.type} 
           title={item.title}
-          dateDue={item.dateDue}
-          submitted={item.submitted}
+          classDate={item.classDate}
+          // submitted={item.submitted}
           _id={item._id}
         />
       </ListItemWeek>
