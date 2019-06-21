@@ -10,6 +10,7 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
+  // console.log('weekreducer', action.payload);
   switch(action.type) {
     case GET_WEEK:
       return { ...state, assignments: { weeksAsses: action.payload.weeksAsses, subs: action.payload.subs }, loading: false };

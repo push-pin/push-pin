@@ -142,7 +142,6 @@ const ProfileContainer = styled.section `
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 2px;
-      outline: none;
 
       font-size: 1.25rem;
       :hover {
