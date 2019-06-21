@@ -144,7 +144,6 @@ const ProfileContainer = styled.section `
       letter-spacing: 2px;
 
       font-size: 1.25rem;
-
       :hover {
       color: #2CE6EA;
       transition: .2s ease-in;

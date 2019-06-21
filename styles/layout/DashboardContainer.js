@@ -11,7 +11,6 @@ const DashboardContainer = styled.section `
   margin-left: 3rem;
 `;
 
-
 const AnnouncementsContainer = styled.section `
   display: flex;
   justify-content: space-between;
