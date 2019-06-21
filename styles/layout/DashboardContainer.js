@@ -86,7 +86,7 @@ const AssignmentContainer = styled(AnnouncementsContainer) `
     height: 70%;
     margin: 4rem 0;
     background-color: #FDFDFD;
-  `;
+`;
 
 const CourseAssignmentContainer = styled(DashboardContainer) `
   height: 100vh;

@@ -1,3 +1,9 @@
+var months = [
+  'January', 'February', 'March', 'April', 'May',
+  'June', 'July', 'August', 'September',
+  'October', 'November', 'December'
+  ];
+
 export default function formattedDate(date) {
 
   let convertTime = date.slice(11, 16);
@@ -17,9 +23,11 @@ export default function formattedDate(date) {
   newTime += (minutes < 10) ? ':0' + minutes : ':' + minutes;
   newTime += (hours >= 12) ? ' PM' : ' AM';
 
+  const month = date.slice(5, 7);
+
   return {
     year: date.slice(0, 4),
-    month: date.slice(5, 7),
+    month: months[parseInt(month) - 1],
     day: date.slice(8, 10),
     time: newTime
   };
