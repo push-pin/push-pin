@@ -17,7 +17,7 @@ function WeekList({ assignments }) {
             <h3>Monday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.mon} />
           </div>
         </DayContainer>
       
@@ -35,7 +35,7 @@ function WeekList({ assignments }) {
             <h3>Wednesday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.wed} />
           </div>
         </DayContainer>
 
@@ -44,7 +44,7 @@ function WeekList({ assignments }) {
             <h3>Thursday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.thurs} />
           </div>
         </DayContainer>
 
@@ -53,7 +53,7 @@ function WeekList({ assignments }) {
             <h3>Friday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.fri} />
           </div>
         </DayContainer>
 

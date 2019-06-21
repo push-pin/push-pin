@@ -57,7 +57,6 @@ const UpperDashboardContainer = styled.section `
   height: 38rem;
   border-bottom: .5rem solid rgba(0,60,145, .5);
   box-shadow: inset 0 .5rem .5rem rgba(0, 0, 0, 0.2);
-  
   background-color: #EDF2F7;
   `;
 
