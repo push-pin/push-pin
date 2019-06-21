@@ -4,9 +4,9 @@ import { LinkStyled } from '../../../../../styles/components/LinkStyled';
 import formattedDate from '../../../../utils/date-formatter';
 
 
-function DayItem({ type, title, dateDue, submitted, _id }) {
-  let dueDay = formattedDate(dateDue);
-  let classDay = formattedDate(classDate);
+function DayItem({ type, title, submitted, _id }) {
+  // let dueDay = formattedDate(dateDue);
+  // let classDay = formattedDate(classDate);
 
 
   let hasSubed = 'Unsubmitted';
@@ -35,7 +35,7 @@ DayItem.propTypes = {
   type: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   classDate: PropTypes.string,
-  // submitted: PropTypes.bool.isRequired,
+  submitted: PropTypes.bool.isRequired,
   _id: PropTypes.string.isRequired
 };
 
