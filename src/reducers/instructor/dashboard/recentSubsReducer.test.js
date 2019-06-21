@@ -40,7 +40,7 @@ describe('instructor recent submissions reducer', () => {
       loading: false,
       recentSubs: expect.any(Array),
       error: {},
-      recent: 0
+      recent: undefined
     });
   });
   it('handles the get recent subs error action', () => {
