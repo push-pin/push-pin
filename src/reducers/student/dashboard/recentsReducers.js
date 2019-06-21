@@ -1,26 +1,31 @@
 import { GET_RECENTS, GET_RECENTS_PENDING, GET_RECENTS_ERROR } from '../../../actions/student/dashboard/recentsActions';
+import formattedDate from '../../../utils/date-formatter';
 
 const initialState = {
   recents: [],
   loading: false,
   error: {}, 
-  unread: 0
+  recent: 0
 };
 
-function unreadCounter(recents) {
-  let unread = 0;
-  for(let i = 0; i < recents.length; i++) {
-    if(!recents[i].read) {
-      unread++;
+function recentCounter(recentSubs) {
+  let recent = 0;
+  const today = new Date();
+  const todayObject = formattedDate(today);
+
+  for(let i = 0; i < recentSubs.length; i++) {
+    const subDateObj = recentSubs[i].updatedAt;
+    if(todayObject.day - subDateObj.day >= 2) {
+      recent ++;
     }
   }
-  return unread;
+  return recent;
 }
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case GET_RECENTS:
-      return { ...state, recents: action.payload, loading: false, unread: unreadCounter(action.payload) };
+      return { ...state, recents: action.payload, loading: false, recent: recentCounter(action.payload) };
     case GET_RECENTS_PENDING:
       return { ...state, loading: true };
     case GET_RECENTS_ERROR:

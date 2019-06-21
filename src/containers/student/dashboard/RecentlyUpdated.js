@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { selectRecents, selectUnreadRecents, selectRecentsLoading, selectRecentsError } from '../../../selectors/student/dashboard/recentsSelectors';
+import { selectRecents, selectRecentRecents, selectRecentsLoading, selectRecentsError } from '../../../selectors/student/dashboard/recentsSelectors';
 import { getRecents } from '../../../actions/student/dashboard/recentsActions';
 import RecentList from '../../../components/student/dashboard/recently-added/RecentList';
 
@@ -12,7 +12,7 @@ class DashboardRecentlyUpdated extends PureComponent {
     fetch: PropTypes.func.isRequired,
     recents: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
-    unread: PropTypes.number.isRequired,
+    recent: PropTypes.number.isRequired,
     error: PropTypes.object,
     studentId: PropTypes.string.isRequired
   }
@@ -20,21 +20,21 @@ class DashboardRecentlyUpdated extends PureComponent {
   componentDidMount() {
     this.props.fetch(this.props.studentId);
   }
-  //similar unread feature to announcements
+
   render() {
     console.log(this.props);
     if(!this.props.recents[0]) {
       return <h1>Loading</h1>;
     }
 
-    return <RecentList recentlyArr={this.props.recents} unread={this.props.unread} />;
+    return <RecentList recentlyArr={this.props.recents} recent={this.props.recent} />;
   }
 }
 
 const mapStateToProps = state => ({
   recents: selectRecents(state),
   loading: selectRecentsLoading(state),
-  unread: selectUnreadRecents(state),
+  recent: selectRecentRecents(state),
   error: selectRecentsError(state),
   studentId: state.user.profile._id
 });

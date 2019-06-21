@@ -20,7 +20,7 @@ const initialState = {
   recents: [],
   loading: false,
   error: {},
-  unread: 0
+  recent: 0
 };
 
 describe('recent items reducer', () => {
@@ -34,7 +34,7 @@ describe('recent items reducer', () => {
       loading: false,
       recents: expect.any(Array),
       error: {},
-      unread: 0
+      recent: 0
     });
   });
   it('handles the get recents error action', () => {
@@ -46,7 +46,7 @@ describe('recent items reducer', () => {
       loading: false,
       recents: [],
       error: expect.any(Object),
-      unread: 0
+      recent: 0
     });
   });
 });

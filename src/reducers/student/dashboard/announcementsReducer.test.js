@@ -22,7 +22,7 @@ const initialState = {
   announcements: [],
   loading: false,
   error: {},
-  unread: 0
+  recent: 0
 };
 
 describe('student announcements reducer', () => {
@@ -36,7 +36,7 @@ describe('student announcements reducer', () => {
       loading: false,
       announcements: expect.any(Array),
       error: {},
-      unread: 0
+      recent: 0
     });
   });
   it('handles the get announcements error action', () => {
@@ -48,7 +48,7 @@ describe('student announcements reducer', () => {
       loading: false,
       announcements: [],
       error: expect.any(Object),
-      unread: 0
+      recent: 0
     });
   });
 });

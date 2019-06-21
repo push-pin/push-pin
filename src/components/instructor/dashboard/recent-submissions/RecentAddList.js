@@ -5,7 +5,7 @@ import { ListItem, ListItemUl } from '../../../../../styles/components/ListItem'
 import { ListItemHeader } from '../../../../../styles/components/ListItemHeader';
 import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardContainer';
 
-function RecentAddList({ recentArray, unread }) {
+function RecentAddList({ recentArray, recent }) {
   const recentSubs = recentArray.map(item => {
     console.log(recentArray, 'recentArray');
     return (
@@ -20,7 +20,7 @@ function RecentAddList({ recentArray, unread }) {
       <ListItemHeader>
         <h2>Recently Submitted</h2>
         <div>
-          <h3>{unread}</h3>
+          <h3>{recent}</h3>
         </div>
       </ListItemHeader>
       <ListItemUl>
@@ -32,7 +32,7 @@ function RecentAddList({ recentArray, unread }) {
 
 RecentAddList.propTypes = {
   recentArray: PropTypes.array.isRequired,
-  unread: PropTypes.number.isRequired
+  recent: PropTypes.number.isRequired
 };
 
 export default RecentAddList;

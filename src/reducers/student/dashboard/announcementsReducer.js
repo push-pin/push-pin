@@ -1,26 +1,31 @@
 import { GET_ANNOUNCEMENTS, GET_ANNOUNCEMENTS_PENDING, GET_ANNOUNCEMENTS_ERROR } from '../../../actions/student/dashboard/announcementActions';
+import formattedDate from '../../../utils/date-formatter';
 
 const initialState = {
   announcements: [],
   loading: false,
   error: {},
-  unread: 0
+  recent: 0
 };
 
-function unreadCounter(announcements) {
-  let unread = 0;
-  for(let i = 0; i < announcements.length; i++) {
-    if(!announcements[i].read) {
-      unread++;
+function recentCounter(recentSubs) {
+  let recent = 0;
+  const today = new Date();
+  const todayObject = formattedDate(today);
+
+  for(let i = 0; i < recentSubs.length; i++) {
+    const subDateObj = recentSubs[i].updatedAt;
+    if(todayObject.day - subDateObj.day >= 2) {
+      recent ++;
     }
   }
-  return unread;
+  return recent;
 }
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case GET_ANNOUNCEMENTS:
-      return { ...state, announcements: action.payload, loading: false, unread: unreadCounter(action.payload) };
+      return { ...state, announcements: action.payload, loading: false, recent: recentCounter(action.payload) };
     case GET_ANNOUNCEMENTS_PENDING:
       return { ...state, loading: true };
     case GET_ANNOUNCEMENTS_ERROR:

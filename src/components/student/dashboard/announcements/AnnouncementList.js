@@ -5,7 +5,7 @@ import { ListItem, ListItemUl } from '../../../../../styles/components/ListItem'
 import { ListItemHeader } from '../../../../../styles/components/ListItemHeader';
 import { UpperDashboardContainer } from '../../../../../styles/layout/DashboardContainer';
 
-function AnnouncementList({ announcements, unread }) {
+function AnnouncementList({ announcements, recent }) {
   const announcementListItems = announcements.map(announcement => {   //where do we limit the number of announcements here?
     return (
       <ListItem key={announcement._id}>
@@ -18,7 +18,7 @@ function AnnouncementList({ announcements, unread }) {
       <ListItemHeader>
         <h2>Announcements</h2>
         <div>
-          <h3>{unread}</h3>
+          <h3>{recent}</h3>
         </div>
       </ListItemHeader>
       <ListItemUl>
@@ -31,8 +31,8 @@ function AnnouncementList({ announcements, unread }) {
 
 AnnouncementList.propTypes = {
   announcements: PropTypes.array.isRequired,
-  unread: PropTypes.number.isRequired
+  recent: PropTypes.number.isRequired
 };
 
 export default AnnouncementList;
-// unread is the number of announcements that are new/haven't been opened in detail by a user. In the wireframe, its the number in the circle to the right of the "announcements" header 
+
