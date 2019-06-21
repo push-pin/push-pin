@@ -72,8 +72,6 @@ const ListItem = styled.li `
       color: #313E50;
       line-height: 1.5em;
     }
-
-
   }
 
 `;
