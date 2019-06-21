@@ -16,7 +16,7 @@ function ReadingInfo({ title, dueDate, classDate, points, bodyText, submitted })
         <p>{submitted}</p>
       </div>
     </section>
-    <textarea>{bodyText}</textarea>
+    <div dangerouslySetInnerHTML={createMarkup(bodyText)} />
     </>
   );
 }
@@ -31,3 +31,7 @@ ReadingInfo.propTypes = {
 };
 
 export default ReadingInfo;
+
+function createMarkup(string) {
+  return { __html: string };
+}

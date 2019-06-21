@@ -16,11 +16,6 @@ export const studentLink = [
   },
   {
     address: '/',
-    image: grades,
-    description: 'grades'
-  },
-  {
-    address: '/',
     image: resources,
     description: 'Resources'
   }

@@ -11,15 +11,6 @@ const DashboardContainer = styled.section `
   margin-left: 3rem;
 `;
 
-// const UpdatesContainer = styled.section `
-//   display: flex;
-//   justify-content: center;
-//   overflow: hidden;
-//   width: 85vw;
-//   height: auto;
-//   border: 2px solid green;
-//   `;
-
 const AnnouncementsContainer = styled.section `
   display: flex;
   justify-content: space-between;
@@ -33,7 +24,6 @@ const AnnouncementsContainer = styled.section `
 const WeekAtGlanceContainer = styled.section `
   display: flex;
   justify-content: center;
-  /* border: 2px solid aqua; */
   overflow-y: auto;
   width: 83vw;
   height: 80vh;
@@ -54,8 +44,6 @@ const UpperDashboardContainer = styled.section `
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: lightgrey; */
-  /* margin: 0 2rem; */
   overflow: scroll;
   width: 38.5vw;
   height: 38rem;
@@ -68,7 +56,6 @@ const UpperDashboardContainer = styled.section `
 const DayContainer = styled.section `
   display: flex;
   flex-direction: column;
-  /* border: 2px solid purple; */
   
   .day-stripe {
     background-color: #3A69AA;
@@ -77,13 +64,11 @@ const DayContainer = styled.section `
   
   h3 {
     font-size: 3.5em;
-    /* color: white; */
     letter-spacing: 1px;
     padding: 2rem;
     
   }
   `;
-
 
 //PERTAINS TO ASSIGNMENT DETAILS CONTAINER
 const AssignmentContainer = styled(AnnouncementsContainer) `
@@ -91,10 +76,10 @@ const AssignmentContainer = styled(AnnouncementsContainer) `
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
-    height: 70vw;
+    height: 70%;
     margin: 4rem 0;
     background-color: #FDFDFD;
-    /* border: 2px solid green; */
+    border:2px solid green;
   `;
 
 export {

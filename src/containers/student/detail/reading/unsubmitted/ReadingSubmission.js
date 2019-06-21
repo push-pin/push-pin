@@ -31,6 +31,7 @@ class ReadingSubmission extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.post(this.props.assignment, this.state.studentId, this.state.submission);
+    this.setState({ submission: '', studentId: '', assignment: '' });
   }
 
   render() {
