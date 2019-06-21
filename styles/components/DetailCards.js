@@ -5,10 +5,10 @@ const DetailCard = styled.section `
   flex-direction: column;
   box-sizing: content-box;
   width: 83vw;
-  /* border: 2px solid red; */
-  height: 45rem;
+  border: 2px solid red;
+  height: 100vh;
+  overflow-y: scroll;
   background-color: #FDFDFD;
-  /* box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2); */
   padding-bottom: 3rem;
 `;
 
@@ -53,6 +53,8 @@ const DetailCardHeader = styled.div `
 `;
 
 const DetailInfo = styled.section `
+flex: 1 1 auto;
+border: 2px solid yellow;
 padding-left: 4rem;
 padding-top: 4rem;
 padding-bottom: 4rem;

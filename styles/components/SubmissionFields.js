@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 const SubmitField = styled.section `
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   align-self: center;
   width: 70vw;
-  height: auto;
+  height: 100%;
   background-color: #FDFDFD;
-  /* padding-bottom: 3rem; */
-  /* border: 2px solid red; */
   margin-bottom: 4rem;
   
   div:nth-child(2) {
@@ -20,17 +19,14 @@ const SubmitField = styled.section `
   `;
 
 
+const SubmitButton = styled.button `
+  height: 2rem;
+  width: 6.5rem;
+  margin-left: 78rem;
+  margin-top: .5rem;
+  background-color: #3A69AA;
+  color: white;
 
-  const SubmitButton = styled.button `
-    /* border: 2px solid yellow; */
-    height: 2rem;
-    width: 6.5rem;
-    margin-left: 78rem;
-    margin-top: .5rem;
-    background-color: #3A69AA;
-    color: white;
-
-    /* padding: .25rem; */
   `;
   
 

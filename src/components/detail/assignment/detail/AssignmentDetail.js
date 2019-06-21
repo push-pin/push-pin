@@ -11,21 +11,23 @@ function AssignmentDetail({ assignment, submitted, grade }) {
   return (
     <>
     { assignment && 
-      <DetailCard>
+    <>
         <DetailCardHeader>
-            <h3>{assignment.type}</h3>
+          <h3>{assignment.type}</h3>
           <section className="submission-details">
             <p>Submitted: {submitted}</p>
             <p>Grade: {grade}</p>
           </section>
         </DetailCardHeader>
+      <DetailCard>
         <DetailInfo>
           <h4>{assignment.title}</h4>
           <p className="info-date">{assignment.dateDue}</p>
           <p>{assignment.instructions}</p>
         </DetailInfo>
-
-      </DetailCard> }
+      </DetailCard>
+    </>
+    }
     </>
   );
 }
