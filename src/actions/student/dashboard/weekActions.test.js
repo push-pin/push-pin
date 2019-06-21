@@ -1,5 +1,20 @@
 import { getWeekAtGlance } from './weekActions';
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+//impolement this when we are up and running with service
+// jest.mock('../../../services/student/dashboard/weekAtGlanceServices.js', () => ({
+//   fetchWeek() {
+//     return Promise.resolve([]);
+//   }
+// }));
 describe('student week actions', () => {
   it('creates an action to fetch week at glance', () => {
     const action = getWeekAtGlance();

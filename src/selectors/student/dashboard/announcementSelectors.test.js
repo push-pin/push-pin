@@ -1,4 +1,4 @@
-import { selectAnnouncements, selectAnnouncementsError, selectAnnouncementsLoading, selectUnreadAnnouncements } from './announcementSelectors';
+import { selectAnnouncements, selectAnnouncementsError, selectAnnouncementsLoading, selectRecentAnnouncements } from './announcementSelectors';
 
 const state = { dashboard: {
   announcements: {
@@ -12,7 +12,7 @@ const state = { dashboard: {
     }],
     loading: false,
     error: {},
-    unread: 1
+    recent: 1
   } 
 }
 };
@@ -34,7 +34,7 @@ describe('student announcement selectors', () => {
   it('gets annoucements error', () => {
     expect(selectAnnouncementsError(state)).toEqual({});
   });
-  it('gets  annoucements unread', () => {
-    expect(selectUnreadAnnouncements(state)).toEqual(1);
+  it('gets  annoucements recent', () => {
+    expect(selectRecentAnnouncements(state)).toEqual(1);
   });
 });

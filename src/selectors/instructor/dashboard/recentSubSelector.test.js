@@ -1,4 +1,4 @@
-import { selectRecentSubs, selectRecentSubsError, selectRecentSubsLoading, selectRecentSubsUnread } from './recentSubsSelector';
+import { selectRecentSubs, selectRecentSubsError, selectRecentSubsLoading, selectRecentSubsRecent } from './recentSubsSelector';
 
 const state = { instDashboard: {
   recentSubs: {
@@ -38,7 +38,7 @@ const state = { instDashboard: {
       }],
     loading: false,
     error: {},
-    unread: 2
+    recent: 2
   } 
 }
 };
@@ -86,7 +86,7 @@ describe('instructor recent submissions selectors', () => {
   it('gets instructor recent subs error', () => {
     expect(selectRecentSubsError(state)).toEqual({});
   });
-  it('gets instructor recent subs unread', () => {
-    expect(selectRecentSubsUnread(state)).toEqual(2);
+  it('gets instructor recent subs recent', () => {
+    expect(selectRecentSubsRecent(state)).toEqual(2);
   });
 });

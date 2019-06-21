@@ -2,11 +2,23 @@ import reducer from './recentSubsReducer';
 
 jest.mock('../../../services/instructor/dashboard/recentSubsService.js');
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+
+jest.mock('../../../actions/instructor/dashboard/recentSubsActions.js');
+
 const initialState = {
   recentSubs: [],
   loading: false,
   error: {},
-  unread: 0
+  recent: 0
 };
 
 describe('instructor recent submissions reducer', () => {
@@ -15,7 +27,7 @@ describe('instructor recent submissions reducer', () => {
       loading: true,
       recentSubs: [],
       error: {},
-      unread: 0
+      recent: 0
     });
   });
   it('handles the GET_RECENT_SUBS action', () => {
@@ -28,7 +40,7 @@ describe('instructor recent submissions reducer', () => {
       loading: false,
       recentSubs: expect.any(Array),
       error: {},
-      unread: 0
+      recent: undefined
     });
   });
   it('handles the get recent subs error action', () => {
@@ -40,7 +52,7 @@ describe('instructor recent submissions reducer', () => {
       loading: false,
       recentSubs: [],
       error: expect.any(Object),
-      unread: 0
+      recent: 0
     });
   });
 });
