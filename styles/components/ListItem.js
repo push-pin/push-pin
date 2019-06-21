@@ -77,6 +77,7 @@ const ListItem = styled.li `
 `;
 
 const ListItemWeek = styled(ListItem) `
+/* was 85% for card  */
   width: 100%;
 
   .type {
@@ -91,9 +92,10 @@ const ListItemWeek = styled(ListItem) `
   }
   
   h4 {
-      font-size: 1.8em;
+      font-size: 2em;
       font-weight: 700;
       margin-bottom: .5rem;
+      letter-spacing: 2px;
     }
 
     p {
@@ -106,7 +108,6 @@ const ListItemWeek = styled(ListItem) `
   .assignment-detail {
     width: 100%;
     padding: 1.5em;
-    border: 2px solid blue;
   }
 `;
 

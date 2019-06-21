@@ -127,7 +127,8 @@ const ProfileContainer = styled.section `
   /* margin-bottom: 2rem; */
   
     .signout-button {
-      margin-top: .8rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
       width: 8rem;
       height: 2.5rem;
       border-radius: 10px;
@@ -135,26 +136,26 @@ const ProfileContainer = styled.section `
       background-color: transparent;
       border: none;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 700;
+      letter-spacing: 2px;
 
-        :hover {
-      /* background-color: #003784;
-      transform: translateY(-.2rem);
-      transition: .4s; */
+      font-size: 1.25rem;
+
+      :hover {
       color: #2CE6EA;
+      transition: .2s ease-in;
     }
 
     ::after {
       position: absolute;
       content: '';
-      top:0;
+      top: 92%;
       left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 0;
+      width: 0;
+      height: 10%;
       background-color: #003784;
-      transform-origin: bottom;
-      transition:height 0.25s ease;
+      transform-origin:left;
+      transition:width 0.25s ease;
       z-index:-1;
     }
 
