@@ -5,6 +5,7 @@ import { ListItemHeaderWeek } from '../../../../../styles/components/ListItemHea
 import { WeekAtGlanceListContainer, DayContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function WeekList({ assignments }) {
+  console.log('weeklist', assignments);
   return (
     <>
       <ListItemHeaderWeek>
@@ -17,7 +18,7 @@ function WeekList({ assignments }) {
             <h3>Monday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.mon || []} />
           </div>
         </DayContainer>
       
@@ -26,7 +27,7 @@ function WeekList({ assignments }) {
             <h3>Tuesday</h3>
           </div>
           <div>
-            <DayList dayArray={assignments.tues} />
+            <DayList dayArray={assignments.tues || []} />
           </div>
         </DayContainer>
 
@@ -35,7 +36,7 @@ function WeekList({ assignments }) {
             <h3>Wednesday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.weds || []} />
           </div>
         </DayContainer>
 
@@ -44,7 +45,7 @@ function WeekList({ assignments }) {
             <h3>Thursday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.thurs || []} />
           </div>
         </DayContainer>
 
@@ -53,7 +54,7 @@ function WeekList({ assignments }) {
             <h3>Friday</h3>
           </div>
           <div>
-            {/* <DayList dayArray={assignments.tues} /> */}
+            <DayList dayArray={assignments.fri || []} />
           </div>
         </DayContainer>
 
