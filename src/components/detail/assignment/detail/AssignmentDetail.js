@@ -5,24 +5,28 @@ import {
   DetailCardHeader,
   DetailInfo
 } from '../../../../../styles/components/DetailCards';
+import capitalize from '../../../../utils/capitalize';
+import formattedDate from '../../../../utils/date-formatter';
 //we want to add grade and possible points to this
 
 function AssignmentDetail({ assignment, submitted, grade }) {
+  const date = formattedDate(assignment.dateDue);
+  console.log(assignment);
   return (
     <>
     { assignment && 
     <>
         <DetailCardHeader>
-          <h3>{assignment.type}</h3>
+          <h3>{capitalize(assignment.type)}</h3>
           <section className="submission-details">
-            <p>Submitted: {submitted}</p>
+            {/* <p>Submitted: {submitted}</p> */}
             <p>Grade: {grade}</p>
           </section>
         </DetailCardHeader>
       <DetailCard>
         <DetailInfo>
           <h4>{assignment.title}</h4>
-          <p className="info-date">{assignment.dateDue}</p>
+          <p className="info-date">Due: {date.month} {date.day} @ {date.time}</p>
           <div dangerouslySetInnerHTML={createMarkup(assignment.instructions)} />
         </DetailInfo>
       </DetailCard>

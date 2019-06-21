@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LinkStyled } from '../../../styles/components/LinkStyled';
 import formattedDate from '../../utils/date-formatter';
+import capitalize from '../../utils/capitalize';
 
 function DayItem({ type, title, dateDue, submitted, _id, classDate }) {
   let dueDay = formattedDate(dateDue);
@@ -12,14 +13,16 @@ function DayItem({ type, title, dateDue, submitted, _id, classDate }) {
   return (
     <LinkStyled to={`/${_id}`}>
       <div className="type">
-        <h4 className="sub-title">{type}</h4>
+        <h4 className="sub-title">{capitalize(type)}</h4>
         <h4 className="sub-title">{classDay.day} {classDay.month}</h4>
       </div>
       <div className="assignment-detail">
         <h4>{title}</h4>
         <p>Due: {dueDay.month} {dueDay.day} @ {dueDay.time}</p>
-        <p>Submitted: {hasSubed}</p>
+        <p>{hasSubed}</p>
+        <p>Grade: </p>
       </div>
+
     </LinkStyled>
   );
 }
