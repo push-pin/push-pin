@@ -12,6 +12,8 @@ jest.mock('../../../services/auth.js', () => ({
   }
 }));
 
+jest.mock('../../../actions/instructor/dashboard/recentSubsActions.js');
+
 const initialState = {
   recentSubs: [],
   loading: false,

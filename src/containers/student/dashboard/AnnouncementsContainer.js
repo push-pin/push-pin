@@ -7,7 +7,6 @@ import AnnouncementList from '../../../components/student/dashboard/announcement
 import { getUser } from '../../../selectors/sessionSelectors';
 
 class DashboardAnnouncements extends PureComponent {
-
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     announcements: PropTypes.array.isRequired,

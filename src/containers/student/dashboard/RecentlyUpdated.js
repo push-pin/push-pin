@@ -36,7 +36,7 @@ const mapStateToProps = state => ({
   loading: selectRecentsLoading(state),
   recent: selectRecentRecents(state),
   error: selectRecentsError(state),
-  studentId: state.user.profile._id
+  studentId: state.user.user._id
 });
 
 const mapDispatchToProps = dispatch => ({

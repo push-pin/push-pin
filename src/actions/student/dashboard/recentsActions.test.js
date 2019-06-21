@@ -11,11 +11,10 @@ jest.mock('../../../services/auth.js', () => ({
 }));
 
 jest.mock('../../../services/student/dashboard/recentItemServices.js', () => ({
-  getRecents() {
+  fetchRecents() {
     return Promise.resolve([]);
   }
 }));
-
 
 describe('student recents actions', () => {
   it('creates an action to fetch recents', () => {
@@ -26,8 +25,7 @@ describe('student recents actions', () => {
       pendingType: 'GET_RECENTS_PENDING',
       fulfilledType: 'GET_RECENTS_FULFILLED',
       rejectedType: 'GET_RECENTS_REJECTED',
-      payload: expect.any(Array)
-      //payload will become a promise when we switch to real fetches
+      payload: expect.any(Promise)
     });
   });
 });
