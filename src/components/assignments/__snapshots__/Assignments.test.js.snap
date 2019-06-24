@@ -2,61 +2,37 @@
 
 exports[`Assignments component renders a Assignments 1`] = `
 <ul>
-  <li
+  <Styled(styled.li)
     key="undefined-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": false,
-          "title": "Ass 1",
-        }
-      }
+    <DayItem
+      submitted={false}
+      title="Ass 1"
     />
-  </li>
-  <li
+  </Styled(styled.li)>
+  <Styled(styled.li)
     key="undefined-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": true,
-          "title": "Ass 11",
-        }
-      }
+    <DayItem
+      submitted={true}
+      title="Ass 11"
     />
-  </li>
-  <li
+  </Styled(styled.li)>
+  <Styled(styled.li)
     key="undefined-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": false,
-          "title": "Ass 12",
-        }
-      }
+    <DayItem
+      submitted={false}
+      title="Ass 12"
     />
-  </li>
-  <li
+  </Styled(styled.li)>
+  <Styled(styled.li)
     key="undefined-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": true,
-          "title": "Ass 13",
-        }
-      }
+    <DayItem
+      submitted={true}
+      title="Ass 13"
     />
-  </li>
+  </Styled(styled.li)>
 </ul>
 `;

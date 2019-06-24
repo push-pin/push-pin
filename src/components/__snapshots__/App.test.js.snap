@@ -2,48 +2,72 @@
 
 exports[`App component renders App 1`] = `
 <styled.section>
-  <BrowserRouter>
-    <GlobalStyleComponent />
-    <Connect(NavContainer) />
-    <Switch>
-      <Route
-        component={
-          Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(WithSession)",
-            "type": [Function],
-          }
-        }
-        exact={true}
-        path="/"
-      />
-      <Route
-        component={
-          Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(Callback)",
-            "type": [Function],
-          }
-        }
-        path="/callback"
-      />
-      <Route
-        component={
-          Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(WithSession)",
-            "type": [Function],
-          }
-        }
-        path="/:assignmentId"
-      />
-    </Switch>
-  </BrowserRouter>
+  <section
+    className="container"
+  >
+    <section
+      className="fade-in"
+    >
+      <BrowserRouter>
+        <GlobalStyleComponent />
+        <Connect(NavContainer) />
+        <Switch>
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(WithSession)",
+                "type": [Function],
+              }
+            }
+            exact={true}
+            path="/"
+          />
+          <Route
+            component={[Function]}
+            path="/calendar"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(WithSession)",
+                "type": [Function],
+              }
+            }
+            path="/assignments"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(Callback)",
+                "type": [Function],
+              }
+            }
+            path="/callback"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(WithSession)",
+                "type": [Function],
+              }
+            }
+            path="/:assignmentId"
+          />
+        </Switch>
+      </BrowserRouter>
+    </section>
+  </section>
 </styled.section>
 `;

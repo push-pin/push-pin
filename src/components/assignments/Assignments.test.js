@@ -6,28 +6,32 @@ describe('Assignments component', () => {
   it('renders a Assignments', () => {
     const assignments = [
       {
-        date: new Date(),
+        classDate: new Date(),
         title:  'Ass 1',
-        grade: false,
-        submitted: false
+        type: 'mob',
+        submitted: false,
+        _id: '1234'
       },
       {
-        date: new Date(),
+        classDate: new Date(),
         title:  'Ass 11',
-        grade: false,
-        submitted: true
+        type: 'mob',
+        submitted: true,
+        _id: '1234'
       },
       {
-        date: new Date(),
+        classDate: new Date(),
         title:  'Ass 12',
-        grade: false,
-        submitted: false
+        type: 'solo',
+        submitted: false,
+        _id: '3456'
       },
       {
-        date: new Date(),
+        classDate: new Date(),
         title:  'Ass 13',
-        grade: false,
-        submitted: true
+        type: 'reading',
+        submitted: true,
+        _id: '456'
       }
     ];
     

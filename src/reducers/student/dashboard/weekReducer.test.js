@@ -2,6 +2,20 @@ import reducer from './weekReducer';
 
 jest.mock('../../../services/student/dashboard/weekAtGlanceServices.js');
 
+jest.mock('../../../services/auth.js', () => ({
+  handleAuth() {
+    return Promise.resolve([{
+      auth0Id: 'ig;hl;j',
+      token: 'thisisatoken'
+    }
+    ]);
+  }
+}));
+
+jest.mock('../../../actions/student/dashboard/weekActions.js', () => {
+  return Promise.resolve([]);
+});
+
 const initialState = {
   assignments: {},
   loading: false,
