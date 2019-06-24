@@ -7,8 +7,8 @@ exports[`Assignments component renders a Assignments 1`] = `
   >
     <DayItem
       _id="1234"
-      classDate={2019-06-24T01:33:00.570Z}
-      dateDue={2019-06-24T01:33:00.570Z}
+      classDate={2019-06-24T02:37:07.386Z}
+      dateDue={2019-06-24T02:37:07.386Z}
       submitted={false}
       title="Ass 1"
       type="mob"
@@ -19,8 +19,8 @@ exports[`Assignments component renders a Assignments 1`] = `
   >
     <DayItem
       _id="1234"
-      classDate={2019-06-24T01:33:00.570Z}
-      dateDue={2019-06-24T01:33:00.570Z}
+      classDate={2019-06-24T02:37:07.386Z}
+      dateDue={2019-06-24T02:37:07.386Z}
       submitted={true}
       title="Ass 11"
       type="mob"
@@ -31,8 +31,8 @@ exports[`Assignments component renders a Assignments 1`] = `
   >
     <DayItem
       _id="3456"
-      classDate={2019-06-24T01:33:00.570Z}
-      dateDue={2019-06-24T01:33:00.570Z}
+      classDate={2019-06-24T02:37:07.386Z}
+      dateDue={2019-06-24T02:37:07.386Z}
       submitted={false}
       title="Ass 12"
       type="solo"
@@ -43,8 +43,8 @@ exports[`Assignments component renders a Assignments 1`] = `
   >
     <DayItem
       _id="456"
-      classDate={2019-06-24T01:33:00.570Z}
-      dateDue={2019-06-24T01:33:00.570Z}
+      classDate={2019-06-24T02:37:07.386Z}
+      dateDue={2019-06-24T02:37:07.386Z}
       submitted={true}
       title="Ass 13"
       type="reading"
