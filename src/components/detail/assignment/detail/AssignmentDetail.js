@@ -11,7 +11,6 @@ import formattedDate from '../../../../utils/date-formatter';
 
 function AssignmentDetail({ assignment, submitted, grade }) {
   const date = formattedDate(assignment.dateDue);
-  console.log(assignment);
   return (
     <>
     { assignment && 

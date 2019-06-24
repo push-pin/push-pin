@@ -5,7 +5,6 @@ import { ListItemHeaderWeek } from '../../../../../styles/components/ListItemHea
 import { WeekAtGlanceListContainer, DayContainer } from '../../../../../styles/layout/DashboardContainer';
 
 function WeekList({ assignments }) {
-  console.log('weeklist', assignments);
   return (
     <>
       <ListItemHeaderWeek>

@@ -9,16 +9,6 @@ const initialState = {
 
 function recentCounter(recentSubs) {
   let recent = recentSubs.length;
-  //commenting this out for now and will come back to it later
-  // let recent = 0;
-  // const today = new Date();
-  // for(let i = 0; i < recentSubs.length; i++) {
-  //   const subDate = new Date(recentSubs[i].updatedAt);
-  //   if((today - subDate) >= 2) {
-  //     console.log(today - subDate);
-  //     recent ++;
-  //   }
-  // }
   return recent;
 }
 

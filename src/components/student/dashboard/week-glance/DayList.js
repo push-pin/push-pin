@@ -4,7 +4,6 @@ import DayItem from './DayItem';
 import { ListItemWeek, ListItemUlWeek } from '../../../../../styles/components/ListItem';
 
 function DayList({ dayArray }) {
-  console.log('daryarr', dayArray);
 
   const dayItems = dayArray.map(item => {
     return (
