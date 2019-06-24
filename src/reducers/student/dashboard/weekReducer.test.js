@@ -17,7 +17,10 @@ jest.mock('../../../actions/student/dashboard/weekActions.js', () => {
 });
 
 const initialState = {
-  assignments: {},
+  assignments: {
+    weeksAsses: {},
+    subs: []
+  },
   loading: false,
   error: {}
 };
@@ -26,7 +29,10 @@ describe('student week at a glance reducer', () => {
   it('handles the GET_WEEK_PENDING action', () => {
     expect(reducer(initialState, { type: 'GET_WEEK_PENDING' })).toEqual({
       loading: true,
-      assignments: {},
+      assignments: {
+        subs: [],
+        weeksAsses: {}
+      },
       error: {}
     });
   });
@@ -48,7 +54,11 @@ describe('student week at a glance reducer', () => {
     });
     expect(newState).toEqual({
       loading: false,
-      assignments: {},
+      assignments: {
+        subs: [],
+        weeksAsses: {
+        }
+      },
       error: expect.any(Object)
     });
   });

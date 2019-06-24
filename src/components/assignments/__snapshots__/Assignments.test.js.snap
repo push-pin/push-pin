@@ -3,35 +3,51 @@
 exports[`Assignments component renders a Assignments 1`] = `
 <ul>
   <Styled(styled.li)
-    key="undefined-undefined"
+    key="1234-undefined"
   >
     <DayItem
+      _id="1234"
+      classDate={2019-06-24T01:33:00.570Z}
+      dateDue={2019-06-24T01:33:00.570Z}
       submitted={false}
       title="Ass 1"
+      type="mob"
     />
   </Styled(styled.li)>
   <Styled(styled.li)
-    key="undefined-undefined"
+    key="1234-undefined"
   >
     <DayItem
+      _id="1234"
+      classDate={2019-06-24T01:33:00.570Z}
+      dateDue={2019-06-24T01:33:00.570Z}
       submitted={true}
       title="Ass 11"
+      type="mob"
     />
   </Styled(styled.li)>
   <Styled(styled.li)
-    key="undefined-undefined"
+    key="3456-undefined"
   >
     <DayItem
+      _id="3456"
+      classDate={2019-06-24T01:33:00.570Z}
+      dateDue={2019-06-24T01:33:00.570Z}
       submitted={false}
       title="Ass 12"
+      type="solo"
     />
   </Styled(styled.li)>
   <Styled(styled.li)
-    key="undefined-undefined"
+    key="456-undefined"
   >
     <DayItem
+      _id="456"
+      classDate={2019-06-24T01:33:00.570Z}
+      dateDue={2019-06-24T01:33:00.570Z}
       submitted={true}
       title="Ass 13"
+      type="reading"
     />
   </Styled(styled.li)>
 </ul>

@@ -5,7 +5,6 @@ import Assignment from './Assignment';
 
 function Assignments({ assignments }) {
   const assignmentListItems = assignments.map(ass => {
-    console.log(ass);
     return (
       <ListItemWeek key={`${ass._id}-${ass._date}`}>
         <Assignment 

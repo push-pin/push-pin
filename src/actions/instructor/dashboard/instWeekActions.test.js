@@ -20,7 +20,7 @@ describe('instructor week at a glance actions', () => {
       fulfilledType: 'GET_INST_WEEK_FULFILLED',
       rejectedType: 'GET_INST_WEEK_REJECTED',
       payload: expect.any(Object)
-      //payload will become a promise when we switch to real fetches
+      //this is still in progress and test will need to be updated when we are fetching this information.
     });
   });
 });
