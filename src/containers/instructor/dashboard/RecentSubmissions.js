@@ -6,8 +6,6 @@ import { getRecentSubs } from '../../../actions/instructor/dashboard/recentSubsA
 import RecentAddList from '../../../components/instructor/dashboard/recent-submissions/RecentAddList';
 
 class RecentSubmissionContainer extends PureComponent {
-  //will get recent comments and assignment submissions by course id
-  //two arrays, spread into one and sort by time, limit number fed into the component
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     recentSubs: PropTypes.array.isRequired,

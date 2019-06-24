@@ -2,61 +2,53 @@
 
 exports[`Assignments component renders a Assignments 1`] = `
 <ul>
-  <li
-    key="undefined-undefined"
+  <Styled(styled.li)
+    key="1234-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": false,
-          "title": "Ass 1",
-        }
-      }
+    <DayItem
+      _id="1234"
+      classDate="2012-10-15T21:26:17Z"
+      dateDue="2012-10-15T21:26:17Z"
+      submitted={false}
+      title="Ass 1"
+      type="mob"
     />
-  </li>
-  <li
-    key="undefined-undefined"
+  </Styled(styled.li)>
+  <Styled(styled.li)
+    key="1234-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": true,
-          "title": "Ass 11",
-        }
-      }
+    <DayItem
+      _id="1234"
+      classDate="2012-10-15T21:26:17Z"
+      dateDue="2012-10-15T21:26:17Z"
+      submitted={true}
+      title="Ass 11"
+      type="mob"
     />
-  </li>
-  <li
-    key="undefined-undefined"
+  </Styled(styled.li)>
+  <Styled(styled.li)
+    key="3456-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": false,
-          "title": "Ass 12",
-        }
-      }
+    <DayItem
+      _id="3456"
+      classDate="2012-10-15T21:26:17Z"
+      dateDue="2012-10-15T21:26:17Z"
+      submitted={false}
+      title="Ass 12"
+      type="solo"
     />
-  </li>
-  <li
-    key="undefined-undefined"
+  </Styled(styled.li)>
+  <Styled(styled.li)
+    key="456-undefined"
   >
-    <Assignment
-      assignment={
-        Object {
-          "date": 2019-06-19T23:57:53.896Z,
-          "grade": false,
-          "submitted": true,
-          "title": "Ass 13",
-        }
-      }
+    <DayItem
+      _id="456"
+      classDate="2012-10-15T21:26:17Z"
+      dateDue="2012-10-15T21:26:17Z"
+      submitted={true}
+      title="Ass 13"
+      type="reading"
     />
-  </li>
+  </Styled(styled.li)>
 </ul>
 `;

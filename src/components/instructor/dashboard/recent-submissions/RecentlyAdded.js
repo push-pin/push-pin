@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import formattedDate from '../../../../utils/date-formatter';
-import abridgedText from '../../../../utils/text-abridge';
 
 function RecentlyAdded({ updatedAt, student, id, assignment }) {
   const date = formattedDate(updatedAt);

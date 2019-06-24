@@ -1,18 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Assignment component renders a Assignment 1`] = `
-<assContainer>
-  <p>
-    <Component />
-  </p>
-  <p>
-    Ass 1
-  </p>
-  <p>
-    Submitted: 
-  </p>
-  <p>
-    Incomplete
-  </p>
-</assContainer>
+<Styled(Link)
+  to="/1234"
+>
+  <div
+    className="type"
+  >
+    <h4
+      className="sub-title"
+    >
+      Mob
+    </h4>
+    <h4
+      className="sub-title"
+    >
+      15
+       
+      October
+    </h4>
+  </div>
+  <div
+    className="assignment-detail"
+  >
+    <h4>
+      Ass 1
+    </h4>
+    <p>
+      Due: 
+      October
+       
+      15
+       @ 
+      9:26 PM
+    </p>
+    <p>
+      Unsubmitted
+    </p>
+  </div>
+</Styled(Link)>
 `;

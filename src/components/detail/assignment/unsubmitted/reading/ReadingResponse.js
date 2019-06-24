@@ -4,7 +4,6 @@ import formattedDate from '../../../../../utils/date-formatter';
 
 function ReadingResponse({ submission, student, createdAt }) {
   const date = formattedDate(createdAt);
-  console.log('student', student);
   return (
     <>
     <div className="type">

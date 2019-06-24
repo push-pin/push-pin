@@ -19,7 +19,6 @@ class NavContainer extends PureComponent {
   }
 }
 
-
 const mapStateToProps = state => ({
   user: getUser(state),
 });

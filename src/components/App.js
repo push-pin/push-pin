@@ -10,8 +10,6 @@ import { withSession } from '../containers/auth/withSession';
 import NavContainer from '../containers/navbar/NavContainer';
 import AssignmentDetailContainer from '../containers/student/detail/AssignmentDetailContainer';
 import Calendar from './Calendar';
-
-// import Styles from './App.css';
 import { MasterContainer } from '../../styles/layout/MasterContainer';
 import { GlobalStyle } from '../../styles/layout/GlobalStyles';
 import CourseAssignments from '../containers/assignment/CourseAssignments';

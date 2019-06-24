@@ -2,10 +2,9 @@ export function fetchInstWeek() {
   const today = new Date();
   const diff = today.getDate() - today.getDay() + (today.getDay() === 0 ? -6 : 1);
   const monday =  new Date(today.setDate(diff));
-  //date.toString() gives you Mon June 10 2019 ...
-
-  //fetch using monday date
-  //map the returned array of assingments into an object of arrays based on day
+  
+  //this is in progress
+  
   return {
     Mon: [
       {

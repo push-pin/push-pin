@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import WeekListInstructor from '../../../components/instructor/dashboard/week-glance/WeekListInstructor';
 import { selectInstWeek, selectInstWeekError, selectInstWeekLoading } from '../../../selectors/instructor/dashboard/instWeekSelectors';
 import { getInstWeek } from '../../../actions/instructor/dashboard/instWeekActions';
-// import Styles from '../../student/dashboard/WeekAtGlance.css';
 
 class InstWeekContainer extends PureComponent {
   static propTypes = {
@@ -19,8 +18,7 @@ class InstWeekContainer extends PureComponent {
   }
 
   render(){
-    // return <h1>week</h1>;
-    if(!this.props.assignments.Mon) {  //change back to loading once fetch is a promise
+    if(!this.props.assignments.Mon) {  
       return <h1>Loading</h1>;
     }
     else {
