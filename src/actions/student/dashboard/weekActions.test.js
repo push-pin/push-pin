@@ -18,7 +18,6 @@ jest.mock('../../../services/student/dashboard/weekAtGlanceServices.js', () => (
 
 describe('student week actions', () => {
   it('creates an action to fetch week at a glance', () => {
-
     expect(getWeekAtGlance()).toEqual({
       type: 'GET_WEEK',
       pendingType: 'GET_WEEK_PENDING',

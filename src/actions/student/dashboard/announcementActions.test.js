@@ -1,6 +1,5 @@
 import { getAnnouncements } from './announcementActions';
 
-
 jest.mock('../../../services/auth.js', () => ({
   handleAuth() {
     return Promise.resolve([{
