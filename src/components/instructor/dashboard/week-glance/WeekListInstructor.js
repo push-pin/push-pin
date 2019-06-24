@@ -50,7 +50,7 @@ function WeekListInstructor({ assignments }) {
         </DayContainer>
 
         <DayContainer>
-          <div>
+          <div className="day-stripe">
             <h3>Friday</h3>
           </div>
           <div>

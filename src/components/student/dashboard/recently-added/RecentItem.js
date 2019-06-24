@@ -18,7 +18,6 @@ function RecentItem({ updatedAt, assignment, grade, firstName, lastName, comment
         <h4 className="recentEvent">{assignment}</h4>
         <p className="recentSubmission">{firstName} {lastName} {comment ? ': ' + abridgedText(comment, 15) : ''}</p>
         <p className="recentSubmission">{grade}</p>
-        {/* <p>{itemId} {assignmentId}</p> */}
       </div>
     </>
   );
@@ -32,7 +31,5 @@ RecentItem.propTypes = {
   grade: PropTypes.number,
   assignment: PropTypes.string,
 };
-
-//id is a p right now, but will eventually be used to link to the submission?
 
 export default RecentItem;

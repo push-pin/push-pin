@@ -21,8 +21,6 @@ class AssignmentDetailContainer extends Component {
     fetch: PropTypes.func.isRequired,
     fetchResponses: PropTypes.func.isRequired,
     assignment: PropTypes.object.isRequired,
-    // submitted: PropTypes.bool,
-    // grade: PropTypes.number,
     responses: PropTypes.array.isRequired
   }
 
@@ -31,7 +29,6 @@ class AssignmentDetailContainer extends Component {
       this.props.fetch(),
       this.props.fetchResponses()
     ]);
-    //if that user has a submission, try to fetch the grade for that submission by submission id
   }
 
   render() {
@@ -41,7 +38,7 @@ class AssignmentDetailContainer extends Component {
     return (
       <DashboardContainer>
         <AssignmentContainer>
-          <AssignmentDetail assignment={this.props.assignment} submitted={this.props.submitted} grade={this.props.grade}/>
+          <AssignmentDetail assignment={this.props.assignment} />
           <ReadingSubmission />
         </AssignmentContainer>
         <WeekAtGlanceContainer>

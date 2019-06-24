@@ -6,6 +6,7 @@ import { selectWeek, selectWeekError, selectWeekLoading } from '../../../selecto
 import { getWeekAtGlance } from '../../../actions/student/dashboard/weekActions';
 import { selectUserId } from '../../../selectors/student/detail/submissionSelectors';
 import { selectCourseId } from '../../../selectors/student/dashboard/userSelectors';
+//submitted and grade need to be added here
 
 class WeekContainer extends Component {
   static propTypes = {
@@ -30,7 +31,7 @@ class WeekContainer extends Component {
   }
 
   render(){
-    if(!this.props.assignments.mon) {  //change back to loading once fetch is a promise
+    if(!this.props.assignments.mon) {  
       return <h1>Loading</h1>;
     }
     else {

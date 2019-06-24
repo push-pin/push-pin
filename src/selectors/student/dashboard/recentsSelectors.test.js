@@ -1,4 +1,4 @@
-import { selectRecents, selectRecentsError, selectRecentsLoading, selectRecentRecents } from './recentsSelectors';
+import { selectRecents, selectRecentsError, selectRecentsLoading } from './recentsSelectors';
 
 const state = { dashboard: {
   recents: {

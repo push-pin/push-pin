@@ -1,4 +1,4 @@
-import { post, get, put } from '../../request';
+import { post, get } from '../../request';
 
 export const postSubmission = (assignment, student, submission) => {
   return post('/api/v1/submissions', { assignment, student, submission });

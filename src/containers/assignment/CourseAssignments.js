@@ -10,7 +10,7 @@ import { ListItemHeaderWeek } from '../../../styles/components/ListItemHeader';
 class CourseAssignments extends PureComponent {
   static propTypes = {
     asses: PropTypes.array.isRequired,
-    course: PropTypes.string.isRequired,
+    course: PropTypes.object.isRequired,
     student: PropTypes.string.isRequired,
     fetch: PropTypes.func.isRequired
   };

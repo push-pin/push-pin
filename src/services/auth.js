@@ -8,7 +8,6 @@ const auth0 = new WebAuth({
   scope: 'openid profile'
 });
 
-// if user isn't logged in send them to auth0 for login/signup
 export const login = () => {
   auth0.authorize();
 };

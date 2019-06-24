@@ -6,8 +6,6 @@ import { getRecents } from '../../../actions/student/dashboard/recentsActions';
 import RecentList from '../../../components/student/dashboard/recently-added/RecentList';
 
 class DashboardRecentlyUpdated extends PureComponent {
-  //will get graded submissions and comments by student id
-  //two arrays, spread into one and sort by time, limit number fed into the component
   static propTypes = {
     fetch: PropTypes.func.isRequired,
     recents: PropTypes.array,

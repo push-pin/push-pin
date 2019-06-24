@@ -12,7 +12,6 @@ function DayList({ dayArray }) {
           type={item.type} 
           title={item.title}
           classDate={item.classDate}
-          submitted={item.submitted}
           _id={item._id} dateDue={item.dateDue}
         />
       </ListItemWeek>
